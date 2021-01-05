@@ -9,7 +9,7 @@ class CustomerAccount extends Component {
 
 
     render() {
-    
+
         const iconImgsStyle = {
             width: 300,
             height: 300
@@ -20,7 +20,7 @@ class CustomerAccount extends Component {
                 <CustomerAccNavBar />
                 <div className="accountBody mt-5">
 
-                {/*-------------------------------------- intro------------------------------------*/}
+                    {/*-------------------------------------- intro------------------------------------*/}
 
                     <h2 className="mt-5 ml-5">Hi, Customer !</h2>
 
@@ -36,7 +36,7 @@ class CustomerAccount extends Component {
                         <div className="container">
                             <div className="row">
 
-                                 {/*---------------------------- card1-----------------------------*/}
+                                {/*---------------------------- card1-----------------------------*/}
 
                                 <div className="col-sm-12 col-md-4 mb-3 control">
                                     <div class="card w-100 m-0">
@@ -47,7 +47,7 @@ class CustomerAccount extends Component {
                                             style={iconImgsStyle}
                                         />
                                         <div className="card-body text-center">
-                                             <a class="btn btn-lg btn-primary" href="/complaint" role="button">Make Complaint</a>
+                                            <a class="btn btn-lg btn-primary" href="/complaint" role="button">Make Complaint</a>
                                         </div>
                                     </div>
                                 </div>
@@ -95,13 +95,13 @@ class CustomerAccount extends Component {
 
                     <h2 className="ml-5 my-5">Recommended for you</h2>
 
-                   {/*-------------------------------------- recommendations ------------------------------------*/}
+                    {/*-------------------------------------- recommendations ------------------------------------*/}
 
-                  <div className="recommendations mb-5">
+                    <div className="recommendations mb-5">
                         <div className="container">
                             <div className="row">
 
-                                 {/*---------------------------- card1-----------------------------*/}
+                                {/*---------------------------- card1-----------------------------*/}
 
                                 <div className="col-sm-12 col-md-4 mb-3 control">
                                     <div class="card w-100 m-0">
@@ -161,7 +161,7 @@ class CustomerAccount extends Component {
                     </div>
                 </div>
             </div>
-        
+
         );
     }
 }

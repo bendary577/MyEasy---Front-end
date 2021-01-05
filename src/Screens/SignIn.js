@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "../ScreenSnippets/Navbar";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,14 +8,15 @@ import {
     faGoogle,
     faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-import "../../public/css/signin.css";
+//import "../../public/css/signin.css";
 
 class SignIn extends Component {
     render() {
         return (
             <div className="loginDiv">
-                <div className="login">
-                    <div className="card cardDiv">
+                <Navbar />
+                <div className="col-xs-12 col-lg-6 m-auto">
+                    <div className="">
                         {/*--------------------- card header ------------------------------------------------ */}
 
                         <div className="card-header bg-dark text-body text-center font-weight-bold py-4">
@@ -26,11 +28,7 @@ class SignIn extends Component {
                         {/*--------------------- card body ------------------------------------------------ */}
 
                         <div className="card-body">
-                            <form
-                                className="needs-validation"
-                                method="post"
-                                novalidate
-                            >
+                            <form className="needs-validation" method="post" novalidate>
                                 {/*--------------------email, password  ----------------------------------------- */}
 
                                 <div className="form-group">

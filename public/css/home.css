@@ -1,0 +1,14 @@
+.welcome{
+    height: 540px;
+    overflow: hidden;
+}
+
+.welcome .carousel,
+.welcome .carousel-inner,
+.welcome .carousel-item{
+    height: 100%;
+}
+
+.about .image{
+    height: 300px;
+}

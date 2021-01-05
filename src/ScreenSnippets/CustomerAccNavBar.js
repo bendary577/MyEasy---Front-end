@@ -12,32 +12,31 @@ class CustomerAccNavBar extends Component {
 
             <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
 
-            {/*------------------------- brand logo ----------------------------------------------*/}
+                {/*------------------------- brand logo ----------------------------------------------*/}
 
-               {/* -- 
+                {/* -- 
                 <a className="navbar-brand" href="#">
                     <img src="" alt="Logo" style={ImageStyle} />
                 </a>
-                */ }
+                */}
 
                 <a class="navbar-brand" href="#">My Easy</a>
 
 
-            {/*------------------------- search bar ----------------------------------------------*/}
-
+                {/*------------------------- search bar ----------------------------------------------*/}
                 <form className="form-inline w-50">
                     <input className="form-control mr-sm-2 w-75" type="text" placeholder="Search" />
-                    <button className="btn btn-success" type="submit">Search</button>
+                    <button className="btn btn-primary" type="submit">Search</button>
                 </form>
 
 
-             {/*------------------------- collapsing button ---------------------------------------*/}
-                
+                {/*------------------------- collapsing button ---------------------------------------*/}
+
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                     <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
-            {/*------------------------- nav links ----------------------------------------------*/}
+                {/*------------------------- nav links ----------------------------------------------*/}
 
                 <div class="collapse navbar-collapse accLinks" id="collapsibleNavbar">
                     <ul className="navbar-nav">
@@ -55,7 +54,7 @@ class CustomerAccNavBar extends Component {
 
                         <li class="nav-item dropdown ml-5">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" alt="logo" className="rounded-circle" />
+                                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" alt="logo" className="rounded-circle" />
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" href="#">Edit Profile</a>
@@ -64,7 +63,7 @@ class CustomerAccNavBar extends Component {
                                 <a className="dropdown-item" href="#">Help</a>
                                 <a className="dropdown-item" href="#">Logout</a>
                             </div>
-                        </li>   
+                        </li>
 
                     </ul>
                 </div>

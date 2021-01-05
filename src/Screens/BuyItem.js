@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import CustomerAccountNavBar from "../ScreenSnippets/CustomerAccNavBar";
 import "../../public/css/buyitem.css";
@@ -8,8 +7,6 @@ import BuyItemInfoCard from "../Components/BuyItemInfoCard";
 class BuyItem extends Component {
 
     render() {
-
-       
         return (
             <div className="parent-div">
 
@@ -29,14 +26,14 @@ class BuyItem extends Component {
                             <PaymentForm />
                         </div>
 
-                {/*------------------------------ right side bar --------------------------------------------- */}
+                        {/*------------------------------ right side bar --------------------------------------------- */}
 
                         <div className="right col-sm-12 col-md-6">
                             <BuyItemInfoCard />
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         );
     }
 }

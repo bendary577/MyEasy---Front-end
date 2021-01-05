@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
 import ItemCartCard from "../Components/ItemCartCard";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';   
-import { faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 class MyCart extends Component {
@@ -13,7 +13,7 @@ class MyCart extends Component {
             <div className="parent">
 
                 <CustomerAccNavBar />
-                
+
 
                 <div className="m-5">
                     <div className="container">

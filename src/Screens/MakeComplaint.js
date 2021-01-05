@@ -29,22 +29,22 @@ class MakeComplaint extends Component {
                     </div>
 
 
-                     {/*------------------------------ complaint text --------------------------------------------- */}
+                    {/*------------------------------ complaint text --------------------------------------------- */}
 
                     <div className="complaint mt-4">
                         <label for="complaint">please describe your complaint breifly</label>
                         <br />
                         <textarea id="complaint" form="editprofile-form" rows="5" cols="100" placeholder="Complaint description ..."></textarea>
-                    </div>          
+                    </div>
 
                     <div className="browseDocuments">
-                            <h6>please provide us with any prooving documents</h6> 
-                            <input type="file" id="file" name="file" />
+                        <h6>please provide us with any prooving documents</h6>
+                        <input type="file" id="file" name="file" />
                     </div>
 
                     <div className="text-center my-5">
                         <button type="submit" class="btn btn-lg btn-warning">Send</button>
-                    </div>         
+                    </div>
                 </div>
             </div>
         );

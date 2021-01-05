@@ -25,64 +25,64 @@ class SignUpAs extends Component {
                     <h2 className="my-4">Would you like to register as</h2>
                 </div>
 
-                    {/*-------------------------------------- controls------------------------------------*/}
+                {/*-------------------------------------- controls------------------------------------*/}
 
-                    <div className="buttons">
-                        <div className="container">
-                            <div className="row">
+                <div className="buttons">
+                    <div className="container">
+                        <div className="row">
 
-                                 {/*---------------------------- card1-----------------------------*/}
+                            {/*---------------------------- card1-----------------------------*/}
 
-                                <div className="col-sm-12 col-md-4 mb-2">
-                                    <div class="card w-100 m-0">
-                                        <img
-                                            src={book1}
-                                            alt="Logo1"
-                                            calssName="img img-responsive"
-                                            style={iconImgsStyle}
-                                        />
-                                        <div className="card-body">
-                                            <a class="btn btn-primary" href="/signup" role="button">Customer</a>
-                                        </div>
+                            <div className="col-sm-12 col-md-4 mb-2">
+                                <div class="card w-100 m-0">
+                                    <img
+                                        src={book1}
+                                        alt="Logo1"
+                                        calssName="img img-responsive"
+                                        style={iconImgsStyle}
+                                    />
+                                    <div className="card-body">
+                                        <a class="btn btn-primary" href="/signup" role="button">Customer</a>
                                     </div>
                                 </div>
-
-                                {/*---------------------------- card2-----------------------------*/}
-
-                                <div className="col-sm-12 col-md-4 mb-2">
-                                    <div className="card w-100 m-0">
-                                        <img
-                                            src={book2}
-                                            alt="Logo1"
-                                            calssName="img img-responsive"
-                                            style={iconImgsStyle}
-                                        />
-                                        <div className="card-body">
-                                            <a class="btn btn-warning" href="/signup" role="button">Individual Seller</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                {/*---------------------------- card3-----------------------------*/}
-
-                                <div className="col-sm-12 col-md-4 mb-2">
-                                    <div claclassNamess="card w-100 m-0">
-                                        <img
-                                            src={book3}
-                                            alt="Logo1"
-                                            calssName="img img-responsive"
-                                            style={iconImgsStyle}
-                                        />
-                                        <div className="card-body">
-                                            <a class="btn btn-dark" href="/signup" role="button">Compnay</a>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
+
+                            {/*---------------------------- card2-----------------------------*/}
+
+                            <div className="col-sm-12 col-md-4 mb-2">
+                                <div className="card w-100 m-0">
+                                    <img
+                                        src={book2}
+                                        alt="Logo1"
+                                        calssName="img img-responsive"
+                                        style={iconImgsStyle}
+                                    />
+                                    <div className="card-body">
+                                        <a class="btn btn-warning" href="/signup" role="button">Individual Seller</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {/*---------------------------- card3-----------------------------*/}
+
+                            <div className="col-sm-12 col-md-4 mb-2">
+                                <div claclassNamess="card w-100 m-0">
+                                    <img
+                                        src={book3}
+                                        alt="Logo1"
+                                        calssName="img img-responsive"
+                                        style={iconImgsStyle}
+                                    />
+                                    <div className="card-body">
+                                        <a class="btn btn-dark" href="/signup" role="button">Compnay</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                </div>
 
             </div>
         );

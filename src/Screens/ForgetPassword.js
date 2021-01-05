@@ -9,10 +9,10 @@ class ForgetPassword extends Component {
 
         return (
 
-             <div>
-                 
-             </div>  
-           
+            <div>
+
+            </div>
+
         );
     }
 }
