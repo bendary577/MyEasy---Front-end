@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../public/css/signup.css";
+import Footer from "../ScreenSnippets/Footer";
+import Navbar from "../ScreenSnippets/Navbar";
 
 
 class Signup extends Component {
     render() {
         return (
             <div className="signupDiv">
-                <div className="signup">
-                    <div className="card signupCard">
+                <div className="signup d-flex justify-content-center align-items-center my-5">
+                    <div className="card signupCard w-50 mt-5">
                         {/*--------------------- card header ------------------------------------------------ */}
 
                         <div className="card-header bg-dark text-body text-center font-weight-bold py-4">
