@@ -1,33 +1,76 @@
 import React, { Component } from "react";
-import Bill from '../../../public/images/Services/bill.png';
-import Busniess from '../../../public/images/Services/busniess.png';
-import Market from '../../../public/images/Services/market.jpg';
 
 class Services extends Component {
     render() {
         return (
-            <div className="services text-center" id="services">
-                <div className="container">
-                    <div className="col-12 text-center">
-                        <h1>SERVICES</h1>
-                        <p>SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES.</p>
-                    </div>
-                    <div className="row mt-4 pt-4">
-                        <div className="col-xs-12 col-lg-4">
-                            <img src={Bill} className="w-50 h-50" />
-                            <h2 className="pt-4">PAY YOUR BILL</h2>
+            <section class="service">
+                <div class="container">
+                    <div class="page-section text-center">
+                        <h2 class="page-section__title">SERVICES WE OFFER</h2>
+                        <p class="page-section__paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <div class="row gutters-40">
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <i class="material-icons">trending_up</i>
+                                    <h4 class="service__title">Growing Business</h4>
+                                    <p class="service__paragraph">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <i class="material-icons">access_time</i>
+                                    <h4 class="service__title">Save Time</h4>
+                                    <p class="service__paragraph">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <i class="material-icons">group</i>
+                                    <h4 class="service__title">Free Support</h4>
+                                    <p class="service__paragraph">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-xs-12 col-lg-4">
-                            <img src={Busniess} className="w-50 h-50" />
-                            <h2 className="pt-4">Goal Your Bussines</h2>
-                        </div>
-                        <div className="col-xs-12 col-lg-4">
-                            <img src={Market} className="w-50 h-50" />
-                            <h2 className="pt-4">Make your Market</h2>
+                        <div class="row gutters-40">
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <i class="material-icons">apps</i>
+                                    <h4 class="service__title">Responsive Design </h4>
+                                    <p class="service__paragraph" >
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <i class="material-icons">adjust</i>
+                                    <h4 class="service__title">Target Fill Up</h4>
+                                    <p class="service__paragraph">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <i class="material-icons">local_cafe</i>
+                                    <h4 class="service__title">Graphic Design</h4>
+                                    <p class="service__paragraph">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }

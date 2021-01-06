@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import '../../public/css/home.css';
 import Navbar from "../ScreenSnippets/Navbar";
-import Welcome from '../ScreenSnippets/home/Welcome';
 import About from '../ScreenSnippets/home/About';
 import Services from '../ScreenSnippets/home/Services';
-import Category from '../ScreenSnippets/home/Category';
 import Contact from '../ScreenSnippets/home/Contact';
+import Lets from '../ScreenSnippets/home/Lets';
+import WhatClientSay from '../ScreenSnippets/home/WhatClientSay';
+import Footer from '../ScreenSnippets/Footer';
 
 class Home extends Component {
     render() {
@@ -13,14 +14,13 @@ class Home extends Component {
             <div className="parent-div">
                 <Navbar />
 
-                <Welcome />
-                <About />
-                <hr />
                 <Services />
-                <hr />
-                <Category />
-                <hr />
                 <Contact />
+                <About />
+                <Lets />
+                <WhatClientSay />
+
+                <Footer />
             </div>
         )
     }

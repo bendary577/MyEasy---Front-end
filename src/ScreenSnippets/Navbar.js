@@ -1,45 +1,38 @@
 import React, { Component } from "react";
-import Logo from '../../public/images/Navbar/logo.png';
 
 class Navbar extends Component {
     render() {
         return (
-            <div className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="/">
-                        <img src={Logo} alt="" width="100" height="70" className="d-inline-block align-top" />
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">HOME</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/#about">ABOUT</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/#services">SERVICES</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/#categories">CATEGORIES</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/#contact">CONTACT</a>
-                            </li>
-                        </ul>
-                        <div className="d-flex">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item">
-                                    <a className="btn btn-primary" aria-current="page" href="/signin">SIGNIN</a>
-                                </li>
+            <header className="header header--bg">
+                <div className="container">
+                    <nav className="navbar">
+                        <div className="navbar-header">
+                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                            </button>
+                            <a className="navbar-brand" href="">MY EASY</a>
+                        </div>
+                        <div className="collapse navbar-collapse" id="myNavbar">
+                            <ul className="nav navbar-nav pull-right">
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">SERVICES</a></li>
+                                <li><a href="">FEATURES</a></li>
+                                <li><a href="">PORTFOLIO</a></li>
+                                <li><a href="">BLOG</a></li>
+                                <li><a href="">CONTACT</a></li>
                             </ul>
                         </div>
+                    </nav>
+                    <div className="header__content text-center">
+                        <h1 className="header__content__title">CREATIVE AGENCY</h1>
+                        <p className="header__content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <a className="button button--margin-right button--hover" href="#">LARN MORE</a>
+                        <a className="button button--hover" href="#" >PURCHASE</a>
                     </div>
                 </div>
-            </div>
+            </header>
         )
     }
 }
