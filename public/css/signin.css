@@ -1,41 +1,7 @@
-/*
-.loginDiv {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(2, 0, 36, 0.6) 0%,
-      rgba(118, 118, 179, 0.6) 0%,
-      rgba(84, 145, 201, 0.6) 0%,
-      rgba(109, 193, 146, 0.6) 26%,
-      rgba(71, 200, 184, 0.6) 44%,
-      rgba(60, 202, 195, 0.6) 59%,
-      rgba(52, 203, 203, 0.6) 74%,
-      rgba(0, 212, 255, 0.6) 100%
-    ),
-    url("../images/signupBackground.jpg");
-  background-position: right top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-
-
-/* @media screen and (max-width: 992px) and (min-width: 769px) {
+@media screen and (max-width: 992px) and (min-width: 769px) {
   .cardDiv {
-    width:35%;
+    width: 35%;
   }
-}
-*/
-
-.login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
 }
 
 @media screen and (max-width: 768px) and (min-width: 577px) {

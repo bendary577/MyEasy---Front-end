@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navbar from "../ScreenSnippets/Navbar";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,15 +7,14 @@ import {
     faGoogle,
     faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-//import "../../public/css/signin.css";
+import "../../public/css/signin.css";
 
 class SignIn extends Component {
     render() {
         return (
             <div className="loginDiv">
-                <Navbar />
-                <div className="col-xs-12 col-lg-6 m-auto">
-                    <div className="">
+                <div className="login d-flex justify-content-center align-items-center my-5">
+                    <div className="card loginCard w-50 mt-5">
                         {/*--------------------- card header ------------------------------------------------ */}
 
                         <div className="card-header bg-dark text-body text-center font-weight-bold py-4">
@@ -178,6 +176,7 @@ class SignIn extends Component {
                     {/*--------------------- end card ----------------------------------------- */}
                 </div>
             </div>
+            
         );
     }
 }

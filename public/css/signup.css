@@ -1,36 +1,17 @@
-.signup {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
-}
-
 @media screen and (max-width: 768px) and (min-width: 577px) {
-  .signupDiv {
-    height: 100%;
-  }
-  .signup {
+  .signupCard {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 576px) and (min-width: 401px) {
-  .signupDiv {
-    height: 100%;
-  }
-  .signup {
+  .signupCard {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 400) {
-  .signupDiv {
-    height: 100%;
-  }
-  .signup {
+  .signupCard {
     width: 80%;
   }
 }

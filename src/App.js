@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Footer from "./ScreenSnippets/Footer";
 import Home from "./Screens/Home";
 import SignIn from "./Screens/SignIn";
 import SignUp from "./Screens/SignUp";
@@ -62,8 +61,11 @@ class App extends Component {
                         <Store />
                     </Route>
 
+                    <Route exact path="/home">
+                        <Home />
+                    </Route>
+
                 </Switch>
-                <Footer />
             </BrowserRouter>
         );
     }
