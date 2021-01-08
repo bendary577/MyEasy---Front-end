@@ -105,7 +105,7 @@ class PaymentForm extends Component {
 
                       {/*------------------card security ----------------------------------------*/}
 
-                          <div className="col-sm-6">
+                          <div className="col-sm-6 mt-2">
                               <label for="card-security">Security Code</label>
                               <FontAwesomeIcon icon={MdSecurity} className="fa-lg"></FontAwesomeIcon>
                               <input type="text" id="card-security" name="card-security" />

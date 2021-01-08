@@ -4,7 +4,7 @@ import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
 import ItemCartCard from "../Components/ItemCartCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
+import Footer from "../ScreenSnippets/Footer";
 
 class MyCart extends Component {
     render() {
@@ -42,7 +42,7 @@ class MyCart extends Component {
                         </div>
                     </div>
                 </div>
-
+                <Footer />
             </div>
         );
     }

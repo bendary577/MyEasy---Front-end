@@ -11,13 +11,14 @@ class Signup extends Component {
             <div className="signupDiv">
                 <div className="signup d-flex justify-content-center align-items-center my-5">
                     <div className="card signupCard w-50 mt-5">
-                        {/*--------------------- card header ------------------------------------------------ */}
+                        {/*--------------------- card header ------------------------------------------------
 
                         <div className="card-header bg-dark text-body text-center font-weight-bold py-4">
                             <h2 className="text-white">
                                 <strong>Signup as an individual seller</strong>
                             </h2>
                         </div>
+                         */}
 
                         {/*--------------------- card body ------------------------------------------------ */}
 
@@ -108,7 +109,7 @@ class Signup extends Component {
                                         type="text"
                                         placeholder="phone number"
                                         className="form-control"
-                                        name="phoneNUmber"
+                                        name="phone"
                                         maxLength="11"
                                         required
                                     ></input>
@@ -116,6 +117,13 @@ class Signup extends Component {
                                         Please enter a valid phone number.
                                     </div>
                                 </div>
+
+                                <div className="form-group">
+                                <input type="date" placeholder="phone number" className="form-control" name="birthday" />
+                                    <div className="invalid-feedback">
+                                        Please enter a valid bithdate.
+                                    </div>
+                                </div>  
 
                                 {/*--------------------- specialization ----------------------------------------------- */}
                                 <div className="form-row">

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
-import book2 from "../../public/images/book_2.png";
+import product from "../../public/images/product1.jpeg"
 
 class BuyItemInfoCard extends Component {
     render() {
@@ -13,7 +13,7 @@ class BuyItemInfoCard extends Component {
 
         return (
             <div className="card mb-5">
-                <img className="card-img-top w-100" alt="" src={book2} style={ImgsStyle} />
+                <img className="card-img-top w-100" alt="" src={product} style={ImgsStyle} />
                 <div className="card-body bg-light">
                     <h3 className="card-title">Summary</h3>
                     <div className="name clearfix">
