@@ -13,13 +13,11 @@ class Home extends Component {
         return (
             <div className="parent-div">
                 <Navbar />
-
                 <Services />
                 <Contact />
                 <About />
                 <Lets />
                 <WhatClientSay />
-
                 <Footer />
             </div>
         )
