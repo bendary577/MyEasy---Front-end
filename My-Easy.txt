@@ -286,8 +286,13 @@
 		- add date
 		- available number
 		- photo
+		- rating
+		- number of ratings
+		- comments
 
 	- categories : 
+
+	- comments : 
 	
 	- Order : 
 		- customer name

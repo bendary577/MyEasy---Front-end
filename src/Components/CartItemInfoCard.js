@@ -6,7 +6,7 @@ import book1 from "../../public/images/book_1.png";
 
 
 
-class ItemCartCard extends Component {
+class CartItemInfoCard extends Component {
 
 
     render() {
@@ -32,7 +32,7 @@ class ItemCartCard extends Component {
 
                     <div className="clearfix">
                         <p className="text-success mt-2 float-left">$129.99</p>
-                        <a class="btn btn-danger w-50 float-right" href="/buyitem" role="button">
+                        <a className="btn btn-danger w-50 float-right" href="/buyitem" role="button">
                             <FontAwesomeIcon icon={faShoppingCart} className="mr-2"></FontAwesomeIcon>
                             Buy
                         </a>
@@ -44,4 +44,4 @@ class ItemCartCard extends Component {
     }
 }
 
-export default ItemCartCard;
+    export default CartItemInfoCard;

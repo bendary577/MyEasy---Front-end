@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ItemCartCard from '../Components/ItemCartCard';
+import CartItemInfoCard from '../Components/CartItemInfoCard';
 import '../../public/css/store.css';
 
 class Store extends Component {
@@ -9,23 +9,23 @@ class Store extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3 control">
-                            <ItemCartCard />
+                            <CartItemInfoCard />
                         </div>
 
                         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3 control">
-                            <ItemCartCard />
+                            <CartItemInfoCard />
                         </div>
 
                         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3 control">
-                            <ItemCartCard />
+                            <CartItemInfoCard />
                         </div>
 
                         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3 control">
-                            <ItemCartCard />
+                            <CartItemInfoCard />
                         </div>
 
                         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3 control">
-                            <ItemCartCard />
+                            <CartItemInfoCard />
                         </div>
                     </div>
                 </div>
