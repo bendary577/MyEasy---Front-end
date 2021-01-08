@@ -12,8 +12,8 @@ class Navbar extends Component {
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="nav me-auto pull-right">
+                        <div className="collapse navbar-collapse" style={{ display: 'block !important' }} id="navbarSupportedContent">
+                            <ul className="nav me-auto float-right">
                                 <li className="nav-item"><a href="" className="nav-link">HOME</a></li>
                                 <li className="nav-item"><a href="" className="nav-link">SERVISES</a></li>
                                 <li className="nav-item"><a href="" className="nav-link">ABOUT</a></li>

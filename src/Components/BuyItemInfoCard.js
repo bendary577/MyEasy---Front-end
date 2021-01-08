@@ -19,7 +19,7 @@ class BuyItemInfoCard extends Component {
                     <div className="name clearfix">
                         <p className="card-text float-left">Item Name</p>
                         <div className="float-right">
-                        <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
                             <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
