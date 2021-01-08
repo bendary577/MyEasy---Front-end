@@ -1,5 +1,4 @@
 .material-icons {
-    font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
     display: inline-block;
@@ -16,7 +15,6 @@
 }
   
 body{
-    font-family: "Roboto", sans-serif;
     line-height: 1.8;
 }
   
@@ -126,7 +124,6 @@ outline: none;
     max-width: 530px;
     margin-right: auto;
     margin-left: auto;
-    font-family: Roboto-Light;
     margin-bottom: 50px;
 }
   
@@ -145,7 +142,7 @@ outline: none;
   
 @media screen and (max-width: 768px){
     .navbar-collapse{
-      float: left;
+      float: right;
     }
   
     .header .button{
@@ -218,7 +215,6 @@ outline: none;
     padding: 8px 35px;
     border: 2px solid #7d7d7d;
     border-radius: 30px;
-    font-family: Roboto-Light;
     font-weight: bold;
 }
 
@@ -368,7 +364,6 @@ outline: none;
 .page-section__paragraph--white{
     font-size: 18px;
     color: #f1f1f1;
-    font-family: Roboto-Light;
     margin-bottom: 50px;
 }
   
@@ -432,7 +427,6 @@ outline: none;
 .about__content-subTitle{
     font-size: 17px;
     color: #848484;
-    font-family: Roboto-Light;
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 40px;
@@ -621,7 +615,6 @@ outline: none;
 .footer__title{
     font-size: 20px;
     color: #fff;
-    font-family: Roboto-Light;
     font-weight: bold;
     padding-top: 80px;
     margin-bottom: 25px;

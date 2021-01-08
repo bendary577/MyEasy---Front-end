@@ -7,7 +7,7 @@ class Lest extends Component {
                 <div class="container">
                     <div class="page-section page-section--small text-center">
                         <h2 class="page-section__title--white page-section__title--white--less-margin">LET’S MAKE SOMETHING GREAT
-                    TOGETHER</h2>
+                        TOGETHER</h2>
                         <p class="page-section__paragraph page-section__paragraph--less-padding">We aim to eliminate the task of
                         dividing your project between different agency between different agency, corporate</p>
                         <a class="button button--hover" href="#">LETS GO</a>
