@@ -1,10 +1,11 @@
 
 import React, { Component } from "react";
 import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
-import ItemCartCard from "../Components/ItemCartCard";
+import ItemCartCard from "../Components/CartItemInfoCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
+import Footer from "../ScreenSnippets/Footer";
+import CartItemInfoCard from "../Components/CartItemInfoCard";
 
 class MyCart extends Component {
     render() {
@@ -25,24 +26,24 @@ class MyCart extends Component {
 
                         <div className="row">
                             <div className="col-sm-6 col-md-3 mb-3 control">
-                                <ItemCartCard />
+                                <CartItemInfoCard />
                             </div>
 
                             <div className="col-sm-6 col-md-3 mb-3 control">
-                                <ItemCartCard />
+                                <CartItemInfoCard />
                             </div>
 
                             <div className="col-sm-6 col-md-3 mb-3 control">
-                                <ItemCartCard />
+                                <CartItemInfoCard />
                             </div>
 
                             <div className="col-sm-6 col-md-3 mb-3 control">
-                                <ItemCartCard />
+                                <CartItemInfoCard />
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <Footer />
             </div>
         );
     }

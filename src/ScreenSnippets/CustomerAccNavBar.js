@@ -1,3 +1,5 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import "../../public/css/customeraccnavbar.css";
 
@@ -20,14 +22,14 @@ class CustomerAccNavBar extends Component {
                 </a>
                 */}
 
-                <a class="navbar-brand" href="#">My Easy</a>
+                <a class="navbar-brand" href="/home">My Easy</a>
 
 
-                {/*------------------------- search bar ----------------------------------------------*/}
-                <form className="form-inline w-50">
-                    <input className="form-control mr-sm-2 w-75" type="text" placeholder="Search" />
-                    <button className="btn btn-primary" type="submit">Search</button>
-                </form>
+                {/*------------------------- search bar ---------------------------------------------*/}
+
+                <div class="input-group w-50">
+                    <input type="text" class="form-control" placeholder="search" aria-describedby="sizing-addon2" />
+                </div>
 
 
                 {/*------------------------- collapsing button ---------------------------------------*/}
@@ -38,21 +40,21 @@ class CustomerAccNavBar extends Component {
 
                 {/*------------------------- nav links ----------------------------------------------*/}
 
-                <div class="collapse navbar-collapse accLinks" id="collapsibleNavbar">
+                <div className="ml-5 collapse navbar-collapse accLinks" id="collapsibleNavbar">
                     <ul className="navbar-nav">
                         <li className="nav-item mt-2">
-                            <a className="nav-link" href="#">Browse Stores</a>
+                            <a className="nav-link" href="/store">Browse Stores</a>
                         </li>
                         <li className="nav-item mt-2">
-                            <a className="nav-link" href="mycart">My Cart</a>
+                            <a className="nav-link" href="/mycart">My Cart</a>
                         </li>
                         <li className="nav-item mt-2">
-                            <a className="nav-link" href="myorders">My Orders</a>
+                            <a className="nav-link" href="/myorders">My Orders</a>
                         </li>
 
                         {/*------------------------- drop down links ----------------------------------------------*/}
 
-                        <li class="nav-item dropdown ml-5">
+                        <li class="nav-item dropdown mr-0 ml-5">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" alt="logo" className="rounded-circle" />
                             </a>

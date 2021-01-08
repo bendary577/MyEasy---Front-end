@@ -205,25 +205,26 @@
 			4.1 - Customer Profile Screen									: Bendary - done
 				4.1.1 - Customer Edit Profile Screen						: Bendary - done
 				4.1.2 - Browse Stores Screen
-					4.1.2.1 - Store Screen									: Bendary
+					4.1.2.1 - Store Screen									: Mosaad
 					4.1.2.2 - View Seller Profile Screen					: Mosaad
-					4.1.2.3 - View Item Details Screen						: Mosaad
+					4.1.2.3 - View Item Details Screen						: Bendary 
 				4.1.3 - My Cart Screen										: Bendary - done
 				4.1.4 - My Orders Screen									: Bendary - done
-					4.1.4.1 - View Order Details							:  																	
+					4.1.4.1 - View Order Details							: Mosaad 																	
 				4.1.5 - Make a Complaint Screen								: Bendary - done
 				4.1.6 - Buy Item Screen										: Bendary - done
 
 			4.2 - Individual Seller Profile Screen
 				4.2.1 - Individual Seller Edit Profile Screen
 				4.2.2 - Create Store Screen									: Mosaad
-					4.2.2.1 - Upload Item Screen							: Mosaad
-				4.2.3 - My Store Screen
-				4.2.4 - Create Invoice Screen								: Mosaad
+					4.2.2.1 - Upload Item Screen							: Mosaad - done
+				4.2.3 - My Store Screen										: Bendary
+				4.2.4 - Create Invoice Screen								: Mosaad - done
 				4.2.5 - Make Complaint Screen
 				4.2.6 - My Orders Screen																		
-				4.2.7 - View Customer Profile Screen
-				4.2.8 - My Invoices Screen
+				4.2.7 - View Customer Profile Screen						: Bendary
+				4.2.8 - My Invoices Screen									: Mosaad
+				4.2.9 - New Order Notification Screen (contains pdf)		: Bendary
 
 			4.3 - Company Seller Profile Screen
 				4.3.1 - Company Seller Edit Profile Screen
@@ -285,6 +286,13 @@
 		- add date
 		- available number
 		- photo
+		- rating
+		- number of ratings
+		- comments
+
+	- categories : 
+
+	- comments : 
 	
 	- Order : 
 		- customer name
@@ -294,7 +302,8 @@
 		- price
 		- item
 		- order time
-	
+		- status 
+
 	- Invoice : 
 		- item
 		- price

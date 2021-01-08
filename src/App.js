@@ -12,6 +12,7 @@ import MyOrders from './Screens/MyOrders';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
 import './App.css';
+import ViewItemDetails from './Screens/ViewItemDetails';
 
 class App extends Component {
     render() {
@@ -63,6 +64,10 @@ class App extends Component {
 
                     <Route exact path="/home">
                         <Home />
+                    </Route>
+
+                    <Route exact path="/viewitem">
+                        <ViewItemDetails />
                     </Route>
 
                 </Switch>
