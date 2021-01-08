@@ -11,6 +11,8 @@ import BuyItem from './Screens/BuyItem';
 import MyOrders from './Screens/MyOrders';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
+import Uploaditem from './Screens/Uploaditem';
+import Invoice from './Screens/Invoice';
 import './App.css';
 import ViewItemDetails from './Screens/ViewItemDetails';
 
@@ -68,6 +70,14 @@ class App extends Component {
 
                     <Route exact path="/viewitem">
                         <ViewItemDetails />
+                    </Route>
+
+                    <Route exact path="/uploaditem">
+                        <Uploaditem />
+                    </Route>
+
+                    <Route exact path="/invoice">
+                        <Invoice />
                     </Route>
 
                 </Switch>
