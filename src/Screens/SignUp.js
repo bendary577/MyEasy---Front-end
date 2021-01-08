@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../public/css/signup.css";
-import Footer from "../ScreenSnippets/Footer";
-import Navbar from "../ScreenSnippets/Navbar";
 
 
 class Signup extends Component {

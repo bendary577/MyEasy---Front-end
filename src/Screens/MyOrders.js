@@ -1,9 +1,9 @@
 
 import { faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from "react";
-import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
+import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Footer from "../ScreenSnippets/Footer";
+import Footer from "../ScreenSnippets/accounts/Footer";
 
 
 

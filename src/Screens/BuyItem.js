@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/CustomerAccNavBar";
+import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import "../../public/css/buyitem.css";
 import PaymentForm from "../Components/PaymentForm";
 import BuyItemInfoCard from "../Components/BuyItemInfoCard";

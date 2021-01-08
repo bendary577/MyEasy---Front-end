@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
+import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import "../../public/css/customeraccount.css";
 import book1 from "../../public/images/book_1.png";
 import book2 from "../../public/images/book_2.png";
 import book3 from "../../public/images/book_3.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import Footer from "../ScreenSnippets/Footer";
+import Footer from "../ScreenSnippets/accounts/Footer";
 
 class CustomerAccount extends Component {
 

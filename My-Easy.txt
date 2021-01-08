@@ -287,6 +287,7 @@
 		- rating
 		- number of ratings
 		- comments
+		- item status
 
 	- categories : 
 

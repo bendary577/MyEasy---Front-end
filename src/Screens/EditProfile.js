@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/CustomerAccNavBar";
+import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import "../../public/css/editaccount.css";
 import book2 from "../../public/images/book_2.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

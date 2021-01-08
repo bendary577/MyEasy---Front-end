@@ -1,15 +1,8 @@
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import "../../public/css/customeraccnavbar.css";
+
 
 class CustomerAccNavBar extends Component {
-
-
     render() {
-
-
-
         return (
 
             <nav className="navbar navbar-expand-sm bg-dark navbar-dark">

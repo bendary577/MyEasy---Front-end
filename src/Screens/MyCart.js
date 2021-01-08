@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
-import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
+import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import ItemCartCard from "../Components/CartItemInfoCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import Footer from "../ScreenSnippets/Footer";
+import Footer from "../ScreenSnippets/accounts/Footer";
 import CartItemInfoCard from "../Components/CartItemInfoCard";
 
 class MyCart extends Component {
