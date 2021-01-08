@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Slider1 from '../../../public/images/blog-pic1.png';
-import Slider2 from '../../../public/images/blog-pic2.png';
-import Slider3 from '../../../public/images/blog-pic3.png';
+import Slider1 from '../../../public/images/girl1.jpg';
+import Slider2 from '../../../public/images/girl2.jpg';
+import Slider3 from '../../../public/images/girl3.jpg';
 
 class StoreSlider extends Component {
     render() {
-        const setting = {
-            controls: false,
-        }
         return (
             <Carousel indicators={false}>
                 <Carousel.Item>
