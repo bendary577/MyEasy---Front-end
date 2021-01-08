@@ -139,7 +139,7 @@ outline: none;
 .navbar-header .icon-bar{
     background-color: #fff !important;
 }
-  
+
 @media screen and (max-width: 768px){
     .navbar-collapse{
       float: right;
