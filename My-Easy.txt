@@ -200,14 +200,14 @@
 			1.4 - Categories Section
 			1.5 - Contact Us Section
 		2 - Register Screen													: Bendary - done
-		3 - Login Screen													: Bendary - done 
+		3 - Login Screen 													: Bendary - done 
 		4 - Views : 
 			4.1 - Customer Profile Screen									: Bendary - done
 				4.1.1 - Customer Edit Profile Screen						: Bendary - done
 				4.1.2 - Browse Stores Screen
 					4.1.2.1 - Store Screen									: Mosaad
 					4.1.2.2 - View Seller Profile Screen					: Mosaad
-					4.1.2.3 - View Item Details Screen						: Bendary 
+					4.1.2.3 - View Item Details Screen						: Bendary - done
 				4.1.3 - My Cart Screen										: Bendary - done
 				4.1.4 - My Orders Screen									: Bendary - done
 					4.1.4.1 - View Order Details							: Mosaad 																	
@@ -215,7 +215,7 @@
 				4.1.6 - Buy Item Screen										: Bendary - done
 
 			4.2 - Individual Seller Profile Screen
-				4.2.1 - Individual Seller Edit Profile Screen
+				4.2.1 - Individual Seller Edit Profile Screen               
 				4.2.2 - Create Store Screen									: Mosaad
 					4.2.2.1 - Upload Item Screen							: Mosaad - done
 				4.2.3 - My Store Screen										: Bendary
@@ -265,12 +265,10 @@
 		- category
 		- phone number
 
-		- Customer : 
 		- Seller : 
-			- Individual
-			- Company
+			- seller bagde
 
-	- Admin : 
+		- Admin : 
 	
 	- Store : 
 		- name

@@ -28,7 +28,8 @@ class BuyItemInfoCard extends Component {
                         </div>
                     </div>
 
-                    <p className="card-text">Item description ... pla pla pla pla pla pla</p>
+                    <p className="card-text">Description Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
 
                     <div className="price clearfix">
                         <p className="card-text float-left">Item Price</p>

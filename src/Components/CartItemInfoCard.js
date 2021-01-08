@@ -12,8 +12,7 @@ class CartItemInfoCard extends Component {
     render() {
         return (
             <div class="card w-100 m-0 itemcartcard">
-                <img
-                    src={book1} calssName="card-img img-responsive" />
+                <img src={book1} calssName="card-img img-responsive" />
                 <div className="card-body">
                     <div className="clearfix">
                         <h6 className="float-left">Item Name</h6>
