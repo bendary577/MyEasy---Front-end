@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Navbar extends Component {
     render() {
         return (
-            <header className="header header--bg">
+            <header className="header navbar-expand-lg header--bg">
                 <div className="container">
                     <nav className="navbar">
                         <div className="navbar-header">
@@ -12,13 +12,15 @@ class Navbar extends Component {
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <ul className="nav navbar-nav pull-right">
-                            <li className="nav-item"><a href="" className="nav-link">HOME</a></li>
-                            <li className="nav-item"><a href="" className="nav-link">SERVISES</a></li>
-                            <li className="nav-item"><a href="" className="nav-link">About</a></li>
-                            <li className="nav-item"><a href="" className="nav-link">CLINET SAY</a></li>
-                            <li className="nav-item"><a href="" className="nav-link">JOIN</a></li>
-                        </ul>
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="nav me-auto pull-right">
+                                <li className="nav-item"><a href="" className="nav-link">HOME</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">SERVISES</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">ABOUT</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">WHAT CLINET SAY</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">JOIN</a></li>
+                            </ul>
+                        </div>
                     </nav>
                     <div className="header__content text-center">
                         <h1 className="header__content__title">CREATIVE AGENCY</h1>
