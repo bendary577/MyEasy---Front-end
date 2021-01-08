@@ -205,7 +205,7 @@
 			4.1 - Customer Profile Screen									: Bendary - done
 				4.1.1 - Customer Edit Profile Screen						: Bendary - done
 				4.1.2 - Browse Stores Screen
-					4.1.2.1 - Store Screen									: Mosaad
+					4.1.2.1 - Store Screen									: Mosaad - done
 					4.1.2.2 - View Seller Profile Screen					: Mosaad
 					4.1.2.3 - View Item Details Screen						: Bendary - done
 				4.1.3 - My Cart Screen										: Bendary - done
