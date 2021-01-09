@@ -12,6 +12,7 @@ import MyOrders from './Screens/MyOrders';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
 import Uploaditem from './Screens/Uploaditem';
+import MyInvoices from './Screens/MyInvoices';
 import MakeInvoice from './Screens/MakeInvoice';
 import ViewItemDetails from './Screens/ViewItemDetails';
 import './App.css';
@@ -78,6 +79,10 @@ class App extends Component {
 
                     <Route exact path="/invoice">
                         <MakeInvoice />
+                    </Route>
+
+                    <Route exact path="/myinvoice">
+                        <MyInvoices />
                     </Route>
 
                 </Switch>

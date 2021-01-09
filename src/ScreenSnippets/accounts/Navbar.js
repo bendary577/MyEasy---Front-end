@@ -14,19 +14,18 @@ class Navbar extends Component {
                         </button>
                         <div className="collapse navbar-collapse" style={{ display: 'block !important' }} id="navbarSupportedContent">
                             <ul className="nav me-auto float-right">
-                                <li className="nav-item"><a href="" className="nav-link">HOME</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">SERVISES</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">ABOUT</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">WHAT CLINET SAY</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">JOIN</a></li>
+                                <li className="nav-item"><a href="/" className="nav-link">HOME</a></li>
+                                <li className="nav-item"><a href="/#services" className="nav-link">SERVISES</a></li>
+                                <li className="nav-item"><a href="/#about" className="nav-link">ABOUT</a></li>
+                                <li className="nav-item"><a href="/#contact" className="nav-link">CONTACT</a></li>
+                                <li className="nav-item"><a href="/#what" className="nav-link">WHAT CLINET SAY</a></li>
+                                <li className="nav-item"><a href="/signin" className="nav-link">JOIN</a></li>
                             </ul>
                         </div>
                     </nav>
                     <div className="header__content text-center">
                         <h1 className="header__content__title">CREATIVE AGENCY</h1>
                         <p className="header__content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                        <a className="button button--margin-right button--hover" href="#">LARN MORE</a>
-                        <a className="button button--hover" href="#" >PURCHASE</a>
                     </div>
                 </div>
             </header >
