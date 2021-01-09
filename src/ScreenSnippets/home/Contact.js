@@ -8,7 +8,7 @@ class Contact extends Component {
                     <div className="page-section text-center">
                         <h2 className="page-section__title--white">We Always Work To Make A Difference</h2>
                         <p className="page-section__paragraph--white">If you like our works and have a project,contact us now</p>
-                        <a className="button button--hover" href="">CONTACT US</a>
+                        <a className="button button--hover" href="/#contact">CONTACT US</a>
                     </div>
                 </div>
             </section>

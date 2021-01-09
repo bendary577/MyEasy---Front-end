@@ -12,7 +12,6 @@ import MyOrders from './Screens/MyOrders';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
 import Uploaditem from './Screens/Uploaditem';
-import Invoice from './Screens/Invoice';
 import MyInvoices from './Screens/MyInvoices';
 import MakeInvoice from './Screens/MakeInvoice';
 import ViewItemDetails from './Screens/ViewItemDetails';

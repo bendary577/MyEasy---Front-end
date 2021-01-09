@@ -1,9 +1,16 @@
 import React, { Component } from "react";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
+import { faHeadset } from "@fortawesome/free-solid-svg-icons";
+import { faFileInvoice } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+faHeadset
 class Services extends Component {
     render() {
         return (
-            <section class="service">
+            <section class="service" id="services">
                 <div class="container">
                     <div class="page-section text-center">
                         <h2 class="page-section__title">SERVICES WE OFFER</h2>
@@ -13,7 +20,7 @@ class Services extends Component {
                         <div class="row gutters-40">
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <i class="material-icons">trending_up</i>
+                                    <FontAwesomeIcon icon={faChartLine} style={{ fontSize: '50px' }}></FontAwesomeIcon>
                                     <h4 class="service__title">Growing Business</h4>
                                     <p class="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -22,7 +29,7 @@ class Services extends Component {
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <i class="material-icons">access_time</i>
+                                    <FontAwesomeIcon icon={faBusinessTime} style={{ fontSize: '50px' }}></FontAwesomeIcon>
                                     <h4 class="service__title">Save Time</h4>
                                     <p class="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -31,7 +38,7 @@ class Services extends Component {
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <i class="material-icons">group</i>
+                                    <FontAwesomeIcon icon={faHeadset} style={{ fontSize: '50px' }}></FontAwesomeIcon>
                                     <h4 class="service__title">Free Support</h4>
                                     <p class="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -42,8 +49,8 @@ class Services extends Component {
                         <div class="row gutters-40">
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <i class="material-icons">apps</i>
-                                    <h4 class="service__title">Responsive Design </h4>
+                                    <FontAwesomeIcon icon={faFileInvoice} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <h4 class="service__title">Make Invoice </h4>
                                     <p class="service__paragraph" >
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
@@ -51,8 +58,8 @@ class Services extends Component {
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <i class="material-icons">adjust</i>
-                                    <h4 class="service__title">Target Fill Up</h4>
+                                    <FontAwesomeIcon icon={faShoppingBag} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <h4 class="service__title">Create Your Market</h4>
                                     <p class="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
@@ -60,8 +67,8 @@ class Services extends Component {
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <i class="material-icons">local_cafe</i>
-                                    <h4 class="service__title">Graphic Design</h4>
+                                    <FontAwesomeIcon icon={faShoppingBasket} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <h4 class="service__title">Make Shopping</h4>
                                     <p class="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
