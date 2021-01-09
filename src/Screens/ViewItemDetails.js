@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import ProductCarousel from "../Components/ProductsCarousel";
 import ViewItemInfoCard from "../Components/ViewItemInfoCard";
-import CustomerAccNavBar from "../ScreenSnippets/CustomerAccNavBar";
-import Footer from "../ScreenSnippets/Footer"
+import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import Footer from "../ScreenSnippets/accounts/Footer";
+import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar"
 
 
 class ViewItemDetails extends Component {
@@ -13,6 +14,7 @@ class ViewItemDetails extends Component {
         return (
             <div className="parent-div">
                 <CustomerAccNavBar />
+                <CategoriesNavbar />
                 <div className="container">
 
                     {/* ------------------------------- links -------------------------------------------- */}

@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/CustomerAccNavBar";
+import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import "../../public/css/makecomplaint.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
