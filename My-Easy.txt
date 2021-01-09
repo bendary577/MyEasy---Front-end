@@ -223,7 +223,7 @@
 				4.2.5 - Make Complaint Screen
 				4.2.6 - My Orders Screen																		
 				4.2.7 - View Customer Profile Screen						: Bendary
-				4.2.8 - My Invoices Screen									: Mosaad
+				4.2.8 - My Invoices Screen									: Mosaad - 
 				4.2.9 - New Order Notification Screen (contains pdf)		: Bendary
 
 			4.3 - Company Seller Profile Screen

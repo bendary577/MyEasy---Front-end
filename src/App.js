@@ -13,8 +13,9 @@ import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
 import Uploaditem from './Screens/Uploaditem';
 import Invoice from './Screens/Invoice';
-import './App.css';
+import MyInvoices from './Screens/MyInvoices';
 import ViewItemDetails from './Screens/ViewItemDetails';
+import './App.css';
 
 class App extends Component {
     render() {
@@ -78,6 +79,10 @@ class App extends Component {
 
                     <Route exact path="/invoice">
                         <Invoice />
+                    </Route>
+
+                    <Route exact path="/myinvoice">
+                        <MyInvoices />
                     </Route>
 
                 </Switch>
