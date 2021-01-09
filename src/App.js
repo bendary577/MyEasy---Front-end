@@ -12,8 +12,12 @@ import MyOrders from './Screens/MyOrders';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
 import Uploaditem from './Screens/Uploaditem';
+<<<<<<< HEAD
 import Invoice from './Screens/Invoice';
 import MyInvoices from './Screens/MyInvoices';
+=======
+import MakeInvoice from './Screens/MakeInvoice';
+>>>>>>> d7590ac0b8122aac8a46bf61b89e5414232216c5
 import ViewItemDetails from './Screens/ViewItemDetails';
 import './App.css';
 
@@ -78,7 +82,7 @@ class App extends Component {
                     </Route>
 
                     <Route exact path="/invoice">
-                        <Invoice />
+                        <MakeInvoice />
                     </Route>
 
                     <Route exact path="/myinvoice">
