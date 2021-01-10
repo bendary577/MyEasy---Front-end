@@ -245,7 +245,7 @@
 
 		5 - Search Result Screen
 		6 - Notifications Screen
-		7 - Logout Screen													: Bendary
+		7 - Logout Screen													: Bendary - 
 		8 - Forget Password Screen											: Mosaad  - done
 			
 
