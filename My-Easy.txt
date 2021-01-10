@@ -216,7 +216,7 @@
 
 			4.2 - Individual Seller Profile Screen							****************
 				4.2.1 - Individual Seller Edit Profile Screen               
-				4.2.2 - Create Store Screen									: Mosaad
+				4.2.2 - Create Store Screen									: Mosaad - Pending
 					4.2.2.1 - Upload Item Screen							: Mosaad - done
 				4.2.3 - My Store Screen										: Bendary
 				4.2.4 - Create Invoice Screen								: Mosaad - done
