@@ -9,6 +9,7 @@ import EditProfile from "./Screens/EditProfile";
 import MakeComplaint from './Screens/MakeComplaint';
 import BuyItem from './Screens/BuyItem';
 import MyOrders from './Screens/MyOrders';
+import OrderDetails from './Screens/OrderDetails';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
 import CreateStore from './Screens/CreateStore';
@@ -26,6 +27,7 @@ class App extends Component {
                     <Route exact path="/">
                         <Home />
                     </Route>
+
                     <Route exact path="/signin">
                         <SignIn />
                     </Route>
@@ -56,6 +58,10 @@ class App extends Component {
 
                     <Route exact path="/myorders">
                         <MyOrders />
+                    </Route>
+
+                    <Route exact path="/OrderDetails">
+                        <OrderDetails />
                     </Route>
 
                     <Route exact path="/mycart">
