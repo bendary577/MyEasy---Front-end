@@ -4,6 +4,7 @@ import Home from "./Screens/Home";
 import SignIn from "./Screens/SignIn";
 import SignUp from "./Screens/SignUp";
 import SignUpAs from "./Screens/SignUpAs";
+import ForgetPassword from './Screens/ForgetPassword';
 import CustomerAccount from './Screens/CustomerAccount';
 import EditProfile from "./Screens/EditProfile";
 import MakeComplaint from './Screens/MakeComplaint';
@@ -38,6 +39,10 @@ class App extends Component {
 
                     <Route exact path="/registeras">
                         <SignUpAs />
+                    </Route>
+
+                    <Route exact path="/forgetpassword">
+                        <ForgetPassword />
                     </Route>
 
                     <Route exact path="/customerprofile">
