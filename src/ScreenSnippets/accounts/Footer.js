@@ -69,8 +69,8 @@ class Footer extends Component {
                         </div>
                         < hr className="footer__horizontal-bar" />
                         <p className="footer__bottom-paragraph">
-                            &copy; Copyright 2017
-                            <a href="" style={{ color: "#00aafe", fontWeight: "bold" }}>DartThemes</a>
+                            &copy; Copyright 2021
+                            <a href="" style={{ color: "#00aafe", fontWeight: "bold" }}> Matsuda-Design</a>
                             . All Rights Reserved
                         </p>
                     </div>
