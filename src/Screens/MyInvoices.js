@@ -5,7 +5,9 @@ class MyInvoices extends Component {
         return (
             <div className="my-invoices pt-4">
                 <div className="container">
-                    <h1 className="text-center">My Invoices</h1>
+                    <h1 className="text-center" style={{
+                        color: '#556a87', fontSize: '30px', fontWeight: 'bold', marginBottom: '25px'
+                    }}>My Invoices</h1>
                     <table class="table">
                         <thead>
                             <tr>
