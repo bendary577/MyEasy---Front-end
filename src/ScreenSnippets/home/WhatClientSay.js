@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class WhatClientSay extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container" id="what">
                 <section className="slider">
                     <div className="page-section text-center">
                         <h2 className="page-section__title">WHAT CLIENT SAY?</h2>
