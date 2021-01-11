@@ -4,13 +4,16 @@ import Home from "./Screens/Home";
 import SignIn from "./Screens/SignIn";
 import SignUp from "./Screens/SignUp";
 import SignUpAs from "./Screens/SignUpAs";
+import ForgetPassword from './Screens/ForgetPassword';
 import CustomerAccount from './Screens/CustomerAccount';
 import EditProfile from "./Screens/EditProfile";
 import MakeComplaint from './Screens/MakeComplaint';
 import BuyItem from './Screens/BuyItem';
 import MyOrders from './Screens/MyOrders';
+import OrderDetails from './Screens/OrderDetails';
 import MyCart from './Screens/MyCart';
 import Store from './Screens/Store';
+import CreateStore from './Screens/CreateStore';
 import Uploaditem from './Screens/Uploaditem';
 import MyInvoices from './Screens/MyInvoices';
 import MakeInvoice from './Screens/MakeInvoice';
@@ -26,6 +29,7 @@ class App extends Component {
                     <Route exact path="/">
                         <Home />
                     </Route>
+
                     <Route exact path="/signin">
                         <SignIn />
                     </Route>
@@ -36,6 +40,10 @@ class App extends Component {
 
                     <Route exact path="/registeras">
                         <SignUpAs />
+                    </Route>
+
+                    <Route exact path="/forgetpassword">
+                        <ForgetPassword />
                     </Route>
 
                     <Route exact path="/customerprofile">
@@ -58,12 +66,20 @@ class App extends Component {
                         <MyOrders />
                     </Route>
 
+                    <Route exact path="/OrderDetails">
+                        <OrderDetails />
+                    </Route>
+
                     <Route exact path="/mycart">
                         <MyCart />
                     </Route>
 
                     <Route exact path="/store">
                         <Store />
+                    </Route>
+
+                    <Route exact path="/createstore">
+                        <CreateStore />
                     </Route>
 
                     <Route exact path="/home">
