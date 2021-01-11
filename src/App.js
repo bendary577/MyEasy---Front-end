@@ -20,6 +20,7 @@ import MakeInvoice from './Screens/MakeInvoice';
 import ViewItemDetails from './Screens/ViewItemDetails';
 import SellerProfile from './Screens/SellerProfile';
 import './App.css';
+import BrowseStores from './Screens/BrowseStores';
 
 class App extends Component {
     render() {
@@ -104,6 +105,10 @@ class App extends Component {
 
                     <Route exact path="/sellerProfile">
                         <SellerProfile />
+                    </Route>
+
+                    <Route exact path="/browsestores">
+                        <BrowseStores />
                     </Route>
 
                 </Switch>
