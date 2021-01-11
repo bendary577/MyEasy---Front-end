@@ -23,7 +23,7 @@ class ViewItemDetails extends Component {
                             Electronics
                         </a>
                         <p className="font-weight-bold mx-3">  </p> 
-                        <a href="#" className="text-dark font-weight-bold">
+                        <a href="/sellerprofile" className="text-dark font-weight-bold">
                             Mosaad Store
                         </a>
                     </div>

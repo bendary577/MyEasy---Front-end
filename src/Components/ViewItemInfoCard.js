@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import productImg from "../../public/images/product1.jpeg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBill, faMoneyCheck, faShoppingCart, faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
-import { faBuysellads } from "@fortawesome/free-brands-svg-icons";
+import { faMoneyBill, faShoppingCart, faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 

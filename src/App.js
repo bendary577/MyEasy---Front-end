@@ -15,6 +15,7 @@ import Uploaditem from './Screens/Uploaditem';
 import MyInvoices from './Screens/MyInvoices';
 import MakeInvoice from './Screens/MakeInvoice';
 import ViewItemDetails from './Screens/ViewItemDetails';
+import SellerProfile from './Screens/SellerProfile';
 import './App.css';
 
 class App extends Component {
@@ -83,6 +84,10 @@ class App extends Component {
 
                     <Route exact path="/myinvoice">
                         <MyInvoices />
+                    </Route>
+
+                    <Route exact path="/sellerProfile">
+                        <SellerProfile />
                     </Route>
 
                 </Switch>

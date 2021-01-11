@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import "../../../public/css/customeraccnavbar.css";
 
 
 class CustomerAccNavBar extends Component {
     render() {
         return (
 
-            <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+            <nav className="topnavigation navbar navbar-expand-sm bg-dark navbar-dark">
 
                 {/*------------------------- brand logo ----------------------------------------------*/}
 
