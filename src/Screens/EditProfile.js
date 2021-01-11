@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import "../../public/css/editaccount.css";
 import book2 from "../../public/images/book_2.png";
+import person from "../../public/images/person_2.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,8 +14,8 @@ class EditProfile extends Component {
     render() {
 
         const iconImgsStyle = {
-            width: 250,
-            height: 250
+            width: 230,
+            height: 230
         };
 
         return (
@@ -35,9 +36,9 @@ class EditProfile extends Component {
 
                         <div className="left-div col-md-12 col-lg-3">
                             <div className="profile-image text-center">
-                                <img src={book2} class="rounded-circle img img-responsive" alt="profile-img" style={iconImgsStyle} />
+                                <img src={person} class="rounded-circle img img-responsive border border-dark" alt="profile-img" style={iconImgsStyle} />
                                 <br />
-                                <button type="button" className="btn btn-primary">Upload Photo</button>
+                                <button type="button" className="btn btn-primary mt-2">Upload Photo</button>
                             </div>
 
                             <div className="bio mt-4 text-center">

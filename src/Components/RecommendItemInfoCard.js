@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill, faShoppingCart, faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
 import "../../public/css/itemcartcard.css";
 import book1 from "../../public/images/book_1.png";
-import product from "../../public/images/product1.jpeg";
+import product from "../../public/images/Products/shoes.jpg";
 
 
 
@@ -16,7 +16,7 @@ class RecommendItemInfoCard extends Component {
                 <img src={product} calssName="card-img img-responsive" />
                 <div className="card-body">
                     <div className="clearfix">
-                        <h5 className="float-left">Item Name</h5>
+                        <h6 className="float-left">Item Name</h6>
                         <div className="float-right">
                             <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                             <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
@@ -26,14 +26,14 @@ class RecommendItemInfoCard extends Component {
                         </div>
                     </div>
 
-                    <div className="clearfix">
-                        <h4 className="text-success float-left mt-2">$129.99</h4>
+                    <div className="clearfix mt-2">
+                        <h6 className="text-success float-left mt-2">$129.99</h6>
                         <a className="btn btn-success float-right" href="/viewitem" role="button">
                             item details
                         </a>
                     </div>
 
-                    <div className="clearfix mt-2">
+                    <div className="clearfix mt-3">
                         <a className="btn btn-warning float-left" href="/mycart" role="button">
                             <FontAwesomeIcon icon={faShoppingCart} className="mr-2"></FontAwesomeIcon>
                             Cart

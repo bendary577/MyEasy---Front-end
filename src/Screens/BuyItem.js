@@ -27,7 +27,7 @@ class BuyItem extends Component {
                         <div className="left col-sm-12 col-md-6">
                             <PaymentForm />
                             <div className="clearfix">
-                                <h5 className="float-left mb-4">
+                                <h5 className="float-left mt-2">
                                     we will use the info saved in your account
                                 </h5>
                                 <a href="/editprofile" className="btn btn-success float-right mb-3" role="button">

@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faStar, faPhone, faStore } from "@fortawesome/free-solid-svg-icons";
 import ProductCarousel from "../Components/ProductsCarousel";
 import "../../public/css/sellerprofile.css";
+import Footer from "../ScreenSnippets/accounts/Footer";
 
 class SellerProfile extends Component {
 
@@ -142,6 +143,8 @@ class SellerProfile extends Component {
                     </div>
                 
                 </div>
+
+                <Footer />
             </div>
 
         );

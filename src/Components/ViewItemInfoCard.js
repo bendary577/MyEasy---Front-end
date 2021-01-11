@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import productImg from "../../public/images/product1.jpeg";
+import product from "../../public/images/Products/shoes.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill, faShoppingCart, faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +15,7 @@ class ViewItemInfoCard extends Component {
                         <div className="col-sm-3 col-md-3 h-100">
 
                             {/* ------------------------------- image -------------------------------------------- */}
-                            <img src={productImg} className="card-img img-responsive img-fluid" alt="" />
+                            <img src={product} className="card-img img-responsive img-fluid" alt="" />
                         </div>
                         <div className="col">
                             <div className="card-block px-2">
