@@ -48,7 +48,7 @@ class BrowseStoreSideNav extends Component {
                                                 <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                 <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                 <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
-                                                <p className="ml-2">or more</p>
+                                                <p className="ml-1">or more</p>
                                             </div>
                                         </div>
                                     </div>

@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 class ContactUs extends Component {
     render() {
         return (
-            <div className="contactus text-center" id="contact">
+            <div className="contactus text-center my-5" id="contact">
                 <div className="container">
                     <h1 style={{
                         color: '#556a87', fontSize: '30px', fontWeight: 'bold', marginBottom: '25px'
@@ -27,7 +27,7 @@ class ContactUs extends Component {
                                 <Form.Control as="textarea" rows={3} placeholder="Content" />
                             </Form.Group>
 
-                            <input className="btn" type="submit" value="Sent" style={{
+                            <input className="btn" type="submit" value="send" style={{
                                 width: '30%', borderRadius: '30px', backgroundColor: '#00AAFE',
                                 color: '#fff'
                             }} />

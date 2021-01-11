@@ -37,7 +37,7 @@ class CustomerAccNavBar extends Component {
                 <div className="ml-5 collapse navbar-collapse accLinks" id="collapsibleNavbar">
                     <ul className="navbar-nav">
                         <li className="nav-item mt-2">
-                            <a className="nav-link" href="/store">Browse Stores</a>
+                            <a className="nav-link" href="/browsestores">Browse Stores</a>
                         </li>
                         <li className="nav-item mt-2">
                             <a className="nav-link" href="/mycart">My Cart</a>

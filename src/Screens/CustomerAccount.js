@@ -55,7 +55,7 @@ class CustomerAccount extends Component {
                                             style={iconImgsStyle}
                                         />
                                         <div className="card-body text-center">
-                                            <a class="btn btn-lg btn-primary" href="/stores" role="button">Browse Stores</a>
+                                            <a class="btn btn-lg btn-primary" href="/browsestores" role="button">Browse Stores</a>
                                         </div>
                                     </div>
                                 </div>

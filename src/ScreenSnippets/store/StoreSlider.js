@@ -10,7 +10,7 @@ class StoreSlider extends Component {
             <Carousel indicators={false}>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className=" w-100"
                         src={Slider1}
                         alt="First slide"
                     />
@@ -18,7 +18,7 @@ class StoreSlider extends Component {
 
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className=" w-100"
                         src={Slider2}
                         alt="Second slide"
                     />
@@ -26,7 +26,7 @@ class StoreSlider extends Component {
 
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className=" w-100"
                         src={Slider3}
                         alt="Third slide"
                     />

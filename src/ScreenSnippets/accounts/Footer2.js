@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "../../../public/css/footer.css"
 
-class Footer extends Component {
+class Footer2 extends Component {
     render() {
         return (
-            <div className="footer bg-dark">
+            <div className="footer footer--bg">
                 <div className="container">
                     <div className="page-section">
                         <div className="row gutters-100">
+
                             <div className="col-md-4 col-lg-3">
                                 <div className="footer__first">
                                     <h2 className="footer__title">DART AGENCY</h2>
@@ -22,6 +22,7 @@ class Footer extends Component {
                                     </ul>
                                 </div>
                             </div>
+
                             <div className="col-md-6 col-lg-2">
                                 <div className="footer__second">
                                     <h2 className="footer__title">QUICK LINK</h2>
@@ -34,6 +35,7 @@ class Footer extends Component {
                                     </ul>
                                 </div>
                             </div>
+
                             <div className="col-md-6 col-lg-3">
                                 <div className="footer__third">
                                     <h2 className="footer__title">CONTACT US</h2>
@@ -41,13 +43,14 @@ class Footer extends Component {
                                         <li><span className="glyphicon glyphicon-envelope"></span> <a href="#">dartagency@gmail.com</a></li>
                                         <li><span className="glyphicon glyphicon-earphone"></span> <a href="#">+0123-345-6789</a></li>
                                     </ul>
-                                    <h4 className="footer__subscribe__title">Subscribe To Our Newsletter</h4>
+                                    <h4 className="footer__subscribe__title">Subscribe</h4>
                                     <div className="subscribe-section">
                                         <input type="email" className="form-control" size="50" placeholder="Enter Your Email" required />
                                         <button className="subscribe-section__button" type="button"><img src="../images/send-icon.png" alt="" /></button>
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-md-6 col-lg-4">
                                 <div className="footer__fourth">
                                     <h4 className="footer__title">INSTAGRAM</h4>
@@ -67,11 +70,12 @@ class Footer extends Component {
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         < hr className="footer__horizontal-bar" />
                         <p className="footer__bottom-paragraph">
                             &copy; Copyright 2021
-                            <a href="" style={{ color: "#00aafe", fontWeight: "bold" }}> MyEasy </a>
+                            <a href="" style={{ color: "#00aafe", fontWeight: "bold" }}>MyEasy</a>
                             . All Rights Reserved
                         </p>
                     </div>
@@ -81,4 +85,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default Footer2;

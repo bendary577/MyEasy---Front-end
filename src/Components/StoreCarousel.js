@@ -1,60 +1,46 @@
 
 import React, { Component } from "react";
-import tv from "../../public/images/Products/tv.jpg";
-import food from "../../public/images/Products/food.jpg";
-import laptob from "../../public/images/Products/laptob.jpg";
 
 class StoreCarousel extends Component {
 
     render() {
 
         return (
-            <div className="parent">
-                <div id="demo" className="carousel slide" data-ride="carousel">
+            <div>
+                <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
-                {/* ---------------------------------indicators------------------------------------------ */}
-
-                    <ul className="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0" className="active"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
-                    </ul>
-
-                {/* --------------------------------- images ------------------------------------------ */}
-
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src={tv}  alt="Los Angeles"  />
-                            <div className="carousel-caption">
-                                <h3 className="text-dark">Browse all kinds of home appliances !</h3>
-                                <a href="" className="btn btn-primary"></a>
-                            </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                    </ol>
+                    
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+                                alt="First slide" />
                         </div>
-                        <div className="carousel-item">
-                            <img src={food}  alt="Chicago" />
-                            <div className="carousel-caption">
-                                <h3>Browse all kinds of home appliances !</h3>
-                                <a href="" className="btn btn-primary"></a>
-                            </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                                alt="Second slide" />
                         </div>
-                        <div className="carousel-item">
-                            <img src={laptob}  alt="New York" />
-                            <div className="carousel-caption">
-                                <h3>Browse all kinds of home appliances !</h3>
-                                <a href="" className="btn btn-primary"></a>
-                            </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                                alt="Third slide" />
                         </div>
+
                     </div>
 
-                    {/* -----------------------------------controls ---------------------------------------- */}
-
-                    <a className="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span className="carousel-control-prev-icon"></span>
+                    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
-                    <a className="carousel-control-next" href="#demo" data-slide="next">
-                        <span className="carousel-control-next-icon"></span>
+                    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
-
                 </div>
             </div>
         );
