@@ -49,7 +49,7 @@ class CustomerAccNavBar extends Component {
                         {/*------------------------- drop down links ----------------------------------------------*/}
 
                         <li class="nav-item dropdown mr-0 ml-5">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="/customerprofile" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" alt="logo" className="rounded-circle" />
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

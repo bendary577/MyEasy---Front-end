@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Footer from "../ScreenSnippets/accounts/Footer";
 import SideNav from "../Components/SideNav";
+import CartItemInfoCard from "../Components/CartItemInfoCard";
+import RecommendItemInfoCard from "../Components/RecommendItemInfoCard";
 
 class CustomerAccount extends Component {
 
@@ -55,7 +57,7 @@ class CustomerAccount extends Component {
                                                     style={iconImgsStyle}
                                                 />
                                                 <div className="card-body text-center">
-                                                    <a class="btn btn-lg btn-primary" href="/complaint" role="button">Make Complaint</a>
+                                                    <a class="btn btn-lg btn-primary" href="/stores" role="button">Browse Stores</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -71,7 +73,7 @@ class CustomerAccount extends Component {
                                                     style={iconImgsStyle}
                                                 />
                                                 <div className="card-body text-center">
-                                                    <button type="button" className="btn btn-warning btn-lg">Create Invoice</button>
+                                                    <a href="/makeinvoice" className="btn btn-dark btn-lg">Create Invoice</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,7 +90,7 @@ class CustomerAccount extends Component {
                                                     style={iconImgsStyle}
                                                 />
                                                 <div className="card-body text-center">
-                                                    <button type="button" className="btn btn-dark btn-lg">Browse Stores</button>
+                                                    <a href="/complaint" className="btn btn-warning btn-lg">Make complaint</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,56 +110,20 @@ class CustomerAccount extends Component {
                                                     {/*---------------------------- card1-----------------------------*/}
 
                                                     <div className="col-sm-12 col-md-4 mb-3 control">
-                                                        <div class="card w-100 m-0">
-                                                            <img
-                                                                src={book1}
-                                                                alt="Logo1"
-                                                                calssName="img img-responsive"
-                                                                style={iconImgsStyle}
-                                                            />
-                                                            <div className="card-body text-center">
-                                                                <h5 className="card-title"></h5>
-                                                                <p className="card-text"> some text in card</p>
-                                                                <a class="btn btn-primary" href="/signup" role="button">do something</a>
-                                                            </div>
-                                                        </div>
+                                                        <RecommendItemInfoCard />
                                                     </div>
 
                                                     {/*---------------------------- card2-----------------------------*/}
 
                                                     <div className="col-sm-12 col-md-4 mb-3 control">
-                                                        <div className="card w-100 m-0">
-                                                            <img
-                                                                src={book2}
-                                                                alt="Logo1"
-                                                                calssName="img img-responsive"
-                                                                style={iconImgsStyle}
-                                                            />
-                                                            <div className="card-body text-center">
-                                                                <h5 className="card-title"></h5>
-                                                                <p className="card-text"> some text in card</p>
-                                                                <a class="btn btn-warning" href="/signup" role="button">do something</a>
-                                                            </div>
-                                                        </div>
+                                                       <RecommendItemInfoCard />
                                                     </div>
 
 
                                                     {/*---------------------------- card3-----------------------------*/}
 
                                                     <div className="col-sm-12 col-md-4 mb-3 control">
-                                                        <div className="card w-100 m-0">
-                                                            <img
-                                                                src={book3}
-                                                                alt="Logo1"
-                                                                calssName="img img-responsive"
-                                                                style={iconImgsStyle}
-                                                            />
-                                                            <div className="card-body text-center">
-                                                                <h5 className="card-title"></h5>
-                                                                <p className="card-text"> some text in card</p>
-                                                                <a class="btn btn-dark" href="/signup" role="button">do something</a>
-                                                            </div>
-                                                        </div>
+                                                        <RecommendItemInfoCard />
                                                     </div>
 
                                                 </div>

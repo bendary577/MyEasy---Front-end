@@ -66,7 +66,7 @@ class App extends Component {
                         <MyOrders />
                     </Route>
 
-                    <Route exact path="/OrderDetails">
+                    <Route exact path="/orderDetails">
                         <OrderDetails />
                     </Route>
 
@@ -94,7 +94,7 @@ class App extends Component {
                         <Uploaditem />
                     </Route>
 
-                    <Route exact path="/invoice">
+                    <Route exact path="/makeinvoice">
                         <MakeInvoice />
                     </Route>
 

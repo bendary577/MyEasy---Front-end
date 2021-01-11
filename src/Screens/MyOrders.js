@@ -37,17 +37,17 @@ class MyOrders extends Component {
                                     <tr>
                                         <td>John</td>
                                         <td>Doe</td>
-                                        <td><a href="" className="btn btn-md btn-primary">View Order Details</a></td>
+                                        <td><a href="/orderdetails" className="btn btn-md btn-primary">View Order Details</a></td>
                                     </tr>
                                     <tr>
                                         <td>Mary</td>
                                         <td>Moe</td>
-                                        <td><a href="" className="btn btn-md btn-primary">View Order Details</a></td>
+                                        <td><a href="/orderdetails" className="btn btn-md btn-primary">View Order Details</a></td>
                                     </tr>
                                     <tr>
                                         <td>July</td>
                                         <td>Dooley</td>
-                                        <td><a href="" className="btn btn-md btn-primary">View Order Details</a></td>
+                                        <td><a href="/orderdetails" className="btn btn-md btn-primary">View Order Details</a></td>
                                     </tr>
                                 </tbody>
                             </table>
