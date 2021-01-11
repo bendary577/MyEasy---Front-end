@@ -205,7 +205,7 @@
 	4 - Views : 															
 			4.1 - Customer Profile Screen									: Bendary - done
 				4.1.1 - Customer Edit Profile Screen						: Bendary - done
-				4.1.2 - Browse Stores Screen								: Mosaad - done
+				4.1.2 - Browse Stores Screen								: 
 					4.1.2.1 - Store Screen									: Mosaad - done
 					4.1.2.2 - View Seller Profile Screen					: Bendary - done
 					4.1.2.3 - View Item Details Screen						: Bendary - done
@@ -282,6 +282,8 @@
 		- creation date
 		- specialization
 		- items
+		- rating
+		- no. of rating
 	
 	- Item : 
 		- name

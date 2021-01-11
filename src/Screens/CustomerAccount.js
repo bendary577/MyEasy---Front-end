@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import CustomerAcc2NavBar from "../ScreenSnippets/accounts/CustomerAcc2NavBar";
+import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
 import RecommendItemInfoCard from "../Components/RecommendItemInfoCard";
 import CustomerSideNav from "../Components/CustomerSideNav";
 import "../../public/css/customeraccount.css";
@@ -24,7 +24,7 @@ class CustomerAccount extends Component {
                     <CustomerSideNav />
 
                     <div id="page-content-wrapper">
-                        <CustomerAcc2NavBar />
+                        <CustomerAccNavBar />
                     
                         <div class="container-fluid">
 

@@ -1,20 +1,48 @@
-
 import React, { Component } from "react";
-import StoreCarousel from "../Components/StoreCarousel";
 import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import StoreCarousel from "../Components/StoreCarousel";
+import BrowseStoreSideNav from "../Components/BrowseStoreSideNav";
+import "../../public/css/browsestores.css";
+import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar";
+import ProductCarousel from "../Components/ProductsCarousel";
 import Footer from "../ScreenSnippets/accounts/Footer";
 
 
 class BrowseStores extends Component {
+
+
     render() {
 
         return (
-            <div className="parent">
-                <CustomerAccNavBar />
-                <div className="storeCarousel">
-                  <StoreCarousel />
+            <div>
+                <div className="d-flex" id="wrapper">
+                    <BrowseStoreSideNav />
+                    <div id="page-content-wrapper">
+                        <CustomerAccNavBar />
+                        <CategoriesNavbar />
+                        <div class="container-fluid">
+                            <StoreCarousel />
+
+                            <div className="mt-5">
+                                <ProductCarousel />
+                            </div>
+
+                            <div className="offerimg w-100 mt-5  d-flex justify-content-center align-items-center text-white">
+                                <h2 className="font-weight-bold">helooooooo</h2>
+                            </div>
+
+                            <div className="my-5">
+                                <ProductCarousel />
+                            </div>
+
+                    </div>
                 </div>
             </div>
+            <Footer />
+        </div>
+
+            
+
         );
     }
 }
