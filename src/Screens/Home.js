@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import '../../public/css/home.css';
-import Navbar from "../ScreenSnippets/accounts/Navbar";
+import NavBar from "../ScreenSnippets/accounts/Navbar";
+import Welcome from '../ScreenSnippets/home/Welcome';
 import About from '../ScreenSnippets/home/About';
 import Services from '../ScreenSnippets/home/Services';
-import Contact from '../ScreenSnippets/home/Contact';
 import Lets from '../ScreenSnippets/home/Lets';
 import WhatClientSay from '../ScreenSnippets/home/WhatClientSay';
 import ContactUs from '../ScreenSnippets/home/ContactUs';
@@ -13,12 +13,12 @@ class Home extends Component {
     render() {
         return (
             <div className="parent-div">
-                <Navbar />
+                <NavBar />
+                <Welcome />
                 <Services />
-                <Contact />
+                <hr />
                 <About />
-                <Lets />
-                <WhatClientSay />
+                <hr />
                 <ContactUs />
                 <Footer />
             </div>

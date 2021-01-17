@@ -6,9 +6,7 @@ class ContactUs extends Component {
         return (
             <div className="contactus text-center my-5" id="contact">
                 <div className="container">
-                    <h1 style={{
-                        color: '#556a87', fontSize: '30px', fontWeight: 'bold', marginBottom: '25px'
-                    }}>Contact Us</h1>
+                    <h2 style={{ marginBottom: '25px' }}>Contact Us</h2>
                     <div className="col-xs-12 col-lg-6 m-auto">
                         <Form>
                             <Form.Group controlId="formBasicEmail">
@@ -27,9 +25,8 @@ class ContactUs extends Component {
                                 <Form.Control as="textarea" rows={3} placeholder="Content" />
                             </Form.Group>
 
-                            <input className="btn" type="submit" value="send" style={{
-                                width: '30%', borderRadius: '30px', backgroundColor: '#00AAFE',
-                                color: '#fff'
+                            <input className="btn btn-dark" type="submit" value="send" style={{
+                                width: '30%', borderRadius: '30px'
                             }} />
                         </Form>
                     </div>
