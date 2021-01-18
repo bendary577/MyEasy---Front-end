@@ -4,10 +4,10 @@ import NavBar from "../ScreenSnippets/accounts/Navbar";
 import Welcome from '../ScreenSnippets/home/Welcome';
 import About from '../ScreenSnippets/home/About';
 import Services from '../ScreenSnippets/home/Services';
-import Lets from '../ScreenSnippets/home/Lets';
-import WhatClientSay from '../ScreenSnippets/home/WhatClientSay';
 import ContactUs from '../ScreenSnippets/home/ContactUs';
+import Panal from '../ScreenSnippets/home/Panal';
 import Footer from '../ScreenSnippets/accounts/Footer';
+
 
 class Home extends Component {
     render() {
@@ -16,7 +16,8 @@ class Home extends Component {
                 <NavBar />
                 <Welcome />
                 <Services />
-                <hr />
+                <Panal head="We Can Make Youe Rich" p="you can use your moeny to busniss it in useful work"
+                    href="/store" a="Store" />
                 <About />
                 <hr />
                 <ContactUs />

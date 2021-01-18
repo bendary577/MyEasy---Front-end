@@ -2,31 +2,34 @@ body{
   font-weight: bold;
 }
 
+.navbar .nav-link{
+  color: #fd7e14 !important;
+}
+
 /* Services */
 .services h2,
 .about h2, .about h3,
 .what h2,
 .contactus h2 {
-    color: #999;
+    color: #fd7e14;
 }
 
 .services h2:hover,
 .about h2:hover,
 .what h2:hover,
 .contactus h2:hover {
-  text-decoration: underline #05b4f9e6 1px;
-  color: #555;
+  color: #fd7e14;
   transform: scale(1.1);
 }
 
 .services .thumbnail {
-    border: 1px solid #ccc;
+    border: 1px solid #fd7e1452 ;
     padding: 20px;
     margin-bottom: 30px;
 }
 
 .services .thumbnail path:hover {
-    color:#05b4f9e6;
+    color:#fd7e14;
 }
 
 .services .thumbnail h4 {
@@ -40,9 +43,38 @@ body{
 .contactus .btn {
     background-color: #999;
     border-color: #999;
+  }
+  
+/* Panal */
+.panal {
+  width: 100%;
+  min-height: 190px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  background-color: #f8994a;
+  padding: 40px;
+  text-align: center;
 }
 
-/* What Client Say */
+.panal h2,
+.panal p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.panal .btn{
+  border-color: #fff;
+  background-color: #fff;
+  color: #fd7e14;
+  min-width: 10%;
+  border-radius: 30px
+}
+
+.panal .btn:hover {
+  border-color: #fd7e14;
+  background-color: #fd7e14;
+  color: #fff;
+}
 
 /* 
 .letsGo--bg{
