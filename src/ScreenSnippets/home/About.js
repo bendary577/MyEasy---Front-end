@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import visaPayment from "../../../public/images/Home/visa-payment.jpg";
 
 class About extends Component {
     render() {
@@ -25,6 +26,22 @@ class About extends Component {
                                 }}>READ MORE</a>
                             </div>
                         </div>
+                            {/** ------------------------------------second photo----------------------------------------- */}
+                        <div className="row my-5">
+                            <div className="col-xs-12 col-lg-6">
+                                <h3 className="mb-4">We Believe</h3>
+                                <p className="mb-4">Trusted comes with tons of custom widgets, color options, font
+                                   control and much more.</p>
+                                <p className="mb-4">We aim to eliminate the task of dividing your project between different agency, corporate and business template. We are a company that offers services for our clients to solve problems and planing strategies for humanity all over the world.</p>
+                                <a className="btn btn-dark" href="" style={{
+                                    width: '30%', borderRadius: '30px'
+                                }}>READ MORE</a>
+                            </div>
+                            <div className="col-xs-12 col-lg-6">
+                                <img className="w-100 h-100" src={visaPayment} alt="" />
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </section >

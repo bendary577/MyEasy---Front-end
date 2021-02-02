@@ -9,27 +9,20 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "../../public/css/signin.css";
 
-class SignIn extends Component {
+class SignInFrom extends Component {
     render() {
         return (
             <div className="loginDiv">
                 <div className="login d-flex justify-content-center align-items-center my-5">
-                    <div className="card loginCard w-50 mt-5">
-                        {/*--------------------- card header ------------------------------------------------ */}
+                    <div className="card loginCard w-75 mt-5"> 
+                       {/*--------------------- card body ------------------------------------------------ */}
 
-                        <div className="card-header bg-dark text-body text-center font-weight-bold py-4">
-                            <h2 className="text-white">
-                                <strong>Sign in</strong>
-                            </h2>
-                        </div>
-
-                        {/*--------------------- card body ------------------------------------------------ */}
-
-                        <div className="card-body">
+                        <div className="card-body mt-5">
                             <form className="needs-validation" method="post" novalidate>
                                 {/*--------------------email, password  ----------------------------------------- */}
 
                                 <div className="form-group">
+                                    <label className="font-weight-bold">Email:*</label>
                                     <input
                                         type="eamil"
                                         placeholder="email"
@@ -44,6 +37,7 @@ class SignIn extends Component {
                                 </div>
 
                                 <div className="form-group">
+                                    <label className="font-weight-bold">Password:*</label>
                                     <input
                                         type="password"
                                         placeholder="password"
@@ -59,24 +53,7 @@ class SignIn extends Component {
 
                                 {/*---------------------remember & forgot password  ----------------------------------------- */}
 
-                                <div className="d-flex justify-content-around">
-                                    <div>
-                                        <div className="form-check form-check-inline">
-                                            <input
-                                                className="form-check-input"
-                                                type="checkbox"
-                                                id="inlineCheckbox1"
-                                                value="option1"
-                                            ></input>
-                                            <label
-                                                className="form-check-label"
-                                                for="inlineCheckbox1"
-                                            >
-                                                remember me
-                                            </label>
-                                        </div>
-                                    </div>
-
+                                <div className="d-flex justify-content-end">
                                     <div>
                                         <div className="form-group">
                                             <p>
@@ -91,12 +68,28 @@ class SignIn extends Component {
                                         </div>
                                     </div>
                                 </div>
-
+                                <div>
+                                    <div className="form-check form-check-inline">
+                                        <input
+                                            className="form-check-input"
+                                            type="checkbox"
+                                            id="inlineCheckbox1"
+                                            value="option1"
+                                        ></input>
+                                        <label
+                                            className="form-check-label"
+                                            for="inlineCheckbox1"
+                                        >
+                                            remember me
+                                        </label>
+                                    </div>
+                                </div>
+                                
                                 {/*---------------------login button ----------------------------------------- */}
 
                                 <div className="form-group mt-4">
                                     <input
-                                        className="btn btn-primary btn-block form-control"
+                                        className="btn btn-dark btn-block form-control"
                                         type="submit"
                                         value="login"
                                     ></input>
@@ -181,4 +174,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default SignInFrom;

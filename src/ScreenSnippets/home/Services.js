@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartLine } from "@fortawesome/free-solid-svg-icons";
-import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
-import { faHeadset } from "@fortawesome/free-solid-svg-icons";
-import { faFileInvoice } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
-faHeadset
+import statistics from "../../../public/icons/statistics.png";
+import shop from "../../../public/icons/shop.png";
+import customerService from "../../../public/icons/customer-service.png";
+import shopping from "../../../public/icons/online-shopping.png";
+import time from "../../../public/icons/time.png";
+import bill from "../../../public/icons/bill.png";
+
 class Services extends Component {
     render() {
         return (
@@ -17,54 +16,54 @@ class Services extends Component {
                         <p className="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. </p>
                         <div className="row">
-                            <div className="col-xs-12 col-md-6 col-lg-4">
+                            <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInLeft">
                                 <div className="thumbnail">
-                                    <FontAwesomeIcon icon={faChartLine} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <img className="w-25 h-25" src={statistics} alt="" /> 
                                     <h4 className="service__title">Growing Business</h4>
                                     <p className="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
                                 </div>
                             </div>
-                            <div className="col-xs-12 col-md-6 col-lg-4">
+                            <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInDown">
                                 <div className="thumbnail">
-                                    <FontAwesomeIcon icon={faBusinessTime} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <img className="w-25 h-25" src={time} alt="" />
                                     <h4 className="service__title">Save Time</h4>
                                     <p className="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
                                 </div>
                             </div>
-                            <div className="col-xs-12 col-md-6 col-lg-4">
+                            <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInRight">
                                 <div className="thumbnail">
-                                    <FontAwesomeIcon icon={faHeadset} style={{ fontSize: '50px' }}></FontAwesomeIcon>
-                                    <h4 className="service__title">Free Support</h4>
+                                    <img className="w-25 h-25" src={customerService} alt="" />
+                                    <h4 className="service__title">Customer Support</h4>
                                     <p className="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
                                 </div>
                             </div>
-                            <div className="col-xs-12 col-md-6 col-lg-4">
+                            <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInLeft">
                                 <div className="thumbnail">
-                                    <FontAwesomeIcon icon={faFileInvoice} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <img className="w-25 h-25" src={bill} alt="" />
                                     <h4 className="service__title">Make Invoice </h4>
                                     <p className="service__paragraph" >
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
                                 </div>
                             </div>
-                            <div className="col-xs-12 col-md-6 col-lg-4">
+                            <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInUp">
                                 <div className="thumbnail">
-                                    <FontAwesomeIcon icon={faShoppingBag} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <img className="w-25 h-25" src={shop} alt="" />
                                     <h4 className="service__title">Create Your Market</h4>
                                     <p className="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                         tempor incididunt</p>
                                 </div>
                             </div>
-                            <div className="col-xs-12 col-md-6 col-lg-4">
+                            <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInRight">
                                 <div className="thumbnail">
-                                    <FontAwesomeIcon icon={faShoppingBasket} style={{ fontSize: '50px' }}></FontAwesomeIcon>
+                                    <img className="w-25 h-25" src={shopping} alt="" />
                                     <h4 className="service__title">Make Shopping</h4>
                                     <p className="service__paragraph">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

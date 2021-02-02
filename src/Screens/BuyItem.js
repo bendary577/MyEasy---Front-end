@@ -30,7 +30,7 @@ class BuyItem extends Component {
                                 <h5 className="float-left mt-2">
                                     we will use the info saved in your account
                                 </h5>
-                                <a href="/editprofile" className="btn btn-success float-right mb-3" role="button">
+                                <a href="/editprofile" className="float-right btn btn-success mb-3" role="button">
                                     <FontAwesomeIcon icon={faUserEdit} className="mr-2"></FontAwesomeIcon>
                                     edit profile info
                                 </a>

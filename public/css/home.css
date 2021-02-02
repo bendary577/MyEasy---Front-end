@@ -3,33 +3,47 @@ body{
 }
 
 .navbar .nav-link{
-  color: #fd7e14 !important;
+  color: white !important;
 }
+
+
+/* Welcome */
+.welcome {
+  height: 700px;
+  background-image: url("../images/Home/online-shopping.jpg");
+  background-attachment:scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
 
 /* Services */
 .services h2,
 .about h2, .about h3,
 .what h2,
 .contactus h2 {
-    color: #fd7e14;
+    color: #4597f5;
 }
 
 .services h2:hover,
 .about h2:hover,
 .what h2:hover,
 .contactus h2:hover {
-  color: #fd7e14;
+  color: #4597f5;
   transform: scale(1.1);
 }
 
 .services .thumbnail {
-    border: 1px solid #fd7e1452 ;
+    border: 1px solid #4597f5 ;
     padding: 20px;
     margin-bottom: 30px;
 }
 
 .services .thumbnail path:hover {
-    color:#fd7e14;
+    color:#4597f5;
 }
 
 .services .thumbnail h4 {
@@ -48,11 +62,16 @@ body{
 /* Panal */
 .panal {
   width: 100%;
-  min-height: 190px;
+  height: 300px;
   margin-top: 30px;
   margin-bottom: 70px;
-  background-color: #f8994a;
-  padding: 40px;
+  background-color: #4597f5;
+  background-image: url("../images/Home/money.jpg");
+  background-attachment:scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 70px;
   text-align: center;
 }
 
@@ -65,14 +84,14 @@ body{
 .panal .btn{
   border-color: #fff;
   background-color: #fff;
-  color: #fd7e14;
+  color: #4597f5;
   min-width: 10%;
   border-radius: 30px
 }
 
 .panal .btn:hover {
-  border-color: #fd7e14;
-  background-color: #fd7e14;
+  border-color: #4597f5;
+  background-color:#4597f5;
   color: #fff;
 }
 

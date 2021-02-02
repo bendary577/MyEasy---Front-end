@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./Screens/Home";
-import SignIn from "./Screens/SignIn";
 import SignUp from "./Screens/SignUp";
 import SignUpAs from "./Screens/SignUpAs";
 import ForgetPassword from './Screens/ForgetPassword';
@@ -21,6 +20,7 @@ import ViewItemDetails from './Screens/ViewItemDetails';
 import SellerProfile from './Screens/SellerProfile';
 import './App.css';
 import BrowseStores from './Screens/BrowseStores';
+import SigninPage from './Screens/SigninPage';
 
 class App extends Component {
     render() {
@@ -32,7 +32,7 @@ class App extends Component {
                     </Route>
 
                     <Route exact path="/signin">
-                        <SignIn />
+                        <SigninPage />
                     </Route>
 
                     <Route exact path="/signup">
