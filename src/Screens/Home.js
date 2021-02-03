@@ -7,7 +7,7 @@ import ContactUs from '../ScreenSnippets/home/ContactUs';
 import Panal from '../ScreenSnippets/home/Panal';
 import Footer from '../ScreenSnippets/accounts/Footer';
 import Offers from "../ScreenSnippets/home/Offers";
-import HomeNavbar from "../ScreenSnippets/accounts/HomeNavbar";
+import HomeNavbar from "../ScreenSnippets/home/HomeNavbar";
 
 
 class Home extends Component {

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faTwitter,
@@ -7,9 +8,33 @@ import {
     faGoogle,
     faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-import "../../public/css/signin.css";
+import ".././../../public/css/signin.css";
 
 class SignInFrom extends Component {
+
+    state = {
+        email: '',
+        password:''
+      };
+    
+      handleChange = event => {
+        this.setState({ email: event.target.value,
+                        password: event.target.value });
+      };
+    
+      handleSubmit = event => {
+        event.preventDefault();
+        const user = {
+            email: this.state.email,
+            password: this.state.password
+        };
+        axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+              .then(res => {
+                    console.log(res);
+                    console.log(res.data);
+      })
+    }
+
     render() {
         return (
             <div className="loginDiv">
@@ -18,7 +43,7 @@ class SignInFrom extends Component {
                        {/*--------------------- card body ------------------------------------------------ */}
 
                         <div className="card-body mt-5">
-                            <form className="needs-validation" method="post" novalidate>
+                            <form className="needs-validation" method="post" onSubmit={this.handleSubmit} noValidate>
                                 {/*--------------------email, password  ----------------------------------------- */}
 
                                 <div className="form-group">
@@ -30,6 +55,7 @@ class SignInFrom extends Component {
                                         name="email"
                                         maxLength="100"
                                         required
+                                        onChange={this.handleChange}
                                     ></input>
                                     <div className="invalid-feedback">
                                         Please enter a valid email.
@@ -45,6 +71,7 @@ class SignInFrom extends Component {
                                         name="password"
                                         maxLength="30"
                                         required
+                                        onChange={this.handleChange}
                                     ></input>
                                     <div className="invalid-feedback">
                                         Please enter a valid password.
@@ -103,7 +130,7 @@ class SignInFrom extends Component {
                                             {" "}
                                             Not a member?{" "}
                                             <b>
-                                                <Link to="/signup">
+                                                <Link to="/registeras">
                                                     Register
                                                 </Link>
                                             </b>{" "}

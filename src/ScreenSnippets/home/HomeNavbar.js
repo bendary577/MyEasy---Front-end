@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import "../../../public/css/customeraccnavbar.css";
+import egypt from "../../../public/icons/home/egypt.png";
 
 
 class HomeNavbar extends Component {
     render() {
+        const langIconStyle={
+            width:30,
+            height:30
+        };
+
         return (
 
             <nav className="topnavigation navbar navbar-expand-sm bg-dark navbar-dark d-flex">
@@ -21,7 +27,7 @@ class HomeNavbar extends Component {
                         {/*------------------------- nav links ----------------------------------------------*/}
 
                         <div className="ml-5 collapse navbar-collapse accLinks" id="collapsibleNavbar">
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav mr-3">
                                 <li className="nav-item mt-2">
                                     <a className="nav-link" href="#services">services</a>
                                 </li>
@@ -40,7 +46,12 @@ class HomeNavbar extends Component {
                                 <li className="nav-item mt-2">
                                     <a className="nav-link" href="/termsofservice">terms of service</a>
                                 </li>
-                            </ul>
+                                <li className="nav-item mx-2 mt-2">
+                                    <a href="">
+                                        <img src={egypt} style={langIconStyle} className="mt-2" alt="" />
+                                    </a> 
+                                </li>
+                            </ul>    
                             <a className="btn btn-sm btn-success mt-2" href="/signin">login</a>
                         </div>
                     </div>

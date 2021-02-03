@@ -334,7 +334,15 @@ Edu@2018@
 
 
 
-
+--------------------------
+package installed
+- bootstrap
+- react bootstrap
+- axios
+- animate.css
+- react router
+- font awesome
+- react scripts
 
 
 

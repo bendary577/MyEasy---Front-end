@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import SignInFrom from "./SignInForm";
+import SignInFrom from "../ScreenSnippets/authentication/SignInForm"
 import app6 from "../../public/images/Home/app6.png";
 
 

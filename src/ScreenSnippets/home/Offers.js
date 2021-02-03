@@ -42,7 +42,7 @@ class Offers extends Component {
                                 <p className="mb-4">We aim to eliminate the task of dividing your project between different agency, corporate and business template. We are a company that offers services for our clients to solve problems and planing strategies for humanity all over the world.</p>
                             </div>
                             <div className="col-xs-12 col-lg-6">
-                                <im src={app5} style={imageStyle} alt="" />
+                                <img src={app5} style={imageStyle} alt="" />
                             </div>
                         </div>
                 </div>

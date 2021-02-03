@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import visaPayment from "../../../public/images/Home/visa-payment.jpg";
+import Discussion from "../../../public/images/Home/about-pic.png";
 
 class About extends Component {
     render() {
@@ -14,7 +15,7 @@ class About extends Component {
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-lg-6">
-                                <img className="w-100 h-100" src="../images/about-pic.png" alt="" />
+                                <img className="w-100 h-100" src={Discussion} alt="" />
                             </div>
                             <div className="col-xs-12 col-lg-6">
                                 <h3 className="mb-4">We Believe</h3>

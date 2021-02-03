@@ -1,22 +1,73 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../public/css/signup.css";
+import axios from 'axios';
 
 
 class Signup extends Component {
+
+    state = {
+        firstname:'',
+        secondname: '',
+        email: '',
+        password:'',
+        confirmpassword:'',
+        phonenumber: '',
+        birthday: '',
+        specialization: '',
+        address: '',
+        province: '',
+        city:'',
+        zipcode:'',
+        gender:''
+      };
+    
+      handleChange = event => {
+        this.setState({ firstname : event.target.value,
+                        secondname : event.target.value,
+                        email : event.target.value,
+                        password : event.target.value,
+                        confirmpassword : event.target.value,
+                        phonenumber : event.target.value,
+                        birthday : event.target.value,
+                        specialization : event.target.value,
+                        address : event.target.value,
+                        province: event.target.value,
+                        city: event.target.value,
+                        zipcode: event.target.value,
+                        gender: event.target.value,  
+                     });
+      };
+    
+      handleSubmit = event => {
+        event.preventDefault();
+        const user = {
+            firstname : this.state.firstname,
+            secondname : this.state.secondname,
+            email : this.state.email,
+            password : this.state.password,
+            confirmpassword : this.state.confirmpassword,
+            phonenumber : this.state.phonenumber,
+            birthday : this.state.birthday,
+            specialization: this.state.specialization,
+            address: this.state.address,
+            province: this.state.province,
+            city: this.state.city,
+            zipcode: this.state.zipcode,
+            gender: this.state.gender
+        };
+        axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+              .then(res => {
+                    console.log(res);
+                    console.log(res.data);
+      })
+    }
+
     render() {
         return (
             <div className="signupDiv">
                 <div className="signup d-flex justify-content-center align-items-center my-5">
                     <div className="card signupCard w-50 mt-5">
-                        {/*--------------------- card header ------------------------------------------------
-
-                        <div className="card-header bg-dark text-body text-center font-weight-bold py-4">
-                            <h2 className="text-white">
-                                <strong>Signup as an individual seller</strong>
-                            </h2>
-                        </div>
-                         */}
 
                         {/*--------------------- card body ------------------------------------------------ */}
 
@@ -30,11 +81,12 @@ class Signup extends Component {
 
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
+                                        <label for="validationfirstname">First name</label>
                                         <input
                                             type="text"
-                                            placeholder="first name"
                                             className="form-control"
-                                            name="firstName"
+                                            id="validationfirstname"
+                                            name="firstname"
                                             maxLength="25"
                                             autofocus
                                             required
@@ -42,18 +94,25 @@ class Signup extends Component {
                                         <div className="invalid-feedback">
                                             Please enter a valid name.
                                         </div>
+                                        <div class="valid-feedback">
+                                            that's a valid name!
+                                        </div>
                                     </div>
                                     <div className="form-group col-md-6">
+                                        <label for="validationsecondname">Second name</label>
                                         <input
                                             type="text"
-                                            placeholder="second name"
                                             className="form-control"
-                                            name="secondName"
+                                            id="validationsecondname"
+                                            name="secondname"
                                             maxLength="25"
                                             required
                                         ></input>
                                         <div className="invalid-feedback">
                                             Please enter a valid name.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            that's a valid name!
                                         </div>
                                     </div>
                                 </div>
@@ -61,10 +120,11 @@ class Signup extends Component {
                                 {/*--------------------email, password, phone ----------------------------------------- */}
 
                                 <div className="form-group">
+                                    <label for="validationemail">Email</label>
                                     <input
-                                        type="eamil"
-                                        placeholder="email"
+                                        type="email"
                                         className="form-control"
+                                        id="validationemail"
                                         name="email"
                                         maxLength="100"
                                         required
@@ -72,13 +132,17 @@ class Signup extends Component {
                                     <div className="invalid-feedback">
                                         Please enter a valid email.
                                     </div>
+                                    <div class="valid-feedback">
+                                            that's a valid email!
+                                    </div>
                                 </div>
 
                                 <div className="form-group">
+                                    <label for="validationpassword">Password</label>
                                     <input
                                         type="password"
-                                        placeholder="password"
                                         className="form-control"
+                                        id="validationpassword"
                                         name="password"
                                         maxLength="30"
                                         required
@@ -86,27 +150,35 @@ class Signup extends Component {
                                     <div className="invalid-feedback">
                                         Please enter a valid password.
                                     </div>
+                                    <div class="valid-feedback">
+                                        that's a valid password!
+                                    </div>
                                 </div>
 
                                 <div className="form-group">
+                                    <label for="validationconfirmpassword">Confirm Password</label>
                                     <input
                                         type="password"
-                                        placeholder="confirm password"
                                         className="form-control"
+                                        id="validationconfirmpassword"
                                         name="password"
                                         maxLength="30"
                                         required
                                     ></input>
                                     <div className="invalid-feedback">
-                                        Please enter a valid password.
+                                        passwords don't match!.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        passwords match!
                                     </div>
                                 </div>
 
                                 <div className="form-group">
+                                    <label for="validationphonenumber">Phone Number</label>
                                     <input
                                         type="text"
-                                        placeholder="phone number"
                                         className="form-control"
+                                        id="validationphonenumber"
                                         name="phone"
                                         maxLength="11"
                                         required
@@ -114,21 +186,30 @@ class Signup extends Component {
                                     <div className="invalid-feedback">
                                         Please enter a valid phone number.
                                     </div>
+                                    <div class="valid-feedback">
+                                            that's a valid number!
+                                    </div>
                                 </div>
 
                                 <div className="form-group">
-                                <input type="date" placeholder="phone number" className="form-control" name="birthday" />
+                                    <label for="validationbirthdate">Birthdate</label>
+                                    <input type="date"  className="form-control" id="validationbirthdate" name="birthday" />
                                     <div className="invalid-feedback">
                                         Please enter a valid bithdate.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        good!
                                     </div>
                                 </div>  
 
                                 {/*--------------------- specialization ----------------------------------------------- */}
                                 <div className="form-row">
                                     <div className="form-group col-md-12">
+                                        <label for="validationspecialization">Specialization</label>
                                         <select
                                             name="specialization"
                                             className="form-control browser-default custom-select"
+                                            id="validationspecialization"
                                             required
                                         >
                                             <option value="" disabled>
@@ -165,11 +246,11 @@ class Signup extends Component {
                                 {/*---------------------address ----------------------------------------------- */}
 
                                 <div className="form-group">
+                                    <label for="validationaddress">Address</label>
                                     <input
                                         type="text"
                                         class="form-control"
-                                        id="inputAddress"
-                                        placeholder="1234 Main St"
+                                        id="validationaddress"
                                         required
                                     ></input>
                                     <div className="invalid-feedback">
@@ -179,9 +260,11 @@ class Signup extends Component {
 
                                 <div className="form-row">
                                     <div className="form-group col-md-4">
+                                        <label for="validationprovince">Province</label>
                                         <select
                                             name="province"
                                             className="form-control browser-default custom-select"
+                                            id="validationprovince"
                                             required
                                         >
                                             <option value="" disabled>
@@ -215,24 +298,27 @@ class Signup extends Component {
                                     </div>
 
                                     <div className="form-group col-md-4">
+                                        <label for="validationcity">City</label>
                                         <input
                                             type="text"
-                                            placeholder="city"
                                             className="form-control"
-                                            id="inputCity"
+                                            id="validationcity"
                                             required
                                         ></input>
                                         <div className="invalid-feedback">
                                             Please enter a city.
                                         </div>
+                                        <div className="valid-feedback">
+                                            good!
+                                        </div>
                                     </div>
 
                                     <div className="form-group col-md-4">
+                                        <label for="validationzipcode">Zip Code</label>
                                         <input
                                             type="text"
-                                            placeholder="ZIP Code"
                                             className="form-control"
-                                            id="inputZip"
+                                            id="validationzipcode"
                                             required
                                         ></input>
                                         <div className="invalid-feedback">
@@ -303,9 +389,13 @@ class Signup extends Component {
                                 <div className="text-center">
                                     <p>
                                         {" "}
-                                        By clicking Sign up you agree to our{" "}
+                                        By clicking Register I agree to our{" "}
                                         <Link to="/termsofservice">
-                                            terms of service
+                                            terms of service 
+                                        </Link>
+                                        {" "} and {" "} 
+                                        <Link to="/privacypolicy">
+                                            privacy policy
                                         </Link>
                                     </p>
                                 </div>
