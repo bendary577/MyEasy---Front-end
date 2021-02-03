@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import statistics from "../../../public/icons/statistics.png";
-import shop from "../../../public/icons/shop.png";
-import customerService from "../../../public/icons/customer-service.png";
-import shopping from "../../../public/icons/online-shopping.png";
-import time from "../../../public/icons/time.png";
-import bill from "../../../public/icons/bill.png";
+import statistics from "../../../public/icons/home/statistics.png";
+import shop from "../../../public/icons/home/shop.png"
+import customerService from "../../../public/icons/home/customer-service.png";
+import shopping from "../../../public/icons/home/online-shopping.png";
+import time from "../../../public/icons/home/time.png";
+import bill from "../../../public/icons/home/bill.png";
 
 class Services extends Component {
     render() {
@@ -25,6 +25,9 @@ class Services extends Component {
                                         tempor incididunt</p>
                                 </div>
                             </div>
+
+                            {/* -------------------------------- save time ------------------------------------------ */}
+
                             <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInDown">
                                 <div className="thumbnail">
                                     <img className="w-25 h-25" src={time} alt="" />
@@ -34,6 +37,9 @@ class Services extends Component {
                                         tempor incididunt</p>
                                 </div>
                             </div>
+
+                            {/* -------------------------------- customer support ------------------------------------------ */}
+
                             <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInRight">
                                 <div className="thumbnail">
                                     <img className="w-25 h-25" src={customerService} alt="" />
@@ -43,6 +49,9 @@ class Services extends Component {
                                         tempor incididunt</p>
                                 </div>
                             </div>
+
+                            {/* -------------------------------- make invoice ------------------------------------------ */}
+
                             <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInLeft">
                                 <div className="thumbnail">
                                     <img className="w-25 h-25" src={bill} alt="" />
@@ -52,6 +61,9 @@ class Services extends Component {
                                         tempor incididunt</p>
                                 </div>
                             </div>
+
+                            {/* -------------------------------- vreate market ------------------------------------------ */}
+
                             <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInUp">
                                 <div className="thumbnail">
                                     <img className="w-25 h-25" src={shop} alt="" />
@@ -61,6 +73,9 @@ class Services extends Component {
                                         tempor incididunt</p>
                                 </div>
                             </div>
+
+                            {/* -------------------------------- make shopping ------------------------------------------ */}
+
                             <div className="col-xs-12 col-md-6 col-lg-4 animate__animated animate__backInRight">
                                 <div className="thumbnail">
                                     <img className="w-25 h-25" src={shopping} alt="" />

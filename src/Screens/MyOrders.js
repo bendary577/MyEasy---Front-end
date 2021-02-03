@@ -30,7 +30,6 @@ class MyOrders extends Component {
 
                 <AccNavbar />
 
-
                     <div className="container" style={{height:500}}>
                         <div className="intro-headline d-flex my-5">
                             <FontAwesomeIcon icon={faMoneyBill} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>

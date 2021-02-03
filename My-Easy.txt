@@ -202,30 +202,30 @@
 		2 - Register Screen													: Bendary - done
 		3 - Login Screen 													: Bendary - done
  
-	4 - Views : 															
-			4.1 - Customer Profile Screen									: Bendary - done
-				4.1.1 - Customer Edit Profile Screen						: Bendary - done
-				4.1.2 - Browse Stores Screen								: Bendary - done
-					4.1.2.1 - Store Screen									: Mosaad - done
-					4.1.2.2 - View Seller Profile Screen					: Bendary - done
-					4.1.2.3 - View Item Details Screen						: Bendary - done
-				4.1.3 - My Cart Screen										: Bendary - done
-				4.1.4 - My Orders Screen									: Bendary - done
-					4.1.4.1 - View Order Details							: Mossad - done 																	
-				4.1.5 - Make a Complaint Screen								: Bendary - done
-				4.1.6 - Buy Item Screen										: Bendary - done
+		4 - Views : 															
+			4.1 - Customer Profile Screen											: Bendary - done
+				4.1.1 - Customer Edit Profile Screen									: Bendary - done
+				4.1.2 - Browse Stores Screen										: Bendary - done
+					4.1.2.1 - Store Screen										: Mosaad - done
+					4.1.2.2 - View Seller Profile Screen								: Bendary - done
+					4.1.2.3 - View Item Details Screen								: Bendary - done
+				4.1.3 - My Cart Screen											: Bendary - done
+				4.1.4 - My Orders Screen										: Bendary - done
+					4.1.4.1 - View Order Details									: Mossad - done 																	
+				4.1.5 - Make a Complaint Screen										: Bendary - done
+				4.1.6 - Buy Item Screen											: Bendary - done
 
-			4.2 - Individual Seller Profile Screen							: Bendary 			
+			4.2 - Individual Seller Profile Screen										: Bendary 			
 				4.2.1 - Individual Seller Edit Profile Screen               
-				4.2.2 - Create Store Screen									: Mosaad - done
-					4.2.2.1 - Upload Item Screen							: Mosaad - done
-				4.2.3 - My Store Screen										: Bendary 
-				4.2.4 - Create Invoice Screen								: Mosaad - done
+				4.2.2 - Create Store Screen										: Mosaad - done
+					4.2.2.1 - Upload Item Screen									: Mosaad - done
+				4.2.3 - My Store Screen											: Bendary 
+				4.2.4 - Create Invoice Screen										: Mosaad - done
 				4.2.5 - Make Complaint Screen
 				4.2.6 - My Orders Screen																		
-				4.2.7 - View Customer Profile Screen						: Bendary
-				4.2.8 - My Invoices Screen									: Mosaad - done
-				4.2.9 - New Order Notification Screen (contains pdf)		: Bendary
+				4.2.7 - View Customer Profile Screen									: Bendary
+				4.2.8 - My Invoices Screen										: Mosaad - done
+				4.2.9 - New Order Notification Screen (contains pdf)							: Bendary
 
 
 			4.3 - Company Seller Profile Screen
@@ -248,7 +248,7 @@
 		5 - Search Result Screen
 		6 - Notifications Screen
 		7 - Logout Screen													: Bendary - 
-		8 - Forget Password Screen											: Mosaad  - done
+		8 - Forget Password Screen												: Mosaad  - done
 			
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -272,6 +272,7 @@
 
 		- Seller : 
 			- seller bagde (gold - silver - bronze)
+			- hasStore
 			- no. of customers
 			- no. of orders
 			- order delivery speed

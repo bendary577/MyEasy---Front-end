@@ -26,7 +26,7 @@ class CartItemInfoCard extends Component {
                     </div>
 
                     <div className="text-secondary">
-                        <p>item description pla pla pla pla pla pla pla pla pla pla .......</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
 
                     <div className="clearfix">

@@ -11,7 +11,6 @@ import BuyItem from './Screens/BuyItem';
 import MyOrders from './Screens/MyOrders';
 import OrderDetails from './Screens/OrderDetails';
 import MyCart from './Screens/MyCart';
-import Store from './Screens/Store';
 import CreateStore from './Screens/CreateStore';
 import Uploaditem from './Screens/Uploaditem';
 import MyInvoices from './Screens/MyInvoices';
@@ -20,6 +19,7 @@ import ViewItemDetails from './Screens/ViewItemDetails';
 import SellerProfile from './Screens/SellerProfile';
 import './App.css';
 import Stores from './Screens/Stores';
+import SellerStore from './Screens/SellerStore';
 import SigninPage from './Screens/SigninPage';
 
 class App extends Component {
@@ -75,8 +75,8 @@ class App extends Component {
                         <MyCart />
                     </Route>
 
-                    <Route exact path="/store">
-                        <Store />
+                    <Route exact path="/mystore">
+                        <SellerStore />
                     </Route>
 
                     <Route exact path="/createstore">

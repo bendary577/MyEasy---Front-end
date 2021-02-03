@@ -6,10 +6,10 @@ import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import RecommendItemInfoCard from "../Components/RecommendItemInfoCard";
 import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
-import store from "../../public/icons/profile/store.png";
-import invoice from "../../public/icons/profile/invoice.png";
-import complaint from "../../public/icons/profile/complaint.png";
+
 import "../../public/css/account.css";
+import CustomerActions from "../ScreenSnippets/accounts/CustomerActions";
+import SellerActions from "../ScreenSnippets/accounts/SellerActions";
 
 
 class Account extends Component {
@@ -37,12 +37,6 @@ class Account extends Component {
 
 
     render() {
-
-        const iconImgsStyle = {
-            width: 120,
-            height: 120
-        };
-        
 
         return (
 
@@ -76,63 +70,8 @@ class Account extends Component {
                         
                          {/**------------------------------------- actions row ---------------------------------- */}
 
+                            {this.state.userinfo.type === "customer" ?  <CustomerActions/>  : <SellerActions />}
                             
-
-                            <div className="row">
-                                {/*---------------------------- card1-----------------------------*/}
-                                <div className="col-sm-12 col-md-4 mb-3 ">
-                                    <div class="card w-100 m-0 control">
-                                        <div className="card-body text-center">
-                                            <img
-                                                src={store}
-                                                alt="Logo1"
-                                                calssName="img img-responsive"
-                                                style={iconImgsStyle}
-                                            />
-                                            <div>
-                                                <a class="btn btn-lg btn-primary" href="/browsestores" role="button">Browse Stores</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/*---------------------------- card2-----------------------------*/}
-
-                                <div className="col-sm-12 col-md-4 mb-3 ">
-                                    <div className="card w-100 m-0 control ">
-                                        <div className="card-body text-center">
-                                            <img
-                                                src={invoice}
-                                                alt="Logo1"
-                                                calssName="img img-responsive"
-                                                style={iconImgsStyle}
-                                            />
-                                            <div>
-                                                <a href="/makeinvoice" className="btn btn-dark btn-lg">Create Invoice</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/*---------------------------- card3-----------------------------*/}
-
-                                <div className="col-sm-12 col-md-4 mb-3 ">
-                                    <div className="card w-100 m-0 control">
-                                        <div className="card-body text-center">
-                                            <img
-                                                src={complaint}
-                                                alt="Logo1"
-                                                calssName="img img-responsive"
-                                                style={iconImgsStyle}
-                                            />
-                                            <div>
-                                                <a href="/complaint" className="btn btn-warning btn-lg">Make Complaint</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                              {/**------------------------------------- recommentation row ---------------------------------- */}
 
                             <div className="row">

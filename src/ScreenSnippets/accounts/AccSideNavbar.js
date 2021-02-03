@@ -5,10 +5,6 @@ import "../../../public/css/accsidenavbar.css";
 
 class AccSideNavbar extends Component {
 
-    constructor(props) {
-        super(props);
-      }
-
     render() {
         return (    
             <div class="bg-light border-right" id="sidebar-wrapper">

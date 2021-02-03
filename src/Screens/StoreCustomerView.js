@@ -5,7 +5,7 @@ import StoreContent from '../ScreenSnippets/store/StoreContent';
 import Recommend from '../ScreenSnippets/store/Recommend';
 import '../../public/css/store.css';
 
-class Store extends Component {
+class StoreCustomerView extends Component {
     render() {
         return (
             <div className="store">
@@ -27,4 +27,4 @@ class Store extends Component {
     }
 }
 
-export default Store;
+export default StoreCustomerView;
