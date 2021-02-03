@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import "../../public/css/sidenavbar.css"
+import "../../public/css/accsidenavbar.css"
 
 class BrowseStoreSideNav extends Component {
 

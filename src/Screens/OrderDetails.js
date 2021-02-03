@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import SunClasses from '../../public/images/Products/sunglasses.jpg';
-import CustomerAccNavBar from '../ScreenSnippets/accounts/CustomerAccNavBar';
+import AccNavbar from '../ScreenSnippets/accounts/AccNavbar';
 import Footer from '../ScreenSnippets/accounts/Footer';
 
 class OrderDetails extends Component {
     render() {
         return (
             <div className="parent">
-                <CustomerAccNavBar />
+                <AccNavbar />
 
                 <div className="order-details pt-5">
                     <div className="container my-5">

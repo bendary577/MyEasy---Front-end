@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import person from "../../public/images/person_2.jpg";
 import medal from "../../public/images/medal.png";
 import star from "../../public/images/star.png";
@@ -33,7 +33,7 @@ class SellerProfile extends Component {
         return (
             <div className="parent-div">
 
-                <CustomerAccountNavBar />
+                <AccNavbar />
 
                 {/*------------------------------ left side bar --------------------------------------------- */}
 

@@ -4,7 +4,7 @@ import Home from "./Screens/Home";
 import SignUp from "./Screens/SignUp";
 import SignUpAs from "./Screens/SignUpAs";
 import ForgetPassword from './Screens/ForgetPassword';
-import CustomerAccount from './Screens/CustomerAccount';
+import Account from './Screens/Account';
 import EditProfile from "./Screens/EditProfile";
 import MakeComplaint from './Screens/MakeComplaint';
 import BuyItem from './Screens/BuyItem';
@@ -19,7 +19,7 @@ import MakeInvoice from './Screens/MakeInvoice';
 import ViewItemDetails from './Screens/ViewItemDetails';
 import SellerProfile from './Screens/SellerProfile';
 import './App.css';
-import BrowseStores from './Screens/BrowseStores';
+import Stores from './Screens/Stores';
 import SigninPage from './Screens/SigninPage';
 
 class App extends Component {
@@ -47,8 +47,8 @@ class App extends Component {
                         <ForgetPassword />
                     </Route>
 
-                    <Route exact path="/customerprofile">
-                        <CustomerAccount />
+                    <Route exact path="/profile">
+                        <Account />
                     </Route>
 
                     <Route exact path="/editprofile">
@@ -108,7 +108,7 @@ class App extends Component {
                     </Route>
 
                     <Route exact path="/browsestores">
-                        <BrowseStores />
+                        <Stores />
                     </Route>
 
                 </Switch>

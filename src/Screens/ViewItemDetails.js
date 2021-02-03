@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import ProductCarousel from "../Components/ProductsCarousel";
 import ViewItemInfoCard from "../Components/ViewItemInfoCard";
-import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar"
 
@@ -13,7 +13,7 @@ class ViewItemDetails extends Component {
     render() {
         return (
             <div className="parent-div">
-                <CustomerAccNavBar />
+                <AccNavbar />
                 <CategoriesNavbar />
                 <div className="container">
 

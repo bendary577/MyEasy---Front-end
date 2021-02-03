@@ -115,11 +115,7 @@ class SignInFrom extends Component {
                                 {/*---------------------login button ----------------------------------------- */}
 
                                 <div className="form-group mt-4">
-                                    <input
-                                        className="btn btn-dark btn-block form-control"
-                                        type="submit"
-                                        value="login"
-                                    ></input>
+                                    <a href="/profile" className="btn btn-dark btn-block">login</a>
                                 </div>
 
                                 {/*--------------------- or register section ----------------------------------------- */}

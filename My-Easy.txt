@@ -266,6 +266,9 @@
 		- gender
 		- category
 		- phone number
+		- isBlocked
+		- isAccountActivated
+		- availableMoneyAmmount
 
 		- Seller : 
 			- seller bagde (gold - silver - bronze)
@@ -328,12 +331,6 @@
 		- creation date 
 
 
-java -jar jd-gui-1.6.6.jar 
-
-Edu@2018@
-
-
-
 --------------------------
 package installed
 - bootstrap
@@ -344,7 +341,10 @@ package installed
 - font awesome
 - react scripts
 
+------------------------
+java -jar jd-gui-1.6.6.jar 
 
+Edu@2018@
 
 
 

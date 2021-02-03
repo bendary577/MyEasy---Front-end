@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import "../../public/css/buyitem.css";
 import PaymentForm from "../Components/PaymentForm";
 import BuyItemInfoCard from "../Components/BuyItemInfoCard";
@@ -14,7 +14,7 @@ class BuyItem extends Component {
         return (
             <div className="parent-div">
 
-                <CustomerAccountNavBar />
+                <AccNavbar />
 
                 {/*------------------------------ left side bar --------------------------------------------- */}
 

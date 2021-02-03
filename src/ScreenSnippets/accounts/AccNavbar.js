@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import egypt from "../../../public/icons/home/egypt.png";
 import "../../../public/css/customeraccnavbar.css";
 
 
 class CustomerAccNavBar extends Component {
     render() {
+        const langIconStyle={
+            width:30,
+            height:30
+        };
         return (
 
             <nav className="topnavigation navbar navbar-expand-sm bg-dark navbar-dark">
@@ -36,14 +41,20 @@ class CustomerAccNavBar extends Component {
 
                 <div className="ml-5 collapse navbar-collapse accLinks" id="collapsibleNavbar">
                     <ul className="navbar-nav">
-                        <li className="nav-item mt-2">
-                            <a className="nav-link" href="/browsestores">Browse Stores</a>
+                        <li className="nav-item mx-2 mt-2">
+                            <a className="nav-link" href="/browsestores">stores</a>
                         </li>
-                        <li className="nav-item mt-2">
-                            <a className="nav-link" href="/mycart">My Cart</a>
+                        <li className="nav-item mx-2 mt-2">
+                            <a className="nav-link" href="/mycart">cart</a>
                         </li>
-                        <li className="nav-item mt-2">
-                            <a className="nav-link" href="/myorders">My Orders</a>
+                        <li className="nav-item mx-2 mt-2">
+                            <a className="nav-link" href="/myorders">orders</a>
+                        </li>
+
+                        <li className="nav-item mx-2 mt-2">
+                            <a href="">
+                                <img src={egypt} style={langIconStyle} className="mt-2" alt="" />
+                            </a> 
                         </li>
 
                         {/*------------------------- drop down links ----------------------------------------------*/}

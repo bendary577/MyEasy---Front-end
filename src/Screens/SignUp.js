@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../public/css/signup.css";
 import axios from 'axios';
+import "../../public/css/signup.css";
 
 
 class Signup extends Component {
@@ -21,7 +21,7 @@ class Signup extends Component {
         zipcode:'',
         gender:''
       };
-    
+
       handleChange = event => {
         this.setState({ firstname : event.target.value,
                         secondname : event.target.value,
@@ -365,11 +365,7 @@ class Signup extends Component {
                                 {/*---------------------submit button ----------------------------------------- */}
 
                                 <div className="form-group mt-4">
-                                    <input
-                                        className="btn btn-success btn-block form-control"
-                                        type="submit"
-                                        value="Submit"
-                                    ></input>
+                                    <a href="/profile" className="btn btn-dark btn-block">submit</a>
                                 </div>
 
                                 {/*---------------------login text ----------------------------------------- */}

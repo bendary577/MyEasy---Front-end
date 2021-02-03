@@ -1,8 +1,7 @@
 
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import "../../public/css/editaccount.css";
-import book2 from "../../public/images/book_2.png";
 import person from "../../public/images/person_2.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +20,7 @@ class EditProfile extends Component {
         return (
             <div className="parent-div">
 
-                <CustomerAccountNavBar />
+                <AccNavbar />
 
                 {/*------------------------------ left side bar --------------------------------------------- */}
 

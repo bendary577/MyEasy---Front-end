@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import CustomerAccNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import BrowseStoreSideNav from "../Components/BrowseStoreSideNav";
-import "../../public/css/browsestores.css";
 import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar";
 import ProductCarousel from "../Components/ProductsCarousel";
 import Footer from "../ScreenSnippets/accounts/Footer";
-import BrowseStoreSlider from "../ScreenSnippets/store/BrowseStoreSlider";
 import StoreCarousel from "../Components/StoreCarousel"
+import "../../public/css/stores.css";
 
-
-class BrowseStores extends Component {
+class Stores extends Component {
 
 
     render() {
@@ -19,7 +17,7 @@ class BrowseStores extends Component {
                 <div className="d-flex" id="wrapper">
                     <BrowseStoreSideNav />
                     <div id="page-content-wrapper">
-                        <CustomerAccNavBar />
+                        <AccNavbar />
                         <CategoriesNavbar />
                         <StoreCarousel />
                         <div class="container-fluid">
@@ -28,8 +26,8 @@ class BrowseStores extends Component {
                                 <ProductCarousel />
                             </div>
 
-                            <div className="offerimg w-100 mt-5  d-flex justify-content-center align-items-center text-white">
-                                <h2 className="font-weight-bold">helooooooo</h2>
+                            <div className="offerimg w-100 mt-5 d-flex justify-content-center align-items-center text-white text-center">
+                                <h2 className="font-weight-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
                             </div>
 
                             <div className="my-5">
@@ -48,4 +46,4 @@ class BrowseStores extends Component {
     }
 }
 
-export default BrowseStores;
+export default Stores;

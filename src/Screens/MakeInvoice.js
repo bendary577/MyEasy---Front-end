@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Form, Container, Button, Col, Row } from 'react-bootstrap';
-import CustomerAccNavBar from '../ScreenSnippets/accounts/CustomerAccNavBar';
+import AccNavbar from '../ScreenSnippets/accounts/AccNavbar';
 import Footer from '../ScreenSnippets/accounts/Footer';
 
 class MakeInvoice extends Component {
     render() {
         return (
             <div className="contact pt-4 pb-4" id="contact">
-                <CustomerAccNavBar />
+                <AccNavbar />
                 <Container className="my-5">
                     <Row>
                         <Col xs={12} style={{ textAlign: 'center' }}>

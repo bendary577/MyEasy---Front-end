@@ -1,10 +1,9 @@
 
 import React, { Component } from "react";
-import CustomerAccountNavBar from "../ScreenSnippets/accounts/CustomerAccNavBar";
+import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import "../../public/css/makecomplaint.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
-import book1 from "../../public/images/book_1.png";
 
 
 class MakeComplaint extends Component {
@@ -19,7 +18,7 @@ class MakeComplaint extends Component {
         return (
             <div className="parent-div">
 
-                <CustomerAccountNavBar />
+                <AccNavbar />
 
                 {/*------------------------------ intro --------------------------------------------- */}
 
