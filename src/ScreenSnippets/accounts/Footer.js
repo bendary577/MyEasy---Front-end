@@ -1,82 +1,114 @@
+
 import React, { Component } from "react";
-import "../../../public/css/footer.css"
+import Facebook from "../../../public/icons/social media/facebook.png";
+import Instagram from "../../../public/icons/social media/instagram.png";
+import Twitter from "../../../public/icons/social media/twitter.png";
+import Pinterest from "../../../public/icons/social media/pinterest.png";
+import GooglePlus from "../../../public/icons/social media/google-plus.png";
+import PlayStore from "../../../public/icons/social media/playstore.png";
 
 class Footer extends Component {
     render() {
+        const socialMediaIconsStyle = {
+            width : 30,
+            height : 30
+        };
+        
         return (
-            <div className="footer bg-dark">
-                <div className="container">
-                    <div className="page-section">
-                        <div className="row gutters-100">
-                            <div className="col-md-4 col-lg-3">
-                                <div className="footer__first">
-                                    <h2 className="footer__title">DART AGENCY</h2>
-                                    <p className="footer-first__paragraph">
-                                        Lorem ipsum dolor sit amet, consectet adipisicing elit, sed do
-                                        eiusmod tempor incididunt ut labore </p>
-                                    <ul className="footer-first__social-icons">
-                                        <li><a href=""><i className="flaticon-facebook-letter-logo"></i></a></li>
-                                        <li><a href=""><i className="flaticon-twitter-logo"></i></a></li>
-                                        <li><a href=""><i className="flaticon-dribbble-logo"></i></a></li>
-                                        <li><a href=""><i className="flaticon-behance-logo"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-2">
-                                <div className="footer__second">
-                                    <h2 className="footer__title">QUICK LINK</h2>
-                                    <ul>
-                                        <li><a href="">Home</a></li>
-                                        <li><a href="">About Us</a></li>
-                                        <li><a href="">Service</a></li>
-                                        <li><a href="">Blog</a></li>
-                                        <li><a href="">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-3">
-                                <div className="footer__third">
-                                    <h2 className="footer__title">CONTACT US</h2>
-                                    <ul>
-                                        <li><span className="glyphicon glyphicon-envelope"></span> <a href="#">dartagency@gmail.com</a></li>
-                                        <li><span className="glyphicon glyphicon-earphone"></span> <a href="#">+0123-345-6789</a></li>
-                                    </ul>
-                                    <h4 className="footer__subscribe__title">Subscribe To Our Newsletter</h4>
-                                    <div className="subscribe-section">
-                                        <input type="email" className="form-control" size="50" placeholder="Enter Your Email" required />
-                                        <button className="subscribe-section__button" type="button"><img src="../images/send-icon.png" alt="" /></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="footer__fourth">
-                                    <h4 className="footer__title">INSTAGRAM</h4>
-                                    <div className="row">
-                                        <ul>
-                                            <li><a href=""><img src="../images/instagram-pic1.png" alt="" /></a></li>
-                                            <li><a href=""><img src="../images/instagram-pic2.png" alt="" /></a></li>
-                                            <li><a href=""><img src="../images/instagram-pic3.png" alt="" /></a></li>
+            <div className="">
+                <div className="footer" style={{backgroundColor:"lightgray"}}>
+                    <div className="container pb-5">
+                        <div className="page-section">
+                            <div className="row gutters-100">
+
+                                {/* ------------------------------ products categories -------------------------------------- */}
+
+                                <div className="col-md-4 col-lg-3">
+                                    <div className="footer__first">
+                                        <h2 className="footer__title text-dark">Products Categories</h2>
+                                        <ul className="footer-first__social-icons">
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
+                                            <li><a href="" className="text-dark">Eloctronics</a></li>
                                         </ul>
                                     </div>
-                                    <div className="row">
+                                </div>
+
+                                {/* ------------------------------ quick link -------------------------------------- */}
+
+                                <div className="col-md-6 col-lg-2">
+                                    <div className="footer__second">
+                                        <h2 className="footer__title text-dark">QUICK LINK</h2>
                                         <ul>
-                                            <li><a href=""><img src="../images/instagram-pic4.png" alt="" /></a></li>
-                                            <li><a href=""><img src="../images/instagram-pic5.png" alt="" /></a></li>
-                                            <li><a href=""><img src="../images/instagram-pic6.png" alt="" /></a></li>
+                                            <li><a href="" className="text-dark">Home</a></li>
+                                            <li><a href="" className="text-dark">About Us</a></li>
+                                            <li><a href="" className="text-dark">Service</a></li>
+                                            <li><a href="" className="text-dark">Blog</a></li>
+                                            <li><a href="" className="text-dark">Contact</a></li>
                                         </ul>
+                                    </div>
+                                </div>
+
+                                {/* ------------------------------ contact us -------------------------------------- */}
+
+                                <div className="col-md-6 col-lg-3">
+                                    <div className="footer__third">
+                                        <h2 className="footer__title text-dark">CONTACT US</h2>
+                                        <ul>
+                                            <li><span className="glyphicon glyphicon-envelope "></span> <a href="#" className="text-dark">dartagency@gmail.com</a></li>
+                                            <li><span className="glyphicon glyphicon-earphone"></span> <a href="#" className="text-dark">+0123-345-6789</a></li>
+                                        </ul>
+                                        <h4 className="footer__subscribe__title text-dark">Subscribe To Our Newsletter</h4>
+                                        <div className="subscribe-section">
+                                            <input type="email" className="form-control" size="50" placeholder="Enter Your Email" required />
+                                            <button className="subscribe-section__button" type="button"><img src="../images/send-icon.png" alt="" /></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* ------------------------------ social media -------------------------------------- */}
+
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="footer__fourth">
+                                        <h4 className="footer__title text-dark">Follow Us On Social Media</h4>
+                                        <div className="icons">
+                                            <ul>
+                                                <li><a href=""><img src={Facebook} style={socialMediaIconsStyle} className="mx-2" alt="" /></a></li>
+                                                <li><a href=""><img src={Instagram} style={socialMediaIconsStyle} className="mx-2" alt="" /></a></li>
+                                                <li><a href=""><img src={Twitter} style={socialMediaIconsStyle} className="mx-2" alt="" /></a></li>
+                                                <li><a href=""><img src={Pinterest} style={socialMediaIconsStyle} className="mx-2" alt="" /></a></li>
+                                                <li><a href=""><img src={GooglePlus} style={socialMediaIconsStyle} className="mx-2" alt="" /></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="footer__fourth">
+                                        <h4 className="footer__title text-dark">Download Our App</h4>
+                                        <img src={PlayStore} style={socialMediaIconsStyle} alt="" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        < hr className="footer__horizontal-bar" />
-                        <p className="footer__bottom-paragraph">
-                            &copy; Copyright 2021
-                            <a href="" style={{ color: "#00aafe", fontWeight: "bold" }}> MyEasy </a>
-                            . All Rights Reserved
-                        </p>
                     </div>
+                </div >
+                <div className="bg-dark" style={{height:80}}>
+                    <p className="footer__bottom-paragraph text-white">
+                         &copy; Copyright 2021
+                        <a href="" style={{ color: "#00aafe", fontWeight: "bold" }}> MyEasy </a>
+                        . All Rights Reserved
+                    </p>
                 </div>
-            </div >
+            </div>
         )
     }
 }

@@ -21,7 +21,7 @@ class MyOrders extends Component {
             const orders = res.data;
             this.setState({ orders });
           })
-      }
+    }
 
     render() {
 

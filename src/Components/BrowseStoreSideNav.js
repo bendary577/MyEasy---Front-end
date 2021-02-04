@@ -1,9 +1,26 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import "../../public/css/accsidenavbar.css"
+import "../../public/css/accsidenavbar.css";
 
 class BrowseStoreSideNav extends Component {
+
+    state = {
+        rating: '',
+        stores: '',
+      }
+    
+    handleChange = event => {
+        event.preventDefault();
+        this.setState({ rating: event.target.value });
+
+        axios.get(`https://jsonplaceholder.typicode.com/stores`)
+             .then(res => {
+                const stores = res.data;
+                this.setState({ stores });
+            })
+      }
 
     render() {
         return (    

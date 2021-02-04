@@ -17,10 +17,10 @@ import MyInvoices from './Screens/MyInvoices';
 import MakeInvoice from './Screens/MakeInvoice';
 import ViewItemDetails from './Screens/ViewItemDetails';
 import SellerProfile from './Screens/SellerProfile';
-import './App.css';
 import Stores from './Screens/Stores';
 import SellerStore from './Screens/SellerStore';
 import SigninPage from './Screens/SigninPage';
+import './App.css';
 
 class App extends Component {
     render() {
@@ -99,7 +99,7 @@ class App extends Component {
                         <MakeInvoice />
                     </Route>
 
-                    <Route exact path="/myinvoice">
+                    <Route exact path="/myinvoices">
                         <MyInvoices />
                     </Route>
 
@@ -107,7 +107,7 @@ class App extends Component {
                         <SellerProfile />
                     </Route>
 
-                    <Route exact path="/browsestores">
+                    <Route exact path="/stores">
                         <Stores />
                     </Route>
 

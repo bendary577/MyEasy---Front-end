@@ -6,10 +6,12 @@ import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import RecommendItemInfoCard from "../Components/RecommendItemInfoCard";
 import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
-
 import "../../public/css/account.css";
 import CustomerActions from "../ScreenSnippets/accounts/CustomerActions";
 import SellerActions from "../ScreenSnippets/accounts/SellerActions";
+import BronzeMedal from "../../public/icons/profile/bronzemedal.png";
+import SilverMedal from "../../public/icons/profile/silvermedal.png";
+import GoldMedal from "../../public/icons/profile/goldmedal.png";
 
 
 class Account extends Component {
@@ -38,6 +40,24 @@ class Account extends Component {
 
     render() {
 
+        const medalImageStyle = {
+            width : 30,
+            height : 30
+        };
+
+        let medalImage;
+        if(this.state.userinfo.type === "customer"){
+            medalImage = "";
+        }else if(this.state.userinfo.type === "seller"){
+            if(this.state.userinfo.badge === "bronze"){
+                medalImage = <img src={BronzeMedal} style={medalImageStyle} className="" alt="" />
+            }else if(this.state.userinfo.badge === "silver"){
+                medalImage = <img src={SilverMedal} style={medalImageStyle} className="" alt="" />
+            }else{
+                medalImage = <img src={GoldMedal} style={medalImageStyle} className="" alt="" />
+            }
+        }
+
         return (
 
                 <div className="d-flex" id="wrapper">
@@ -59,7 +79,8 @@ class Account extends Component {
                             <div className="row">
                                 <div className="intro-headline d-flex my-5 ml-4">
                                     <FontAwesomeIcon icon={faShoppingCart} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
-                                    <h2 className="font-weight-bold">Hi Customer !</h2>
+                                    <h2 className="font-weight-bold">Hi {this.state.userinfo.name} !</h2>
+                                    {medalImage}
                                 </div>
 
                                 <div className="badge">

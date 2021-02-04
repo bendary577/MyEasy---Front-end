@@ -1,9 +1,56 @@
 import React, { Component } from 'react';
 import { Form, Container, Button, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
 import AccNavbar from '../ScreenSnippets/accounts/AccNavbar';
 import Upload from "../../public/icons/stores/uploaditem.png";
 
 class UploadItem extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name : '',
+            price : '',
+            number: '',
+            description: '',
+            image: '',
+            category: '' 
+         };
+      }
+
+      handleChange = event => {
+        this.setState({ 
+            name: event.target.value,
+            price: event.target.price,
+            number: event.target.number,
+            description: event.target.description,
+            image: event.target.image,
+            category: event.target.category,
+            status: event.target.status,     
+        });
+      }
+    
+      handleSubmit = event => {
+        event.preventDefault();
+    
+        const item = {
+            name: this.state.name,
+            price: this.state.price,
+            number: this.state.number,
+            description: this.state.description,
+            image: this.state.image,
+            category: this.state.category,
+            status: this.state.status,
+            upoladdate: new Date()
+        };
+    
+        axios.post(`https://jsonplaceholder.typicode.com/users`, { item })
+          .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+      }
+
     render() {
 
         const imageStyle = {
@@ -18,14 +65,14 @@ class UploadItem extends Component {
                 <Container>
 
                     {/**----------------------------header ------------------------------------ */}
-                      <div className="header">
+                    
+                        <div className="header">
                             <h1 className="text-center" style={{
                                 color: '#556a87', fontSize: '30px', fontWeight: 'bold', marginBottom: '25px'
                             }}>Upload Your Item Now!</h1>
                         </div>
 
                     <Row>
-
                     {/**----------------------------image ------------------------------------ */}
 
                         <Col xs={12} lg={6}>
@@ -37,19 +84,23 @@ class UploadItem extends Component {
                         <Col xs={12} lg={6} className="m-auto">
                             <Form>
                                 <Form.Group controlId="formBasicPassword">
-                                    <Form.Control type="text" placeholder="Name" />
+                                    <Form.Label className="font-weight-bold">Name</Form.Label>
+                                    <Form.Control type="text" />
                                 </Form.Group>
 
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Control type="number" placeholder="Price" />
+                                    <Form.Label className="font-weight-bold">Price</Form.Label>
+                                    <Form.Control type="number" />
                                 </Form.Group>
 
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Control type="number" placeholder="Avilable Number" />
+                                    <Form.Label className="font-weight-bold">Available Number</Form.Label>
+                                    <Form.Control type="number" />
                                 </Form.Group>
 
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
-                                    <Form.Control as="textarea" placeholder="Description" rows={3} />
+                                    <Form.Label className="font-weight-bold">Description</Form.Label>
+                                    <Form.Control as="textarea" rows={3} />
                                 </Form.Group>
 
                                 <Form.Group>
@@ -57,9 +108,24 @@ class UploadItem extends Component {
                                 </Form.Group>
 
                                 <Form.Group>
-                                    <Form.Label>Category</Form.Label>
+                                    <Form.Label className="font-weight-bold">Category</Form.Label>
                                     <Form.Control as="select">
-                                        <option>Large select</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                        <option>Electronics</option>
+                                    </Form.Control>
+                                </Form.Group>
+
+                                <Form.Group>
+                                    <Form.Label className="font-weight-bold">Item Status</Form.Label>
+                                    <Form.Control as="select">
+                                        <option>New</option>
+                                        <option>Used</option>
                                     </Form.Control>
                                 </Form.Group>
 
