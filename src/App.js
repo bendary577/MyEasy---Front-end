@@ -20,6 +20,7 @@ import SellerProfile from './Screens/SellerProfile';
 import Stores from './Screens/Stores';
 import SellerStore from './Screens/SellerStore';
 import SigninPage from './Screens/SigninPage';
+import AdminDashBoard from './Screens/AdminDashBoard';
 import './App.css';
 
 class App extends Component {
@@ -109,6 +110,10 @@ class App extends Component {
 
                     <Route exact path="/stores">
                         <Stores />
+                    </Route>
+
+                    <Route exact path="/admin">
+                        <AdminDashBoard />
                     </Route>
 
                 </Switch>

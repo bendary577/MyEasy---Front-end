@@ -322,7 +322,7 @@
 		- status 
 
 	- Invoice : 
-		- item
+		- name
 		- price
 		- creation date
 		- expiration date
