@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import "../../public/css/buyitem.css";
 import PaymentForm from "../Components/PaymentForm";
-import BuyItemInfoCard from "../Components/BuyItemInfoCard";
+import BuyItemInfoCard from "../Components/Cards/BuyItemInfoCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";

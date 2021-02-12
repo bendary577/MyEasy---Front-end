@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
-import RecommendItemInfoCard from "../Components/RecommendItemInfoCard";
+import RecommendItemInfoCard from "../Components/Cards/RecommendItemInfoCard";
 import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
 import "../../public/css/account.css";
 import CustomerActions from "../ScreenSnippets/accounts/CustomerActions";

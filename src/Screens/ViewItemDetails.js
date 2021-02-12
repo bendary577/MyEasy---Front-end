@@ -2,7 +2,7 @@ import { faMailBulk, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import ProductCarousel from "../Components/ProductsCarousel";
-import ViewItemInfoCard from "../Components/ViewItemInfoCard";
+import ViewItemInfoCard from "../Components/Cards/ViewItemInfoCard";
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar";

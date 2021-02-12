@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import product from "../../public/images/Products/shoes.jpg";
+import product from "../../../public/images/Products/shoes.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill, faShoppingCart, faStar } from '@fortawesome/free-solid-svg-icons';
 

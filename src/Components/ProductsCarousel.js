@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RecommendItemInfoCard from "../Components/RecommendItemInfoCard";
+import RecommendItemInfoCard from "./Cards/RecommendItemInfoCard";
 
 
 

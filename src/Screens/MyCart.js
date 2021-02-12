@@ -4,7 +4,7 @@ import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Footer from "../ScreenSnippets/accounts/Footer";
-import CartItemInfoCard from "../Components/CartItemInfoCard";
+import CartItemInfoCard from "../Components/Cards/CartItemInfoCard";
 import axios from 'axios';
 
 class MyCart extends Component {

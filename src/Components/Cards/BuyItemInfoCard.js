@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
-import product from "../../public/images/Products/shoes.jpg";
+import product from "../../../public/images/Products/shoes.jpg";
 
 class BuyItemInfoCard extends Component {
     render() {
