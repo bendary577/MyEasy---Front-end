@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../../public/css/customeraccnavbar.css";
+import "../../../public/css/accnavbar.css";
 import egypt from "../../../public/icons/home/egypt.png";
 
 

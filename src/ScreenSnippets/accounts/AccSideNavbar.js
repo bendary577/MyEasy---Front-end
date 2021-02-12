@@ -9,7 +9,7 @@ class AccSideNavbar extends Component {
         return (    
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading">My Easy account </div>
-                {this.props.user === "customer" ?  <AccCustomerLinks /> : <AccSellerLinks /> }   
+                {this.props.user === "customer" ?  <AccSellerLinks /> : <AccCustomerLinks />  }   
             </div>
 
         );

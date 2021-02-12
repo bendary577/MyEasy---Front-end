@@ -28,7 +28,6 @@ class ViewItemInfoCard extends Component {
                                     </div>
                                     
                                     <div className=" mt-3 float-right">
-                                        <span class="fa fa-star checked"></span>
                                         <div className="d-flex">
                                             <p className="text-success mr-2">4.6</p>
                                             <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>

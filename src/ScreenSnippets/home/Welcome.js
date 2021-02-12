@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import app from "../../../public/images/Home/app2.png"
+import app7 from "../../../public/images/Home/app7.png"
 
 class Welcome extends Component {
 
@@ -20,7 +20,7 @@ class Welcome extends Component {
                             </div>  
                         </div>
                         <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
-                            <img className="" src={app} style={image} alt="" />
+                            <img className="" src={app7} style={image} alt="" />
                         </div>
                     </div>
                 </div>

@@ -5,21 +5,27 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 class StoreItemCard extends Component {
 
-    render() {
+    constructor(props) {
+        super(props);
+      }
+
+      render() {
         return (
-            <div class="card">
-                <img src={this.props.item.image} calssName="card-img img-responsive" alt="" />
+            <div class="card" style={{height:300}}>
+                <img src={this.props.item.photo_path} calssName="card-img img-responsive" alt="" />
                 <div className="card-body">
                     <div className="clearfix">
-                        <h6 className="float-left">Item Name</h6>
+                        <h6 className="float-left">{this.props.item.name}</h6>
                         <div className="float-right">
-                            {this.props.item.ratings.map(
+                            put rating here
+                           {/* {this.props.item.rating.map(function(){
                                 <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
-                            )}
+                                }
+                            )} */}
                         </div>
                     </div>
 
-                    <div className="text-secondary">
+                    <div className="text-secondary"  style={{height:160}}>
                         <p>{this.props.item.description}</p>
                     </div>
 

@@ -5,7 +5,8 @@ import ProductCarousel from "../Components/ProductsCarousel";
 import ViewItemInfoCard from "../Components/ViewItemInfoCard";
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
-import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar"
+import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar";
+import CommentSection from "../Components/Comments/CommentSection";
 
 
 class ViewItemDetails extends Component {
@@ -31,6 +32,10 @@ class ViewItemDetails extends Component {
                      {/* ------------------------------- item card -------------------------------------------- */}
 
                     <ViewItemInfoCard />
+
+                    {/* ------------------------------- item card -------------------------------------------- */}
+
+                    <CommentSection />
 
                     {/* ------------------------------- others watched -------------------------------------------- */}
 

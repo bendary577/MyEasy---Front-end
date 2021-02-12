@@ -58,16 +58,14 @@ class Account extends Component {
             }
         }
 
-        return (
+        const userType = "customer";    //this.state.userinfo.profile_type;
+        const userName = this.state.userinfo.name;
 
+        return (
+            <div>
                 <div className="d-flex" id="wrapper">
 
-
-                    {this.state.userinfo.type === "customer" ?  <AccSideNavbar user="customer"/>   
-                      :  this.state.userinfo.type === "seller" ? <AccSideNavbar user="seller"/> 
-                      :  <AccSideNavbar user="company"/>  
-                    }
-                    
+                       <AccSideNavbar user={userType}/>                      
 
                     <div id="page-content-wrapper">
                         <AccNavbar />
@@ -79,11 +77,11 @@ class Account extends Component {
                             <div className="row">
                                 <div className="intro-headline d-flex my-5 ml-4">
                                     <FontAwesomeIcon icon={faShoppingCart} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
-                                    <h2 className="font-weight-bold">Hi {this.state.userinfo.name} !</h2>
+                                    <h2 className="font-weight-bold">Hi {userName}!</h2>
                                     {medalImage}
                                 </div>
 
-                                <div className="badge">
+                                <div className="account_intro_badge">
                                     <h3 className="mt-3">Browse More Than 500 Stores</h3>
                                     <h4>choose your desired items, add it to your cart</h4>
                                 </div>
@@ -129,6 +127,8 @@ class Account extends Component {
                 </div>
                 
             </div>
+            <Footer/>
+        </div>
             
 
         );

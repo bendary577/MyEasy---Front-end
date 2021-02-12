@@ -112,6 +112,10 @@ class App extends Component {
                         <Stores />
                     </Route>
 
+                    <Route exact path="/mystore">
+                        <SellerStore />
+                    </Route>
+
                     <Route exact path="/admin">
                         <AdminDashBoard />
                     </Route>
