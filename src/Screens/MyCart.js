@@ -14,7 +14,7 @@ class MyCart extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/cartproducts`)
+        axios.get('http://127.0.0.1:8000/cart')
             .then(res => {
                 const cartproducts = res.data;
                 this.setState({ cartproducts });
