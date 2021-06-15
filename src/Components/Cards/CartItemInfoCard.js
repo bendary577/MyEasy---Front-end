@@ -8,7 +8,6 @@ import book1 from "../../../public/images/book_1.png";
 
 class CartItemInfoCard extends Component {
 
-
     render() {
         return (
             <div class="card w-100 m-0 itemcartcard">
@@ -43,4 +42,4 @@ class CartItemInfoCard extends Component {
     }
 }
 
-    export default CartItemInfoCard;
+export default CartItemInfoCard;
