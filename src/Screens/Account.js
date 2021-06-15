@@ -80,11 +80,6 @@ class Account extends Component {
                                     <h2 className="font-weight-bold">Hi {userName}!</h2>
                                     {medalImage}
                                 </div>
-
-                                <div className="account_intro_badge">
-                                    <h3 className="mt-3">Browse More Than 500 Stores</h3>
-                                    <h4>choose your desired items, add it to your cart</h4>
-                                </div>
                             </div>
                         
                          {/**------------------------------------- actions row ---------------------------------- */}

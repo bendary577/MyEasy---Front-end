@@ -3,9 +3,11 @@ import egypt from "../../../public/icons/home/egypt.png";
 import "../../../public/css/accnavbar.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import Pusher from 'pusher-js'
+import Pusher from 'pusher-js';
+import logo from '../../../public/images/Home/myeasy-logo.png'
 
 class CustomerAccNavBar extends Component {
+
   state = {
     new_notification_message : "",
     notifications_number: 0,
@@ -44,20 +46,20 @@ class CustomerAccNavBar extends Component {
       height: 30,
     };
 
+    const logoStyle = {
+      width: 90,
+      height: 90,
+      marginTop : 5
+    };
+
     return (
       <nav className="topnavigation navbar navbar-expand-sm bg-dark navbar-dark">
         {/*------------------------- brand logo ----------------------------------------------*/}
 
-        {/* -- 
-                <a className="navbar-brand" href="#">
-                    <img src="" alt="Logo" style={ImageStyle} />
-                </a>
-                */}
-
-        <a class="navbar-brand" href="/home">
-          My Easy
+        <a className="navbar-brand" href="/">
+          <img src={logo} alt="Logo"  style={logoStyle}/>
         </a>
-
+        
         {/*------------------------- search bar ---------------------------------------------*/}
 
         <div class="input-group w-50">
@@ -90,23 +92,23 @@ class CustomerAccNavBar extends Component {
           id="collapsibleNavbar"
         >
           <ul className="navbar-nav">
-            <li className="nav-item mx-2 mt-2">
+            <li className="nav-item mx-1 mt-2">
               <a className="nav-link" href="/stores">
                 stores
               </a>
             </li>
-            <li className="nav-item mx-2 mt-2">
+            <li className="nav-item mx-1 mt-2">
               <a className="nav-link" href="/mycart">
                 cart
               </a>
             </li>
-            <li className="nav-item mx-2 mt-2">
+            <li className="nav-item mx-1 mt-2">
               <a className="nav-link" href="/myorders">
                 orders
               </a>
             </li>
 
-            <li className="nav-item mx-2 mt-2">
+            <li className="nav-item mx-1 mt-2">
               <a href="">
                 <img
                   src={egypt}
@@ -148,7 +150,7 @@ class CustomerAccNavBar extends Component {
             </li>
 
             {/*------------------------- options drop down links ----------------------------------------------*/}
-            <li class="nav-item dropdown mr-0 ml-3">
+            <li class="nav-item dropdown mr-0">
               <a
                 className="nav-link"
                 href="/customerprofile"
@@ -164,7 +166,11 @@ class CustomerAccNavBar extends Component {
                 class="dropdown-menu"
                 aria-labelledby="optionsDropdownMenuLink"
               >
-                <a className="dropdown-item" href="#">
+                 <a className="dropdown-item" href="profile">
+                  Profile
+                </a>
+
+                <a className="dropdown-item" href="editprofile">
                   Edit Profile
                 </a>
                 <a className="dropdown-item" href="#">

@@ -21,6 +21,8 @@ import Stores from './Screens/Stores';
 import SellerStore from './Screens/SellerStore';
 import SigninPage from './Screens/SigninPage';
 import AdminDashBoard from './Screens/AdminDashBoard';
+import Search from './Screens/Search';
+import Notifications from './Screens/Notifications';
 import './App.css';
 
 class App extends Component {
@@ -119,6 +121,15 @@ class App extends Component {
                     <Route exact path="/admin">
                         <AdminDashBoard />
                     </Route>
+
+                    <Route exact path="/search">
+                        <Search />
+                    </Route>
+
+                    <Route exact path="/notifications">
+                        <Notifications />
+                    </Route>
+
 
                 </Switch>
             </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../../public/css/accnavbar.css";
 import egypt from "../../../public/icons/home/egypt.png";
-
+import logo from '../../../public/images/Home/myeasy-logo.png';
 
 class HomeNavbar extends Component {
     render() {
@@ -10,12 +10,21 @@ class HomeNavbar extends Component {
             height:30
         };
 
+        const logoStyle = {
+            width: 90,
+            height: 90,
+            marginTop : 5
+          };
+
         return (
 
             <nav className="topnavigation navbar navbar-expand-sm bg-dark navbar-dark d-flex">
                     <div className="">
                         {/*------------------------- brand logo ----------------------------------------------*/}
-                        <a className="navbar-brand font-weight-bold" href="/home">My Easy</a>
+                        <a className="navbar-brand font-weight-bold" href="#">
+                            <img src={logo} alt="Logo"  style={logoStyle}/>
+                            My Easy
+                        </a>
                     </div>
                     <div className="ml-auto">
                         {/*------------------------- collapsing button ---------------------------------------*/}

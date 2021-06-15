@@ -7,8 +7,6 @@ import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
 
 
-
-
 class MyOrders extends Component {
 
     state = {
@@ -36,7 +34,6 @@ class MyOrders extends Component {
                             <FontAwesomeIcon icon={faMoneyBill} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
                             <h2 className="font-weight-bold">My Orders</h2>
                         </div>
-
 
                         <div className="content">
                                 { this.state.orders === [] ? 
