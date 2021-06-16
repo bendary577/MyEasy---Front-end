@@ -28,6 +28,12 @@
   margin-left: 0;
 }
 
+.items-list{
+  padding: 0;
+  list-style-type: none;
+  
+}
+
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;

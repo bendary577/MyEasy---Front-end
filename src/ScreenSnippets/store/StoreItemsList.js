@@ -9,15 +9,14 @@ class StoreItemsList extends Component {
     }
 
     render() {
-
         return (
           <div className="container">
             <div className="row">
               {
                 this.props.items.map(item =>
-                                          <div className="col-xs-12 col-md-4" key={item.id}>
-                                              <StoreItemCard item={item}/>
-                                          </div>
+                  <div className="col-xs-12 col-md-4" key={item.id}>
+                      <StoreItemCard item={item}/>
+                  </div>
                   )
               }
             </div>

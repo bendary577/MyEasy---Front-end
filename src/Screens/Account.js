@@ -84,7 +84,7 @@ class Account extends Component {
                         
                          {/**------------------------------------- actions row ---------------------------------- */}
 
-                            {this.state.userinfo.type === "customer" ?  <CustomerActions/>  : <SellerActions />}
+                            {this.state.userinfo.type === "customer" ?  <SellerActions /> : <CustomerActions/>}
                             
                              {/**------------------------------------- recommentation row ---------------------------------- */}
 

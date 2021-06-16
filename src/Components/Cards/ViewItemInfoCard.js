@@ -13,18 +13,16 @@ class ViewItemInfoCard extends Component {
                <div className="card">
                     <div className="row">
                         <div className="col-sm-3 col-md-3 h-100">
-
-                            {/* ------------------------------- image -------------------------------------------- */}
                             <img src={product} className="card-img img-responsive img-fluid" alt="" />
                         </div>
-                        <div className="col">
+                        <div className="col-md-9">
                             <div className="card-block px-2">
-
                                 {/* ------------------------------- item info -------------------------------------------- */}
                                 <div className="itemName clearfix">
                                     <div className="float-left">
                                         <h4 className="card-title mt-3">Item Name</h4>
                                         <h5 className="text-success">$129.0</h5>
+                                        <h6 className="text-primary">Item Status</h6>
                                     </div>
                                     
                                     <div className=" mt-3 float-right">
@@ -57,7 +55,10 @@ class ViewItemInfoCard extends Component {
                                         order now
                                     </a>
                                 </div>
-                               
+
+                                <div className="gallery">
+                                    <div className="bg-danger"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,10 +67,38 @@ class ViewItemInfoCard extends Component {
 
                     <div className="card-footer w-100 d-flex justify-content-around">
                         <p className="font-weight-bold mt-3">Rate our item ! it will not take a second</p>
-                        <a href="#"  className="mt-3">
-                            <FontAwesomeIcon icon={faStar} className="mr-2 p-0"></FontAwesomeIcon>
-                            rate us
+                        <a href="#"  className="mt-3" data-toggle="modal" data-target="#rateProduct">
+                            <div className="d-flex">
+                                <FontAwesomeIcon icon={faStar} className="mr-2 p-0 mt-1"></FontAwesomeIcon>
+                                <h5>Rate The Product Now!</h5>
+                            </div>
                         </a>
+                    </div>
+
+                    {/*----------------------- Modal -------------------------*/}
+                    <div class="modal fade" id="rateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Rating</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div className="d-flex w-10 justify-content-center">
+                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
+                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
+                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
+                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
+                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
+                            </div>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import BrowseStoreSideNav from "../Components/BrowseStoreSideNav";
 import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar";
-import ProductCarousel from "../Components/ProductsCarousel";
+import StoreCarousel from "../Components/StoreCarousel";
 import Footer from "../ScreenSnippets/accounts/Footer";
-import StoreCarousel from "../Components/StoreCarousel"
 import "../../public/css/stores.css";
 
 class Stores extends Component {
@@ -19,11 +18,11 @@ class Stores extends Component {
                     <div id="page-content-wrapper">
                         <AccNavbar />
                         <CategoriesNavbar />
-                        <StoreCarousel />
+
                         <div class="container-fluid">
 
                             <div className="mt-5">
-                                <ProductCarousel />
+                                <StoreCarousel />
                             </div>
 
                             <div className="offerimg w-100 mt-5 d-flex justify-content-center align-items-center text-white text-center">
@@ -31,7 +30,7 @@ class Stores extends Component {
                             </div>
 
                             <div className="my-5">
-                                <ProductCarousel />
+                                <StoreCarousel />
                             </div>
 
                     </div>

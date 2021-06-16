@@ -239,7 +239,6 @@
 				4.3.7 - View Customer Profile Screen
 				4.3.8 - My Invoices Screen
 
-
 			4.4 - Admin Profile Screen
 				4.4.1 - Registeration Requests Page
 				4.4.2 - Orders Page
@@ -247,11 +246,10 @@
 				4.4.4 - dashboard screen
 
 		5 - Search Result Screen
-		6 - Notifications Screen
-		7 - Logout Screen													: Bendary - 
-		8 - Forget Password Screen												: Mosaad  - done
-		9 - Forget Password Confirmation Screen
-		10 - Update Password Screen
+		6 - Notifications Screen												
+		7 - Forget Password Screen												
+		8 - Forget Password Confirmation Screen
+		9 - Update Password Screen
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -354,6 +352,18 @@ java -jar jd-gui-1.6.6.jar
 
 Edu@2018@
 
+
+
+--------------------------------------
+additional attributes:
+--------------------
+store : details, main_image(relation)
+prodcut : main_image(relation) , another images(relation)
+
+
+additional models : 
+----------------------
+Image Model
 
 
 

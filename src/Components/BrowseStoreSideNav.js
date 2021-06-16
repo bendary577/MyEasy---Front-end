@@ -32,7 +32,7 @@ class BrowseStoreSideNav extends Component {
                     <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
                     <div class="rating list-group-item-action  ">
                         <p className="ml-3 mt-2">Stores Ratings</p>
-                        <ul>
+                        <ul class="items-list ml-3">
                             <li>
                                 <div class="clearfix">
                                     <div className="float-left">
@@ -141,7 +141,7 @@ class BrowseStoreSideNav extends Component {
 
                     <div className="sellerbadge ">
                     <p className="ml-3 mt-2">Seller Level</p>
-                        <ul>
+                        <ul class="items-list ml-3">
                             <li>
                                 <div class="clearfix">
                                     <div className="float-left">

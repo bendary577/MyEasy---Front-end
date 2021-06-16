@@ -25,7 +25,6 @@ class SigninPage extends Component {
                         </div>
                     </div>
                 </div>
-
             </div>
         );
     }

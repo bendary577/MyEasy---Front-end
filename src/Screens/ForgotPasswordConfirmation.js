@@ -1,21 +1,20 @@
 import React, { Component } from "react";
 import '../../public/css/authenticationpassword.css';
 
-class ForgetPassword extends Component {
+class ForgotPasswordConfirmation extends Component {
     render() {
         return (
-            <div class="background-3">
+            <div class="background-2">
                 <div className="container d-flex justify-content-center align-items-center h-100">
                     <div className="">
                         <div class="card">
                             <div class="card-body bg-light">
                                 <div className="">
-                                    <h1>Forgot Your Password ?</h1>
-                                    <h5 class="my-3">Confirm your mail and we will send the instructions</h5>
+                                    <h1>Confirm Code</h1>
+                                    <h5 class="my-3">please write the code we sent to your email</h5>
                                     <form>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter code" />
                                             <div class="text-center">
                                                 <button type="submit" class="btn btn-primary my-4">Submit</button>
                                             </div>
@@ -31,4 +30,4 @@ class ForgetPassword extends Component {
     }
 }
 
-export default ForgetPassword;
+export default ForgotPasswordConfirmation;

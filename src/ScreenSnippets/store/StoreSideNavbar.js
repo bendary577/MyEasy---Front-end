@@ -40,7 +40,7 @@ class StoreSideNavbar extends Component {
                             </div> 
                         </div>
                         <div className="collapse" id="rating">
-                            <ul>
+                            <ul class="items-list">
                                 <li>
                                     <div class="clearfix">
                                         <div className="float-left">
@@ -68,7 +68,7 @@ class StoreSideNavbar extends Component {
                                         <div className="float-left">
                                             <div className="d-flex">
                                                 <input type="radio" id="male" name="gender" className="mt-2"/>
-                                                <div className="ml-2 d-flex">
+                                                <div className="ml-2 d-flex mt-1">
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
@@ -90,7 +90,7 @@ class StoreSideNavbar extends Component {
                                         <div className="float-left">
                                             <div className="d-flex">
                                                 <input type="radio" id="male" name="gender" className="mt-2"/>
-                                                <div className="ml-2 d-flex">
+                                                <div className="ml-2 d-flex mt-1">
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
@@ -111,7 +111,7 @@ class StoreSideNavbar extends Component {
                                         <div className="float-left">
                                             <div className="d-flex">
                                                 <input type="radio" id="male" name="gender" className="mt-2"/>
-                                                <div className="ml-2 d-flex">
+                                                <div className="ml-2 d-flex mt-1">
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <p className="ml-2">or more</p>
@@ -131,7 +131,7 @@ class StoreSideNavbar extends Component {
                                         <div className="float-left">
                                             <div className="d-flex">
                                                 <input type="radio" id="male" name="gender" className="mt-2"/>
-                                                <div className="ml-2 d-flex">
+                                                <div className="ml-2 d-flex mt-1">
                                                     <FontAwesomeIcon icon={faStar} className="checked"></FontAwesomeIcon>
                                                     <p className="ml-2">or more</p>
                                                 </div>
@@ -158,7 +158,7 @@ class StoreSideNavbar extends Component {
                             </div>
                         </div>
                         <div className="collapse" id="level">
-                            <ul>
+                            <ul className="items-list">
                                 <li>
                                     <div class="clearfix">
                                         <div className="float-left">

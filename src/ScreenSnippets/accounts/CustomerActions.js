@@ -15,7 +15,7 @@ class CustomerActions extends Component {
                  
             <div className="row">
             {/*---------------------------- card1-----------------------------*/}
-            <div className="col-sm-12 col-md-4 mb-3 ">
+            <div className="col-sm-12 col-md-6 mb-3 ">
                 <div class="card w-100 m-0 control">
                     <div className="card-body text-center">
                         <img
@@ -33,25 +33,7 @@ class CustomerActions extends Component {
 
             {/*---------------------------- card2-----------------------------*/}
 
-            <div className="col-sm-12 col-md-4 mb-3 ">
-                <div className="card w-100 m-0 control ">
-                    <div className="card-body text-center">
-                        <img
-                            src={invoice}
-                            alt="Logo1"
-                            calssName="img img-responsive"
-                            style={iconImgsStyle}
-                        />
-                        <div>
-                            <a href="/makeinvoice" className="btn btn-dark btn-lg">Create Invoice</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/*---------------------------- card3-----------------------------*/}
-
-            <div className="col-sm-12 col-md-4 mb-3 ">
+            <div className="col-sm-12 col-md-6 mb-3 ">
                 <div className="card w-100 m-0 control">
                     <div className="card-body text-center">
                         <img

@@ -23,7 +23,10 @@ import SigninPage from './Screens/SigninPage';
 import AdminDashBoard from './Screens/AdminDashBoard';
 import Search from './Screens/Search';
 import Notifications from './Screens/Notifications';
+import ForgotPasswordConfirmation from './Screens/ForgotPasswordConfirmation';
 import './App.css';
+import UpdatePassword from './Screens/UpdatePassword';
+import StoreView from './Screens/StoreView';
 
 class App extends Component {
     render() {
@@ -130,6 +133,17 @@ class App extends Component {
                         <Notifications />
                     </Route>
 
+                    <Route exact path="/confirm_code">
+                        <ForgotPasswordConfirmation />
+                    </Route>
+
+                    <Route exact path="/update_password">
+                        <UpdatePassword />
+                    </Route>
+
+                    <Route exact path="/view_store">
+                        <StoreView />
+                    </Route>
 
                 </Switch>
             </BrowserRouter>

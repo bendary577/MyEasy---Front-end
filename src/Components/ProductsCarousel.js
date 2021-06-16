@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import RecommendItemInfoCard from "./Cards/RecommendItemInfoCard";
-
-
+import StoreItemCardDemo from "../ScreenSnippets/store/StoreItemCardDemo";
 
 
 class ProductCarousel extends Component {
@@ -9,56 +7,80 @@ class ProductCarousel extends Component {
     render() {
         return (
             <div className="parent-div">
-                <div className="container">
-                    <div className="row">
-
-                    
 
                     {/* --------------------------- indicators ------------------------------- */}
+                        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                    <div class="col-12">
-                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                            <div class="controls-top text-center">
+                                <a class="btn btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                                <a class="btn btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                            </div>
 
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
+                            <ol class="carousel-indicators">
+                                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                                <li data-target="#multi-item-example" data-slide-to="2"></li>
+                            </ol>
 
-                                        <div class="col-md-3 mb-3">
-                                           <RecommendItemInfoCard />
-                                        </div>
+                            <div class="carousel-inner" role="listbox">
 
-                                        <div class="col-md-3 mb-3">
-                                           <RecommendItemInfoCard />
-                                        </div>
+                            <div class="carousel-item active">
 
-                                        <div class="col-md-3 mb-3">
-                                           <RecommendItemInfoCard />
-                                        </div>
+                                <div class="row">
+                                <div class="col-md-4">
+                                    <StoreItemCardDemo />
+                                </div>
 
-                                        <div class="col-md-3 mb-3">
-                                           <RecommendItemInfoCard />
-                                        </div>
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <StoreItemCardDemo />
+                                </div>
 
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <StoreItemCardDemo />
+                                </div>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-item">
+
+                                <div class="row">
+                                <div class="col-md-4">
+                                    <StoreItemCardDemo />
+                                </div>
+
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <StoreItemCardDemo />
+                                </div>
+
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <StoreItemCardDemo />
+                                </div>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-item">
+
+                                <div class="row">
+                                <div class="col-md-4">
+                                    <StoreItemCardDemo />
+                                </div>
+
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <StoreItemCardDemo />
+                                </div>
+
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                     <StoreItemCardDemo />
                                     </div>
                                 </div>
                             </div>
+                            </div>
                         </div>
+{/* ---------------------------------- end carousel ------------------- */}
                     </div>
-                    {/* --------------------------- controls ------------------------------- */}
 
-                        <div class="col-12 text-center">
-                            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                                <i class="fa fa-arrow-left"></i>
-                            </a>
-
-                            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                 </div>
-            </div>
         );
     }
 }

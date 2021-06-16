@@ -34,16 +34,14 @@ class Notifications extends Component {
 
         return (
             <div className="parent" >
-
                 <AccNavbar />
-
                 <div className="container" style={{height:500}}>
 
                         <div className="intro-headline d-flex my-5">
                             <FontAwesomeIcon icon={faNewspaper} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
                             <h2 className="font-weight-bold">Notifications</h2>
                         </div>
-
+                        
                        <div class="search_results">
                            hello
                        </div>

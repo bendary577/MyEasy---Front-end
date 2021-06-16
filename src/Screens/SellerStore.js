@@ -33,54 +33,16 @@ class SellerStore extends Component {
   };
 
   render() {
-    let { data } = this.state;
-
     const imageStyle = {
       width: 400,
       height: 400,
     };
-
-    const renderProducts = () => {
-      if (data) {
-        return (
-          <div className="container">
-            <StoreItemsList items={this.state.data.data} />
-            <div className="pagination my-5 d-flex justify-content-center text-center">
-              <Pagination
-                activePage={this.state.activePage}
-                itemsCountPerPage={this.state.data.per_page}
-                totalItemsCount={this.state.data.total}
-                pageRangeDisplayed={8}
-                itemClass="page-item"
-                linkClass="page-link"
-                firstPageText="first"
-                lastPageText="last"
-                onChange={(pageNumber) => {
-                  this.handlePageChange(pageNumber);
-                }}
-              />
-            </div>
-          </div>
-        );
-      } else {
-        return (
-          <div className="noitem  text-center">
-            <img className="" src={noItems} style={imageStyle} alt="" />
-            <h3>you didn't upload any items yet!</h3>
-            <a href="/uploaditem" className="btn btn-lg btn-warning">
-              Upload an item
-            </a>
-          </div>
-        );
-      }
-    };
-
     return (
       <div>
         <div className="d-flex" id="wrapper">
           <StoreSideNavbar />
-          
-          <div className="page-content-wrapper">
+          {/* ------------------------------- page content ------------------------------------- */}
+          <div className="page-content-wrapper w-100">
               <AccNavbar />
               <div className="container-fluid" >
                 {/**---------------------------- header ------------------------------------ */}
@@ -89,15 +51,39 @@ class SellerStore extends Component {
                         <FontAwesomeIcon icon={faStore} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
                         <h2 className="font-weight-bold">My Store</h2>
                     </div>
-                    <div>
-                      {renderProducts()}
+                    <div class="container">
+                      {
+                        this.state.data === null ? 
+                          <div className="text-center my-5">
+                            <img className="" src={noItems} style={imageStyle} alt="" />
+                            <h3>your store is empty!</h3>
+                            <a href="/uploaditem" className="btn btn-lg btn-warning">
+                              Upload an item
+                            </a>
+                          </div>
+                        :
+                        <div className="">
+                          <StoreItemsList items={this.state.data.data} />
+                          <div className="pagination my-5 d-flex justify-content-center text-center">
+                            <Pagination
+                              activePage={this.state.activePage}
+                              itemsCountPerPage={this.state.data.per_page}
+                              totalItemsCount={this.state.data.total}
+                              pageRangeDisplayed={8}
+                              itemClass="page-item"
+                              linkClass="page-link"
+                              firstPageText="first"
+                              lastPageText="last"
+                              onChange={(pageNumber) => {
+                                this.handlePageChange(pageNumber);
+                              }}
+                            />
+                          </div>
+                        </div>
+                      }
                     </div>
-                    
                 </div>
-                {/**---------------------------- products ------------------------------------ */} 
-                
-                
-                      
+                {/**---------------------------- products ------------------------------------ */}       
               </div>
           </div>
         </div>
