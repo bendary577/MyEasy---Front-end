@@ -3,6 +3,9 @@ import axios from 'axios';
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileInvoice } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../ScreenSnippets/accounts/Footer";
+import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
+
 
 class MyInvoices extends Component {
 
@@ -20,13 +23,21 @@ class MyInvoices extends Component {
 
     render() {
         return (
-            <div className="my-invoices pt-4">
-                <AccNavbar />
+            <div>
+            <div className="d-flex" id="wrapper">
 
-                <div className="container" style={{height:500}}>
+                <AccSideNavbar user={'seller'}/>                      
+
+                <div id="page-content-wrapper">
+                    <AccNavbar />
+                
+                    <div class="container-fluid">
+
+
+                <div className="container">
                     <div className="intro-headline d-flex my-5">
                         <FontAwesomeIcon icon={faFileInvoice} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
-                        <h2 className="font-weight-bold">My Ivoices</h2>
+                        <h2 className="font-weight-bold">My Invoices</h2>
                     </div>
 
 
@@ -52,16 +63,20 @@ class MyInvoices extends Component {
                                                                         </tr>)}
                                     </tbody>
                                 </table>
-                            :   <div className="noOrders my-5 d-flex">
+                            :   <div className="noOrders my-5 d-flex" style={{height:500}}>
                                     <h1>you have no inovices yet!</h1>
                                     <div className="mx-5">
-                                        <a href="/stores" className="btn btn-lg btn-success">Buy now !</a>
+                                        <a href="/make_invoice" className="btn btn-lg btn-success">Create One</a>
                                     </div>
                                 </div>
                             }            
                     </div>
                 </div>
-            </div >
+                </div>
+                    </div>  
+                </div>
+            <Footer/>
+        </div>
         )
     }
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import AccNavbar from '../ScreenSnippets/accounts/AccNavbar';
 import createStore from "../../public/images/Store/create-store.png";
+import Footer from "../ScreenSnippets/accounts/Footer";
+import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
 
 class CreateStore extends Component {
     render() {
@@ -12,16 +14,22 @@ class CreateStore extends Component {
         };
 
         return (
-            <div className="">
-                <AccNavbar />
-                <div className="create-store mt-5">
+            <div>
+            <div className="d-flex" id="wrapper">
+
+                <AccSideNavbar user={'seller'}/>                      
+
+                <div id="page-content-wrapper">
+                    <AccNavbar />
+                
+                    <div class="container-fluid">
                     <div className="container">
 
                         {/**----------------------------header ------------------------------------ */}
 
                         <div className="header">
                             <h1 className="text-center" style={{
-                                color: '#556a87', fontSize: '30px', fontWeight: 'bold', marginBottom: '25px'
+                                color: '#556a87', fontSize: '30px', fontWeight: 'bold', marginBottom: '25px', marginTop : '20px'
                             }}>Create Your Store and start gaining money!</h1>
                         </div>
 
@@ -38,6 +46,13 @@ class CreateStore extends Component {
                                     <Form.Group>
                                         <Form.Label className="font-weight-bold">Store Name</Form.Label>
                                         <Form.Control type="text" />
+                                    </Form.Group>
+
+                                    <Form.Group>
+                                        <Form.Label className="font-weight-bold">Store Description</Form.Label>
+                                        <textarea id="token" name="token" rows="4" cols="50" placeholder="store description" style={{width : "100%"}}>
+        
+                                        </textarea>
                                     </Form.Group>
 
                                     <Form.Group>
@@ -59,8 +74,11 @@ class CreateStore extends Component {
                             </div>
                         </div>
                     </div>
+                    </div>
+                    </div>  
                 </div>
-            </div>
+            <Footer/>
+        </div>
         )
     }
 }

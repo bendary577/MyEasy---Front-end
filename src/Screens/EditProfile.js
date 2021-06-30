@@ -5,7 +5,8 @@ import "../../public/css/editaccount.css";
 import person from "../../public/images/person_2.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
-
+import Footer from "../ScreenSnippets/accounts/Footer";
+import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
 
 class EditProfile extends Component {
 
@@ -18,13 +19,18 @@ class EditProfile extends Component {
         };
 
         return (
-            <div className="parent-div">
+            <div>
+                <div className="d-flex" id="wrapper">
 
-                <AccNavbar />
+                       <AccSideNavbar user={'seller'}/>                      
 
-                {/*------------------------------ left side bar --------------------------------------------- */}
+                    <div id="page-content-wrapper">
+                        <AccNavbar />
+                    
+                        <div class="container-fluid">
 
-                <div className="container">
+
+                        <div className="container">
 
                     <div className="intro-headline d-flex my-5">
                         <FontAwesomeIcon icon={faUserEdit} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
@@ -101,6 +107,11 @@ class EditProfile extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
+            </div>
+                
+                </div>
+                <Footer/>
             </div>
 
         );

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
 import "../../../public/css/itemcartcard.css";
-import product from "../../../public/images/Products/shoes.jpg";
+import storecard from "../../../public/icons/stores/storecard.png";
 
 
 
@@ -12,7 +12,7 @@ class StoreCard extends Component {
     render() {
         return (
             <div class="card w-100 m-0 itemcartcard border">
-                <img src={product} calssName="card-img img-responsive" />
+                <img src={this.props.icon} calssName="card-img img-responsive" />
                 <div className="card-body">
                     <div className="clearfix">
                         <h6 className="float-left">Store Name</h6>

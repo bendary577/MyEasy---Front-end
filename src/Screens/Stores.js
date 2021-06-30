@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import BrowseStoreSideNav from "../Components/BrowseStoreSideNav";
 import CategoriesNavbar from "../ScreenSnippets/accounts/CategoriesNavbar";
-import StoreCarousel from "../Components/StoreCarousel";
+import StoreCarousel from "../Components/Carousels/StoreCarousel";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import "../../public/css/stores.css";
 

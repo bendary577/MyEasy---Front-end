@@ -1,10 +1,7 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
-import RecommendItemInfoCard from "../Components/Cards/RecommendItemInfoCard";
 import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
 import "../../public/css/account.css";
 import CustomerActions from "../ScreenSnippets/accounts/CustomerActions";
@@ -12,25 +9,24 @@ import SellerActions from "../ScreenSnippets/accounts/SellerActions";
 import BronzeMedal from "../../public/icons/profile/bronzemedal.png";
 import SilverMedal from "../../public/icons/profile/silvermedal.png";
 import GoldMedal from "../../public/icons/profile/goldmedal.png";
+import AccountInfoSection from '../ScreenSnippets/accounts/AccountInfoSection';
+import AccountRecommendedProducts from "./AccountRecommendedProducts";
 
+const Account = () => {
 
-class Account extends Component {
-
-    state = {
-        userinfo: [],
-        recommendations:[]
-      }
+    const [userInfo, setUserInfo] = useState([]);
+    const [recommendations, setRecommendations] = useState([]);
     
-      componentDidMount() {
+    const componentDidMount = () => {
         axios.all([																		 
             axios.get("https://jsonplaceholder.typicode.com/users"),					 
             axios.get("https://jsonplaceholder.typicode.com/posts")
            ])
              .then(axios.spread((...responses) => {
-                    const userinfo = responses[0].data;
+                    const userInfo = responses[0].data;
                     const recommendations = responses[1].data;
-                    this.setState({ userinfo });													 
-                    this.setState({ recommendations });													 
+                    setUserInfo(userInfo);													 
+                    setRecommendations(recommendations);													 
             }))
              .catch(errors => {
                 //react on errors.
@@ -38,28 +34,25 @@ class Account extends Component {
       }
 
 
-    render() {
-
-        const medalImageStyle = {
+    const userType = "seller";    //this.state.userinfo.profile_type;
+    const medalImageStyle = {
             width : 30,
             height : 30
-        };
+    };
 
         let medalImage;
-        if(this.state.userinfo.type === "customer"){
+        if(userInfo.type === "customer"){
             medalImage = "";
-        }else if(this.state.userinfo.type === "seller"){
-            if(this.state.userinfo.badge === "bronze"){
+        }else if(userInfo.type === "seller"){
+            if(userInfo.badge === "bronze"){
                 medalImage = <img src={BronzeMedal} style={medalImageStyle} className="" alt="" />
-            }else if(this.state.userinfo.badge === "silver"){
+            }else if(userInfo.badge === "silver"){
                 medalImage = <img src={SilverMedal} style={medalImageStyle} className="" alt="" />
             }else{
                 medalImage = <img src={GoldMedal} style={medalImageStyle} className="" alt="" />
             }
         }
 
-        const userType = "customer";    //this.state.userinfo.profile_type;
-        const userName = this.state.userinfo.name;
 
         return (
             <div>
@@ -72,52 +65,16 @@ class Account extends Component {
                     
                         <div class="container-fluid">
 
-                        {/**------------------------------------- account intro row ---------------------------------- */}
-
-                            <div className="row">
-                                <div className="intro-headline d-flex my-5 ml-4">
-                                    <FontAwesomeIcon icon={faShoppingCart} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
-                                    <h2 className="font-weight-bold">Hi {userName}!</h2>
-                                    {medalImage}
-                                </div>
-                            </div>
+                       <AccountInfoSection />
                         
+                        <hr></hr>
                          {/**------------------------------------- actions row ---------------------------------- */}
 
-                            {this.state.userinfo.type === "customer" ?  <SellerActions /> : <CustomerActions/>}
+                            {userInfo.type === "customer" ? <CustomerActions/> : <SellerActions /> }
                             
                              {/**------------------------------------- recommentation row ---------------------------------- */}
 
-                            <div className="row">
-                                <div className="recommendations mb-5">
-                                    <div className="container">
-                                        <div className="intro-headline d-flex my-5">
-                                            <FontAwesomeIcon icon={faShoppingCart} className=" fa-2x mr-2 mt-1"></FontAwesomeIcon>
-                                            <h2 className="font-weight-bold">Recommended for you</h2>
-                                        </div>           
-                                                
-                                        <div className="row">
-                                            <div className="content">
-                                            { this.state.recommendations === [] ? 
-                                                <div className="row">
-                                                    {this.state.recommendations.map(recommendedproduct => 
-                                                        <div key={recommendedproduct.key} className="col-sm-6 col-md-3 mb-3 control">
-                                                            <RecommendItemInfoCard name={recommendedproduct.name} price={recommendedproduct.price} />
-                                                        </div>
-                                                    )}
-                                                </div>
-                                                :   <div className="noOrders my-5 d-flex">
-                                                        <h3 className="ml-4">there is no recommended products!</h3>
-                                                        <div className="mx-5">
-                                                            <a href="/stores" className="btn btn-lg btn-success">browse stores !</a>
-                                                        </div>
-                                                    </div>
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <AccountRecommendedProducts products={recommendations} />
                     </div>
                 </div>
                 
@@ -128,6 +85,5 @@ class Account extends Component {
 
         );
     }
-}
 
 export default Account;

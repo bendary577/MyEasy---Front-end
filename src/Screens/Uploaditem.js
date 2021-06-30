@@ -3,6 +3,8 @@ import { Form, Container, Button, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
 import AccNavbar from '../ScreenSnippets/accounts/AccNavbar';
 import Upload from "../../public/icons/stores/uploaditem.png";
+import Footer from "../ScreenSnippets/accounts/Footer";
+import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
 
 class UploadItem extends Component {
 
@@ -49,7 +51,7 @@ class UploadItem extends Component {
             console.log(res);
             console.log(res.data);
           })
-      }
+    }
 
     render() {
 
@@ -59,8 +61,15 @@ class UploadItem extends Component {
         };
 
         return (
-            <div className="">
-            <AccNavbar />
+            <div>
+            <div className="d-flex" id="wrapper">
+
+                <AccSideNavbar user={'seller'}/>                      
+
+                <div id="page-content-wrapper">
+                    <AccNavbar />
+                
+                    <div class="container-fluid">
             <div className="contact pt-4 pb-4 my-5" id="contact">
                 <Container>
 
@@ -138,7 +147,11 @@ class UploadItem extends Component {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+                </div>
+                    </div>  
+                </div>
+                </div>
+            <Footer/>
         </div>
         )
     }

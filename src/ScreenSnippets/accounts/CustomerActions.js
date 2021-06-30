@@ -25,7 +25,7 @@ class CustomerActions extends Component {
                             style={iconImgsStyle}
                         />
                         <div>
-                            <a class="btn btn-lg btn-primary" href="/browsestores" role="button">Browse Stores</a>
+                            <a class="btn btn-lg btn-primary mt-2" href="/browsestores" role="button">Browse Stores</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ class CustomerActions extends Component {
                             style={iconImgsStyle}
                         />
                         <div>
-                            <a href="/complaint" className="btn btn-warning btn-lg">Make Complaint</a>
+                            <a href="/make_complaint" className="btn btn-warning btn-lg mt-2">Make Complaint</a>
                         </div>
                     </div>
                 </div>

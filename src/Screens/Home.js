@@ -8,17 +8,18 @@ import Panal from '../ScreenSnippets/home/Panal';
 import Footer from '../ScreenSnippets/accounts/Footer';
 import Offers from "../ScreenSnippets/home/Offers";
 import HomeNavbar from "../ScreenSnippets/home/HomeNavbar";
-
+import { withTranslation } from 'react-i18next';
 
 class Home extends Component {
     render() {
+        const { t } = this.props;
         return (
             <div className="parent-div">
                 <HomeNavbar />
                 <Welcome />
                 <Services />
-                <Panal head="We Can Make Youe Rich" p="you can use your moeny to busniss it in useful work"
-                    href="/store" a="Store" />
+                <Panal head={t(`home.panel.title`)} p={t(`home.panel.description`)}
+                    href="/store" a={t(`home.panel.action`)} />
                 <About />
                 <hr />
                 <Offers />
@@ -29,4 +30,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default withTranslation()(Home);

@@ -359,11 +359,12 @@ additional attributes:
 --------------------
 store : details, main_image(relation)
 prodcut : main_image(relation) , another images(relation)
-
+user : username, approved, approval_files(relation)
 
 additional models : 
 ----------------------
 Image Model
+
 
 
 

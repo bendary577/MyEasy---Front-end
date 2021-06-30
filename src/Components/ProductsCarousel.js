@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import StoreItemCardDemo from "../ScreenSnippets/store/StoreItemCardDemo";
-
+import product1 from '../../public/icons/products/product1.jfif';
+import product2 from '../../public/icons/products/product2.jfif';
+import product3 from '../../public/icons/products/product3.jfif';
+import product4 from '../../public/icons/products/product4.jfif';
+import product5 from '../../public/icons/products/product5.jfif';
+import product6 from '../../public/icons/products/product6.jfif';
+import product7 from '../../public/icons/products/product7.jfif';
+import product8 from '../../public/icons/products/product8.jfif';
+import product9 from '../../public/icons/products/product9.jfif';
 
 class ProductCarousel extends Component {
 
@@ -28,15 +36,15 @@ class ProductCarousel extends Component {
 
                                 <div class="row">
                                 <div class="col-md-4">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product1}/>
                                 </div>
 
                                 <div class="col-md-4 clearfix d-none d-md-block">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product2}/>
                                 </div>
 
                                 <div class="col-md-4 clearfix d-none d-md-block">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product3}/>
                                 </div>
                                 </div>
 
@@ -46,15 +54,15 @@ class ProductCarousel extends Component {
 
                                 <div class="row">
                                 <div class="col-md-4">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product4}/>
                                 </div>
 
                                 <div class="col-md-4 clearfix d-none d-md-block">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product5}/>
                                 </div>
 
                                 <div class="col-md-4 clearfix d-none d-md-block">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product6}/>
                                 </div>
                                 </div>
 
@@ -64,15 +72,15 @@ class ProductCarousel extends Component {
 
                                 <div class="row">
                                 <div class="col-md-4">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product7}/>
                                 </div>
 
                                 <div class="col-md-4 clearfix d-none d-md-block">
-                                    <StoreItemCardDemo />
+                                    <StoreItemCardDemo icon={product8}/>
                                 </div>
 
                                 <div class="col-md-4 clearfix d-none d-md-block">
-                                     <StoreItemCardDemo />
+                                     <StoreItemCardDemo icon={product9}/>
                                     </div>
                                 </div>
                             </div>

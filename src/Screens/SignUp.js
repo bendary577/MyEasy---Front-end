@@ -1,13 +1,15 @@
+/*
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import "../../public/css/signup.css";
+
 
 
 class Signup extends Component {
 
     state = {
         firstname:'',
+
         secondname: '',
         email: '',
         password:'',
@@ -69,7 +71,7 @@ class Signup extends Component {
                 <div className="signup d-flex justify-content-center align-items-center my-5">
                     <div className="card signupCard w-50 mt-5">
 
-                        {/*--------------------- card body ------------------------------------------------ */}
+        --------------------- card body ------------------------------------------------ 
 
                         <div className="card-body">
                             <form
@@ -77,7 +79,7 @@ class Signup extends Component {
                                 method="post"
                                 novalidate
                             >
-                                {/*---------------------name ------------------------------------------------ */}
+                                {/*---------------------name ------------------------------------------------ 
 
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
@@ -117,7 +119,7 @@ class Signup extends Component {
                                     </div>
                                 </div>
 
-                                {/*--------------------email, password, phone ----------------------------------------- */}
+                                {/*--------------------email, password, phone ----------------------------------------- 
 
                                 <div className="form-group">
                                     <label for="validationemail">Email</label>
@@ -202,7 +204,7 @@ class Signup extends Component {
                                     </div>
                                 </div>  
 
-                                {/*--------------------- specialization ----------------------------------------------- */}
+                                {/*--------------------- specialization ----------------------------------------------- 
                                 <div className="form-row">
                                     <div className="form-group col-md-12">
                                         <label for="validationspecialization">Specialization</label>
@@ -243,7 +245,7 @@ class Signup extends Component {
                                     </div>
                                 </div>
 
-                                {/*---------------------address ----------------------------------------------- */}
+                                {/*---------------------address ----------------------------------------------- 
 
                                 <div className="form-group">
                                     <label for="validationaddress">Address</label>
@@ -327,7 +329,7 @@ class Signup extends Component {
                                     </div>
                                 </div>
 
-                                {/*---------------------radio button ----------------------------------------- */}
+                                {/*---------------------radio button ----------------------------------------- 
 
                                 <div className="form-check form-check-inline">
                                     <input
@@ -362,13 +364,13 @@ class Signup extends Component {
                                     </label>
                                 </div>
 
-                                {/*---------------------submit button ----------------------------------------- */}
+                                {/*---------------------submit button ----------------------------------------- 
 
                                 <div className="form-group mt-4">
                                     <a href="/profile" className="btn btn-dark btn-block">submit</a>
                                 </div>
 
-                                {/*---------------------login text ----------------------------------------- */}
+                                {/*---------------------login text ----------------------------------------- 
 
                                 <div className="text-center">
                                     <p>
@@ -405,3 +407,461 @@ class Signup extends Component {
 }
 
 export default Signup;
+*/
+
+
+
+import React, { Component } from "react";
+import Form from "react-validation/build/form";
+import Input from "react-validation/build/input";
+import CheckButton from "react-validation/build/button";
+import { isEmail } from "validator";
+import { withRouter } from "react-router-dom";
+//import {PhoneInput} from 'react-phone-number-input';
+//import 'react-phone-number-input/style.css';
+import "../../public/css/signup.css";
+import AuthService from "../Services/AuthService";
+import Signup from '../../public/images/Authentication/signup.png';
+
+const imageStyle = {
+    width : 600,
+    height : 600
+}
+const required = value => {
+  if (!value) {
+    return (
+      <div className="alert alert-danger mt-2" role="alert">
+        This field is required!
+      </div>
+    );
+  }
+};
+
+const email = value => {
+  if (!isEmail(value)) {
+    return (
+      <div className="alert alert-danger mt-2" role="alert">
+        This is not a valid email.
+      </div>
+    );
+  }
+};
+
+const vusername = value => {
+  if (value.length < 3 || value.length > 20) {
+    return (
+      <div className="alert alert-danger mt-2" role="alert">
+        The username must be between 3 and 20 characters.
+      </div>
+    );
+  }
+};
+
+const vpassword = value => {
+  if (value.length < 6 || value.length > 40) {
+    return (
+      <div className="alert alert-danger mt-2" role="alert">
+        The password must be between 6 and 40 characters.
+      </div>
+    );
+  }
+};
+
+const vphone = value => {
+    if (value.length !== 11) {
+      return (
+        <div className="alert alert-danger mt-2" role="alert">
+          Phone number must be 11 digits.
+        </div>
+      );
+    }
+  };
+
+
+class SignUp extends Component {
+  constructor(props) {
+    super(props);
+
+
+    this.state = {
+      first_name : "",
+      second_name : "",
+      username: "",
+      email: "",
+      password: "",
+      confirm_password : "",
+      address : "",
+      phone : "",
+      zip_code : "",
+      files : [],
+      successful: false,
+      message: "",
+    };
+  }
+
+   vconfirmpassword = value => {
+    if (value !== this.state.password) {
+      return (
+        <div className="alert alert-danger mt-2" role="alert">
+          password confirmation is not identical.
+        </div>
+      );
+    }
+  };
+
+  onChangeFirstName = (e) => {
+    this.setState({
+      first_name: e.target.value
+    });
+  }
+
+  onChangeSecondName = (e) => {
+    this.setState({
+      second_name: e.target.value
+    });
+  }
+
+  onChangeUsername = (e) => {
+    this.setState({
+      username: e.target.value
+    });
+  }
+
+  onChangeEmail = (e) => {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  onChangePassword = (e) => {
+    this.setState({
+      password: e.target.value
+    });
+  }
+
+  onChangeConfirmPassword = (e) => {
+    this.setState({
+      confirm_password: e.target.value
+    });
+  }
+
+  onChangePhone = (e) => {
+    this.setState({
+      phone: e.target.value
+    });
+  }
+
+  onChangeAddress = (e) => {
+    this.setState({
+      address: e.target.value
+    });
+  }
+
+  onChangeZipCode = (e) => {
+    this.setState({
+      zip_code: e.target.value
+    });
+  }
+
+  onChangeFiles = (e) => {
+    this.setState({
+      files : e.target.files
+    });
+  }
+
+  handleRegister = (e) => {
+    e.preventDefault();
+
+    this.setState({
+      message: "",
+      successful: false
+    });
+
+    this.form.validateAll();
+
+    if (this.checkBtn.context._errors.length === 0) {
+        let data = {
+           first_name : this.state.first_name,
+           second_name : this.state.second_name,
+           username : this.state.username,
+           email: this.state.email,
+           password: this.state.password,
+           phone : this.state.phone,
+           address: this.state.address,
+           zip_code: this.state.zip_code,
+        }
+        if(this.state.files.length !== 0){
+            let formData = new FormData();
+            for (let i = 0; i < this.state.files.length; i++) {
+                formData.append(`images[${i}]`, this.state.files[i])
+            }
+            data.approval_files = formData;
+        }
+      AuthService.register(data).then(
+        response => {
+          this.setState({
+            message: response.data.message,
+            successful: true
+          });
+        },
+        error => {
+          const resMessage =
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
+            error.message ||
+            error.toString();
+
+          this.setState({
+            successful: false,
+            message: resMessage
+          });
+        }
+      );
+    }
+  }
+
+  render() {
+    
+
+    const type =  this.props.location.state.type;
+    
+    return (
+            <div className="signup ">
+               <div className="row">
+                   <div class="col-md-6">
+                        <div className="auth-card card card-container">
+                            <img
+                            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+                            alt="profile-img"
+                            className="profile-img-card"
+                            />
+                
+                            <Form
+                            onSubmit={this.handleRegister}
+                            ref={c => {
+                                this.form = c;
+                            }}
+                            >
+                            {!this.state.successful && (
+                                
+                                <div>
+                
+                                <div className="form-group">
+                                    <div className="row">
+                                        <div className="col">
+                                            <label htmlFor="first_name">First Name</label>
+                                            <Input
+                                                type="text"
+                                                className="form-control"
+                                                name="first_name"
+                                                value={this.state.first_name}
+                                                onChange={this.onChangeFirstName}
+                                                validations={[required]}
+                                            />
+                                        </div>
+                                        <div className="col">
+                                            <label htmlFor="second_name">Second Name</label>
+                                            <Input
+                                                type="text"
+                                                className="form-control"
+                                                name="second_name"
+                                                value={this.state.second_name}
+                                                onChange={this.onChangeSecondName}
+                                                validations={[required]}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div className="form-group">
+                                    <label htmlFor="username">Username</label>
+                                    <Input
+                                    type="text"
+                                    className="form-control"
+                                    name="username"
+                                    value={this.state.username}
+                                    onChange={this.onChangeUsername}
+                                    validations={[required, vusername]}
+                                    />
+                                </div>
+                
+                                <div className="form-group">
+                                    <label htmlFor="email">Email</label>
+                                    <Input
+                                    type="email"
+                                    className="form-control"
+                                    name="email"
+                                    value={this.state.email}
+                                    onChange={this.onChangeEmail}
+                                    validations={[required, email]}
+                                    />
+                                </div>
+                
+                                <div className="form-group">
+                                    <label htmlFor="password">Password</label>
+                                    <Input
+                                    type="password"
+                                    className="form-control"
+                                    name="password"
+                                    value={this.state.password}
+                                    onChange={this.onChangePassword}
+                                    validations={[required, vpassword]}
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="confirm_password">Confirm Password</label>
+                                    <Input
+                                    type="password"
+                                    className="form-control"
+                                    name="confirm_password"
+                                    value={this.state.confirm_password}
+                                    onChange={this.onChangeConfirmPassword}
+                                    validations={[required, vpassword, this.vconfirmpassword]}
+                                    />
+                                </div>
+                
+                                <div className="form-group">
+                                    <label>Phone Number</label>
+                                    {/* 
+                                    <PhoneInput
+                                        placeholder="Enter phone number"
+                                        international
+                                        defaultCountry="EG"
+                                        value={this.state.phone}
+                                        onChange={this.onChangePassword}/>
+                                        -- */}
+                                        <Input
+                                            type="phone"
+                                            className="form-control"
+                                            name="phone"
+                                            value={this.state.phone}
+                                            onChange={this.onChangePhone}
+                                            validations={[required, vphone]}
+                                        />
+                                </div>
+                
+                                <div className="form-group">
+                                    <label htmlFor="address">Address</label>
+                                    <Input
+                                    type="text"
+                                    className="form-control"
+                                    name="address"
+                                    value={this.state.address}
+                                    onChange={this.onChangeAddress}
+                                    validations={[required]}
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="zip_code">Zip Code</label>
+                                    <Input
+                                    type="text"
+                                    className="form-control"
+                                    name="zip_code"
+                                    value={this.state.zip_code}
+                                    onChange={this.onChangeZipCode}
+                                    validations={[required]}
+                                    />
+                                </div>
+
+                                {
+                                        /** ------------------------------ id user is individual seller ------------------------------ */
+                                        (type === 'seller' && 
+                                        <div className="form-group">
+                                            <label htmlFor="national_identity">Approval Documents</label>
+                                            <p className="text-danger text-small">please upload national identity card</p>
+                                            <Input
+                                            type="file"
+                                            name="national_identity"
+                                            validations={[required]}
+                                            />
+                                        </div>
+                                        )
+                                    }
+                                    {
+                                        
+                                        (type === 'company' && 
+                                        <div className="form-group">
+                                            <label htmlFor="national_identity">Approval Documents</label>
+                                            <p className="text-danger text-small">please upload a copy of the company Tax card and Commercial Record</p>
+                                            <Input
+                                            type="file"
+                                            multiple 
+                                            name="national_identity"
+                                            validations={[required]}
+                                            />
+                                        </div>
+                                        )
+                                    }
+
+                                <div className="form-group">
+                                    <a href="/profile" className="btn btn-primary btn-block">Sign Up</a>
+                                </div>
+                                <div>
+                                    <p>By clicking Register, you agree to our <a href="">Terms & Condtitions</a> and <a href="">Privacy Policy</a></p>
+                                </div>
+                                </div>
+                            )}
+                
+                            {this.state.message && (
+                                <div className="form-group">
+                                <div
+                                    className={
+                                    this.state.successful
+                                        ? "alert alert-success"
+                                        : "alert alert-danger"
+                                    }
+                                    role="alert"
+                                >
+                                    {this.state.message}
+                                </div>
+                                </div>
+                            )}
+                            <CheckButton
+                                style={{ display: "none" }}
+                                ref={c => {
+                                this.checkBtn = c;
+                                }}
+                            />
+                            </Form>
+                        </div>
+                   </div>
+                   <div class="col-md-6 justify-content-center bg-light">
+                       <div className="container">
+                            <div className="row">
+                                <div className="title my-4">
+                                    <h1><strong>MyEasy Registeration</strong></h1>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="info mt-2">
+                                    <h3>Please Note That</h3>
+                                    <div className="alert alert-success">
+                                        after registeration, your account will be susbended waiting approval by our system, 
+                                        after checking your info you will be send an activation mail that you can login with
+                                    </div>
+                                </div>
+                                <div className="instructions mt-2">
+                                   <ul>
+                                       <li className="text-danger"><strong>please make sure your data is correct</strong></li>
+                                       <li className="text-danger"><strong>provide all your personal cards for your safety</strong></li>
+                                       <li className="text-danger"><strong>your personal info is safe and no one can access it</strong></li>
+                                   </ul>
+                                </div>
+                            </div>
+                            <div className="">
+                                <img src={Signup} style={imageStyle} className="" alt="register" />
+                            </div>
+                       </div>
+                   </div>
+             </div>
+       </div>
+      );
+    
+
+  }
+}
+
+export default withRouter(SignUp);

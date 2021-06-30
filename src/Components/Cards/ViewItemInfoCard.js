@@ -2,20 +2,24 @@ import React, { Component } from "react";
 import product from "../../../public/images/Products/shoes.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill, faShoppingCart, faStar } from '@fortawesome/free-solid-svg-icons';
-
-
+import ProductImagesCarousel from '../Carousels/ProductImagesCarousel';
+import star from '../../../public/icons/stores/star.png';
 
 class ViewItemInfoCard extends Component {
 
     render() {
+        const imageStyle={
+            width:"100%",
+            height:"100%"
+        }
         return (
             <div className="parent-div">
                <div className="card">
                     <div className="row">
-                        <div className="col-sm-3 col-md-3 h-100">
-                            <img src={product} className="card-img img-responsive img-fluid" alt="" />
+                        <div className="col-sm-3 col-md-4 h-100">
+                            <img src={product} className="" alt="" style={imageStyle}/>
                         </div>
-                        <div className="col-md-9">
+                        <div className="col-md-8">
                             <div className="card-block px-2">
                                 {/* ------------------------------- item info -------------------------------------------- */}
                                 <div className="itemName clearfix">
@@ -57,7 +61,45 @@ class ViewItemInfoCard extends Component {
                                 </div>
 
                                 <div className="gallery">
-                                    <div className="bg-danger"></div>
+                                    {/*
+                                    <div class="ecommerce-gallery" data-mdb-zoom-effect="true" data-mdb-auto-height="true">
+                                        <div class="row py-3 shadow-5">
+                                            <div class="col-3 mt-1">
+                                                <img
+                                                    src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
+                                                    data-mdb-img="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
+                                                    alt="Gallery image 1"
+                                                    class="active w-100"
+                                                />
+                                            </div>
+                                            <div class="col-3 mt-1">
+                                                <img
+                                                    src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
+                                                    data-mdb-img="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
+                                                    alt="Gallery image 2"
+                                                    class="w-100"
+                                                />
+                                            </div>
+                                            <div class="col-3 mt-1">
+                                                <img
+                                                    src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
+                                                    data-mdb-img="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
+                                                    alt="Gallery image 3"
+                                                    class="w-100"
+                                                />
+                                            </div>
+                                            <div class="col-3 mt-1">
+                                                <img
+                                                    src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
+                                                    data-mdb-img="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
+                                                    alt="Gallery image 4"
+                                                    class="w-100"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    */}
+                                    <ProductImagesCarousel />
                                 </div>
                             </div>
                         </div>
@@ -77,28 +119,28 @@ class ViewItemInfoCard extends Component {
 
                     {/*----------------------- Modal -------------------------*/}
                     <div class="modal fade" id="rateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Rating</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div className="d-flex w-10 justify-content-center">
-                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
-                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
-                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
-                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
-                                <a href="" ><FontAwesomeIcon icon={faStar} className="checked mr-5" ></FontAwesomeIcon></a>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Rating</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div className="d-flex w-10 justify-content-center">
+                                        <a href="" className="mx-2"><img src={star} style={{width:70, height:70}} /></a>
+                                        <a href="" className="mx-2"><img src={star} style={{width:70, height:70}} /></a>
+                                        <a href="" className="mx-2"><img src={star} style={{width:70, height:70}} /></a>
+                                        <a href="" className="mx-2"><img src={star} style={{width:70, height:70}} /></a>
+                                        <a href="" className="mx-2"><img src={star} style={{width:70, height:70}} /></a>
+                                </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
                             </div>
                         </div>
-                        <div class="modal-footer text-center">
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>

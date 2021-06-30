@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
+import AdminNavbar from "../ScreenSnippets/admin_dash_board/AdminNavbar";
+import AdminFooter from "../ScreenSnippets/admin_dash_board/AdminFooter";
+import AdminSideMenu from "../ScreenSnippets/admin_dash_board/AdminSideMenu";
 
-class AdminContent extends Component {
+class AdminChartsView extends Component {
     render() {
-        return (
-                       
-                <div className="content-wrapper">
-                {/* Content Header (Page header) */}
-                <div className="content-header">
-                    <div className="container-fluid">
-                    <div className="row mb-2">
-                        <div className="col-sm-6">
-                        <h1 className="m-0 text-dark">Dashboard v3</h1>
-                        </div>{/* /.col */}
-                        <div className="col-sm-6">
-                        <ol className="breadcrumb float-sm-right">
-                            <li className="breadcrumb-item"><a href="#">Home</a></li>
-                            <li className="breadcrumb-item active">Dashboard v3</li>
-                        </ol>
-                        </div>{/* /.col */}
-                    </div>{/* /.row */}
-                    </div>{/* /.container-fluid */}
+        return ( 
+        <div class="wrapper">
+        <AdminNavbar />
+        <AdminSideMenu />
+        <div class="content">
+            <div className="content-wrapper">
+            <div className="content-header">
+                <div className="container-fluid">
+                <div className="row mb-2">
+                    <div className="col-sm-6">
+                    <h1 className="m-0 text-dark">Dashboard</h1>
+                    </div>
                 </div>
-                {/* /.content-header */}
-                {/* Main content */}
-                <div className="content">
-                    <div className="container-fluid">
+                </div>
+            </div>
+            <div className="content">
+                <div className="container-fluid">
+                       
                     <div className="row">
                         <div className="col-lg-6">
                         <div className="card">
@@ -183,6 +181,7 @@ class AdminContent extends Component {
                                 <span className="text-bold text-lg">$18,230.00</span>
                                 <span>Sales Over Time</span>
                                 </p>
+                                
                                 <p className="ml-auto d-flex flex-column text-right">
                                 <span className="text-success">
                                     <i className="fas fa-arrow-up" /> 33.1%
@@ -259,14 +258,14 @@ class AdminContent extends Component {
                         </div>
                         {/* /.col-md-6 */}
                     </div>
-                    {/* /.row */}
                     </div>
-                    {/* /.container-fluid */}
+                    </div>
+                    </div>
                 </div>
-                {/* /.content */}
-                </div>
+                <AdminFooter />
+            </div>
         )
     }
 }
 
-export default AdminContent;
+export default AdminChartsView;

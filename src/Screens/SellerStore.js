@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStore } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import StoreSideNavbar from "../ScreenSnippets/store/StoreSideNavbar";
+import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
 
 class SellerStore extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class SellerStore extends Component {
     return (
       <div>
         <div className="d-flex" id="wrapper">
-          <StoreSideNavbar />
+          <AccSideNavbar />
           {/* ------------------------------- page content ------------------------------------- */}
           <div className="page-content-wrapper w-100">
               <AccNavbar />

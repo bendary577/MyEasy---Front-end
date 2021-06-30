@@ -35,8 +35,9 @@ class ViewItemDetails extends Component {
 
                     {/* ------------------------------- item card -------------------------------------------- */}
 
+                    {/*
                     <CommentSection />
-
+                    */}
                     {/* ------------------------------- others watched -------------------------------------------- */}
 
                     <div className="otherWatched bg-light p-5 my-5">

@@ -10,6 +10,8 @@ import termsAndConditions from '../../../public/icons/profile/terms-conditions.p
 import help from '../../../public/icons/profile/help.png';
 import integration from '../../../public/icons/profile/integration.png';
 import customers from '../../../public/icons/profile/customers.png';
+import myorders from '../../../public/icons/profile/myorders.png';
+
 
 const iconStyle = {
     width : 20,
@@ -30,25 +32,29 @@ class AccSellerLinks extends Component {
                         <img src={orders} style={iconStyle} className="" alt="" />
                         Orders number <strong className="text-success ml-3">0</strong>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">
+                    <a href="/profile" class="list-group-item list-group-item-action bg-light">
                         <img src={account} style={iconStyle} className="" alt="" />
                         My Profile
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">
+                    <a href="/mystore" class="list-group-item list-group-item-action bg-light">
                         <img src={stores} style={iconStyle} className="" alt="" />
                         My Store
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">
+                    <a href="/myorders" class="list-group-item list-group-item-action bg-light">
+                        <img src={orders} style={iconStyle} className="" alt="" />
+                        My Orders 
+                    </a>
+                    <a href="/myinvoices" class="list-group-item list-group-item-action bg-light">
                         <img src={invoices} style={iconStyle} className="" alt="" />
                         Invoices
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">
+                    <a href="/make_complaint" class="list-group-item list-group-item-action bg-light">
                         <img src={customers} style={iconStyle} className="" alt="" />
-                        Customers    
+                        Complaints    
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">
+                    <a href="/integration" class="list-group-item list-group-item-action bg-light">
                         <img src={integration} style={iconStyle} className="" alt="" />
-                        Integrations    
+                        Integration Settings    
                     </a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">
                         <img src={overview} style={iconStyle} className="" alt="" />
@@ -66,6 +72,7 @@ class AccSellerLinks extends Component {
                         <img src={termsAndConditions} style={iconStyle} className="" alt="" />
                         Terms & conditions
                     </a>
+                    
                 </div>
             </div>
 

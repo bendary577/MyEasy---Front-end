@@ -17,8 +17,7 @@ class Offers extends Component {
                         <div className="">
                             <div className="text-center">
                                 <h2 className="mb-4">What We Can Offer !</h2>
-                                <p className="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p className="mb-5"> </p>
                             </div>
                         </div>
                         <div className="row">

@@ -13,9 +13,13 @@ class StoreItemCardDemo extends Component {
       }
 
       render() {
+          const imageStyle = {
+              width : "100%",
+              height : "100%"
+          }
         return (
             <div class="card" /*style={{height:400}}*/>
-                 <img src={book} calssName="card-img img-responsive" alt="" /> 
+                 <img src={this.props.icon} style={imageStyle} calssName="card-img img-responsive" alt="" /> 
                 <div className="card-body">
                     {/* ----------------------------------------- name and ratings------------------ */}
                     <div className="clearfix">
@@ -34,18 +38,18 @@ class StoreItemCardDemo extends Component {
                     </div>
 
                     <div className="">
-                        <a className="btn btn-success" href="/viewitemdetails">
+                        <a className="btn btn-success" href="/viewitem">
                             <FontAwesomeIcon icon={faShoppingCart} className="mr-2"></FontAwesomeIcon>
                             View Item Details
                         </a>
                     </div>
 
                     <div className="clearfix my-4">
-                        <a className="btn btn-warning float-right" href="/viewitem" role="button">
+                        <a className="btn btn-warning float-right" href="/mycart" role="button">
                             <FontAwesomeIcon icon={faCartPlus} className="mr-2"></FontAwesomeIcon>
                             add to cart
                         </a>
-                        <a className="btn btn-danger float-left" href="/viewitemdetails" role="button">
+                        <a className="btn btn-danger float-left" href="/buyitem" role="button">
                             <FontAwesomeIcon icon={faMoneyCheck} className="mr-2"></FontAwesomeIcon>
                             buy now
                         </a>

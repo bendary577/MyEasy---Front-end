@@ -4,7 +4,7 @@ import "../../public/css/signupas.css";
 import customer from "../../public/icons/login&registeration/customer.png";
 import individual from "../../public/icons/login&registeration/individual.png";
 import company from "../../public/icons/login&registeration/company.png";
-
+import {Link} from "react-router-dom";
 
 class SignUpAs extends Component {
     render() {
@@ -42,7 +42,7 @@ class SignUpAs extends Component {
                                         style={iconImgsStyle}
                                     />
                                     <div className="card-body text-center">
-                                        <a class="btn btn-lg btn-primary" href="/signup" role="button">Customer</a>
+                                        <Link to={{ pathname: '/signup', state: { type : 'customer' } }} className="btn btn-primary btn-lg">Customer</Link>
                                     </div>
                                 </div>
                             </div>
@@ -58,11 +58,10 @@ class SignUpAs extends Component {
                                         style={iconImgsStyle}
                                     />
                                     <div className="card-body text-center">
-                                        <a class="btn btn-lg btn-warning" href="/signup" role="button">Individual Seller</a>
+                                    <Link to={{ pathname: '/signup', state: { type : 'seller' } }} className="btn btn-warning btn-lg">Individual Seller</Link>
                                     </div>
                                 </div>
                             </div>
-
 
                             {/*---------------------------- card3-----------------------------*/}
 
@@ -75,11 +74,10 @@ class SignUpAs extends Component {
                                         style={iconImgsStyle}
                                     />
                                     <div className="card-body text-center">
-                                        <a class="btn btn-lg btn-dark" href="/signup" role="button">Company</a>
+                                        <Link to={{ pathname: '/signup', state: { type : 'company' } }} className="btn btn-dark btn-lg">Company</Link>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

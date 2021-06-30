@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import app7 from "../../../public/images/Home/app7.png"
+import { withTranslation } from 'react-i18next';
 
 class Welcome extends Component {
 
     render() {
+
+        const { t } = this.props;
+
         const image = {
             width:630,
             height:600
@@ -15,8 +19,8 @@ class Welcome extends Component {
                     <div className="row h-100">
                         <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
                             <div>
-                                <h3 className="text-white animate__animated animate__backInLeft delay-2s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. dummy text of the printing and typesetting industry.</h3> 
-                                <a href="/signup" className="btn btn-lg btn-success mt-5 animate__animated animate__backInLeft delay-2s">Start Now !</a>
+                                <h2 className="text-white animate__animated animate__backInLeft delay-2s">{t('home.welcome.welcome')}</h2> 
+                                <a href="/signup" className=" btn btn-lg btn-success mt-5 animate__animated animate__backInLeft delay-2s">{t('home.welcome.start_now')}</a>
                             </div>  
                         </div>
                         <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -29,4 +33,4 @@ class Welcome extends Component {
     }
 }
 
-export default Welcome;
+export default withTranslation()(Welcome);
