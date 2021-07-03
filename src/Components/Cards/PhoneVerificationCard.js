@@ -34,7 +34,7 @@ export default class PhoneVerificationCard extends Component {
       loading: false,
       message: ""
     };
-  }
+}
 
   onChangePassword = (e) => {
     this.setState({
