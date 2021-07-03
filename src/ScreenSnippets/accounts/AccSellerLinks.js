@@ -10,8 +10,9 @@ import termsAndConditions from '../../../public/icons/profile/terms-conditions.p
 import help from '../../../public/icons/profile/help.png';
 import integration from '../../../public/icons/profile/integration.png';
 import customers from '../../../public/icons/profile/customers.png';
+import withdraw from '../../../public/icons/profile/withdraw.png';
 import myorders from '../../../public/icons/profile/myorders.png';
-
+import { withRouter } from 'react-router-dom'
 
 const iconStyle = {
     width : 20,
@@ -20,13 +21,48 @@ const iconStyle = {
 }
 
 class AccSellerLinks extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            canWithdrawMoney : false,
+            checkWithdraw : false,
+        }
+    }
+
+    checkCanWithdrawMoney = () => {
+        this.props.history.push('/withdraw_money')
+        /*
+        this.setState({
+            checkWithdraw : !this.state.checkWithdraw
+        })
+        */
+    }
+
     render() {
         return (    
             <div>
                 <div class="list-group list-group-flush">
                     <a href="#" class="list-group-item list-group-item-action bg-light">
                         <img src={wallet} style={iconStyle} className="" alt="" />
-                        Your Wallet<strong className="text-success ml-5">$0</strong>
+                        Your Wallet
+                        <div className="alert alert-success mt-2 text-center">
+                            <h3><strong className="text-success">0.00 EGP</strong></h3>
+                            <a href="" className="text-primary">change to dollar</a>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">
+                        <button className="btn btn-danger" onClick={this.checkCanWithdrawMoney}>
+                            <img src={withdraw} style={iconStyle} className="" alt="" />
+                            Withdraw money
+                        </button>
+                        {
+                           this.state.checkWithdraw  === true ? 
+
+                           <div className="alert alert-danger mt-2">sorry, can't withdraw money yet</div>
+                           :
+                           <div></div>
+                        }
                     </a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">
                         <img src={orders} style={iconStyle} className="" alt="" />
@@ -80,4 +116,4 @@ class AccSellerLinks extends Component {
     }
 }
 
-export default AccSellerLinks;
+export default withRouter(AccSellerLinks);

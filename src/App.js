@@ -44,6 +44,7 @@ import AdminComplaintsView from './Screens/AdminComplaintsView';
 import PayInvoice from './Screens/PayInvoice';
 import TermsAndConditions from './Screens/Terms&Conditions';
 import AdminCheckComplaint from './Screens/AdminCheckComplaint';
+import WithdrawMoney from './Screens/WithdrawMoney';
 
 const App = () => {
 
@@ -146,7 +147,12 @@ const App = () => {
                         </Route>
 
                         <Route exact path="/mystore">
+                            
                             <SellerStore />
+                        </Route>
+
+                        <Route exact path="/withdraw_money">
+                            <WithdrawMoney />
                         </Route>
 
                         <Route exact path="/admin">

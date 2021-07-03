@@ -1,22 +1,20 @@
 
 
 import React, { Component } from "react";
-import "../../public/css/signupas.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcVisa, faCcMastercard } from "@fortawesome/free-brands-svg-icons";
 import {MdSecurity} from "@fortawesome/fontawesome-svg-core";
 
 
-class PaymentForm extends Component {
+class BankDetailsCard extends Component {
     render() {
 
         return (
-
                   <div className="payment-form mb-5 p-5 bg-light">
                   <form className="">
 
                       <div className="clearfix mb-3">
-                          <h4 className="float-left">New Payment Card</h4>
+                          <h4 className="float-left">Bank Details</h4>
                           <div className="float-right">
                                <FontAwesomeIcon icon={faCcVisa} className="fa-2x visa"></FontAwesomeIcon>                 
                                <FontAwesomeIcon icon={faCcMastercard} className="ml-2 fa-2x master"></FontAwesomeIcon>
@@ -33,14 +31,6 @@ class PaymentForm extends Component {
                           <input type="text" className="form-control" placeholder="card number" id="cardnumber" name="card-number" />
                       </div>
 
-                      <div className="form-group my-3">
-                          <label for="card-security">Currency</label>
-                          <select class="custom-select">
-                            <option selected>select currency</option>
-                            <option value="1">EGP</option>
-                            <option value="2">Dollar</option>
-                        </select>
-                      </div>
 
                       {/* --------------------------- card date ------------------------------------- */}
 
@@ -108,40 +98,21 @@ class PaymentForm extends Component {
                                       <option value="19"> 2039 </option>
                                    </select>
                               </div>
-                              
                           </div>
 
                       {/*------------------card security ----------------------------------------*/}
 
-                          <div className="col-sm-6 mt-2">
+                        <div className="col-sm-6 mt-2">
                               <label for="card-security">Security Code</label>
                               <FontAwesomeIcon icon={MdSecurity} className="fa-lg"></FontAwesomeIcon>
                               <input type="text" id="card-security" name="card-security" />
-                          </div>
-                      </div>
-
-                      {/*------------------ save card info ----------------------------------------*/}
-
-                      <div className="form-group mt-3">
-                          <input type="checkbox" id="card" name="save-card" />
-                          <label for="card" className="ml-2">Save Card Info</label>
-                      </div>
-
-                      {/*------------------ for your safety ----------------------------------------*/}
-
-                      <div className="">
-                          <h4>For your safety</h4>
-                          <ul>
-                              <li><h6>meet seller in open area</h6></li>
-                              <li><h6>meet seller in open area</h6></li>
-                              <li><h6>meet seller in open area</h6></li>
-                          </ul>
-                      </div>
+                        </div>
+                    </div>
 
                       {/*------------------ submit button ----------------------------------------*/}
 
                       <div className="mt-4">
-                          <button className="btn btn-lg btn-success">Complete Payment</button>
+                          <button className="btn btn-lg btn-success">Withdraw Money</button>
                       </div>
                   </form>
               </div>
@@ -149,4 +120,4 @@ class PaymentForm extends Component {
         }
     }
 
-export default PaymentForm;
+export default BankDetailsCard;

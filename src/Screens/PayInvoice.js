@@ -220,6 +220,14 @@ export default class PayInvoice extends Component {
                           </div>
                       </div>
 
+                      <div className="form-group my-3">
+                          <label for="card-security">Currency</label>
+                          <select class="custom-select">
+                            <option selected>select currency</option>
+                            <option value="1">EGP</option>
+                            <option value="2">Dollar</option>
+                        </select>
+                      </div>
                   </form>
               </div>
 

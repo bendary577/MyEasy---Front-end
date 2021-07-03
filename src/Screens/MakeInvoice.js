@@ -104,9 +104,7 @@ class MakeInvoice extends Component {
                                         )
                                     }
                                     <Col xs={12} className="text-center">
-                                        <Button variant="primary" type="submit">
-                                            Send 
-                                    </Button>
+                                        <Button variant="primary" type="submit" className="btn btn-primary btn-block">Send</Button>
                                     </Col>
                                 </Form>
                             </Col>

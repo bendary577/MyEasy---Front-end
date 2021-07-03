@@ -31,7 +31,7 @@ const Integartion = () => {
         
                                         </textarea>
                                     </div>
-                                    <button className="btn btn-primary">Create</button>
+                                    <button className="btn btn-primary btn-block">Create</button>
                                 </div>
                             </div>
                         </div>

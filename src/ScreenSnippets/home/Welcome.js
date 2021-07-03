@@ -20,7 +20,7 @@ class Welcome extends Component {
                         <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
                             <div>
                                 <h2 className="text-white animate__animated animate__backInLeft delay-2s">{t('home.welcome.welcome')}</h2> 
-                                <a href="/signup" className=" btn btn-lg btn-success mt-5 animate__animated animate__backInLeft delay-2s">{t('home.welcome.start_now')}</a>
+                                <a href="/registeras" className=" btn btn-lg btn-success mt-5 animate__animated animate__backInLeft delay-2s">{t('home.welcome.start_now')}</a>
                             </div>  
                         </div>
                         <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">

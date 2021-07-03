@@ -23,7 +23,7 @@ class HomeNavbar extends Component {
 
         return (
 
-            <nav className="topnavigation navbar navbar-expand-sm bg-dark navbar-dark">
+            <nav className="topnavigation navbar navbar-expand-sm bg-light navbar-light">
                     <div className="col-md-3">
                         {/*------------------------- brand logo ----------------------------------------------*/}
                         <a className="navbar-brand font-weight-bold" href="#">
