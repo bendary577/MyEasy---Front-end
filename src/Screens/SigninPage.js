@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-
 import AuthService from "../Services/AuthService";
 
 const required = value => {
@@ -16,9 +15,9 @@ const required = value => {
 };
 
 export default class SigninPage extends Component {
+
   constructor(props) {
     super(props);
-
     this.state = {
       username: "",
       password: "",
@@ -41,7 +40,6 @@ export default class SigninPage extends Component {
 
   handleLogin = (e) => {
     e.preventDefault();
-
     this.setState({
       message: "",
       loading: true
@@ -49,8 +47,13 @@ export default class SigninPage extends Component {
 
     this.form.validateAll();
 
+    //if no errors
     if (this.checkBtn.context._errors.length === 0) {
-      AuthService.login(this.state.username, this.state.password).then(
+      let data = {
+        email : this.state.username, 
+        password : this.state.password,
+      }
+      AuthService.login(data).then(
         () => {
           this.props.history.push("/profile");
           window.location.reload();
@@ -86,7 +89,7 @@ export default class SigninPage extends Component {
             className="profile-img-card"
           />
 
-          <Form
+          <Form 
             onSubmit={this.handleLogin}
             ref={c => {
               this.form = c;
@@ -123,8 +126,7 @@ export default class SigninPage extends Component {
             </div>
 
             <div className="form-group">
-              <a
-                href="/profile"
+              <button
                 className="btn btn-primary btn-block"
                 disabled={this.state.loading}
               >
@@ -132,18 +134,12 @@ export default class SigninPage extends Component {
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
                 <span>Login</span>
-              </a>
+              </button>
             </div>
 
             <div className="form-group">
-              <button
-                className="btn btn-success btn-block"
-                disabled={this.state.loading}
-              >
-                {this.state.loading && (
-                  <span className="spinner-border spinner-border-sm"></span>
-                )}
-                <span>doesn't have an account ? <a href="/registeras" className="text-white">Signup</a></span>
+              <button className="btn btn-success btn-block">
+                <span>don't have an account ? <a href="/registeras" className="text-white">Signup</a></span>
               </button>
             </div>
 
@@ -154,12 +150,14 @@ export default class SigninPage extends Component {
                 </div>
               </div>
             )}
+
             <CheckButton
               style={{ display: "none" }}
               ref={c => {
                 this.checkBtn = c;
               }}
             />
+            
           </Form>
         </div>
       </div>
