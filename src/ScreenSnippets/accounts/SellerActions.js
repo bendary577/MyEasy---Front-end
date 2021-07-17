@@ -14,6 +14,10 @@ class SellerActions extends Component {
             height: 120
         };
 
+        const componentDidMount = () => {
+            console.log("Kosooooooooom Hayateeeeeeeeeee" + this.props.user.profile)
+        }
+
         return (    
 
 
@@ -29,6 +33,8 @@ class SellerActions extends Component {
 
                 <div className="col-sm-12 col-md-4 mb-3 ">
                     <div class="card w-100 m-0 control">
+                        {
+                            this.props.user.profile === 1 ?
                         <div className="card-body text-center">
                             <img
                                 src={createStore}
@@ -40,6 +46,19 @@ class SellerActions extends Component {
                                 <a class="btn btn-lg btn-primary mt-2" href="/createstore" role="button">Create Store</a>
                             </div>
                         </div>
+                        :
+                        <div className="card-body text-center">
+                            <img
+                                src={createStore}
+                                alt="Logo1"
+                                calssName="img img-responsive"
+                                style={iconImgsStyle}
+                            />
+                            <div>
+                                <a class="btn btn-lg btn-success mt-2" href="/mystore" role="button">Visit Store</a>
+                            </div>
+                        </div>
+                        }
                     </div>
                 </div>
 

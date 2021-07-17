@@ -3,6 +3,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../Services/AuthService";
+import  { withRouter  } from 'react-router-dom';
 
 const required = value => {
   if (!value) {
@@ -14,7 +15,7 @@ const required = value => {
   }
 };
 
-export default class SigninPage extends Component {
+class SigninPage extends Component {
 
   constructor(props) {
     super(props);
@@ -165,3 +166,4 @@ export default class SigninPage extends Component {
   }
 }
 
+export default withRouter(SigninPage);  

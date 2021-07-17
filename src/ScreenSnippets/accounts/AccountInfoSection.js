@@ -1,20 +1,21 @@
 import React, { Component } from "react";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import person_2 from '../../../public/images/person_2.jpg';
 
+
+
 class AccountInfoSection extends Component {
 
     render() {
-
-
     
         const avatarStyle = {
             width : "80%",
             height : "80"
         };
 
+
+    
         return (
             <div>
                 {/**------------------------------------- account intro row ---------------------------------- */}
@@ -32,16 +33,22 @@ class AccountInfoSection extends Component {
                                 <div className="continer">
                                     <div className="row">
                                         <div className="col-md-4">
-                                                <img src={person_2} style={avatarStyle} className="rounded" alt="avatar" />
+                                            <img src={person_2} style={avatarStyle} className="rounded" alt="avatar" />
                                         </div>
                                         <div className="col-md-8">
                                             <div className="info">
-                                                <h2>User Name</h2>
-                                                <p>User Account Type</p>
-                                                <p>registered at 12/3/1998</p>
+                                                <h2>{this.props.user.first_name}</h2>
+                                                <p>
+                                                    {
+                                                        this.props.user.profile_type === "App\\Models\\AdminProfile" ? "Admin" : 
+                                                        this.props.user.profile_type === "App\\Models\\SellerProfile" ? " Seller" : "Company"
+                                                    }
+                                                </p>
+                                                {/* <p>registered at {this.props.user.created_at.slice(0,10)}</p> */}
                                             </div>
+                                            
                                             <div className="about">
-                                                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </h4>
+                                                <h4>{this.props.user.bio}</h4>
                                             </div>
                                         </div>
                                     </div>

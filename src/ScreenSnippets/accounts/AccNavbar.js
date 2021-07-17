@@ -5,6 +5,8 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import Pusher from 'pusher-js';
 import logo from '../../../public/images/Home/myeasy-logo.png'
 import LanguageSwitcher from "../../Components/Buttons/LanguageSwitcher";
+import AuthService from "../../Services/AuthService";
+import  { withRouter  } from 'react-router-dom'
 
 class CustomerAccNavBar extends Component {
 
@@ -41,6 +43,14 @@ class CustomerAccNavBar extends Component {
     })
   }
 
+  logout = async () => {
+    let status = await AuthService.logout();
+    if(status === 200){
+      this.props.history.push("/signin");
+      window.location.reload();
+    }
+  }
+
   render() {
 
     const logoStyle = {
@@ -50,116 +60,7 @@ class CustomerAccNavBar extends Component {
     };
 
     return (
-      /*
-      <nav className="topnavigation navbar navbar-expand-lg bg-dark navbar-dark">
 
-        <a className="navbar-brand" href="/">
-          <img src={logo} alt="Logo"  style={logoStyle}/>
-        </a>
-        
-          <div class="">
-                <form class="d-flex input-group ">
-                  <input
-                    type="search"
-                    class="form-control rounded"
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-addon"
-                  />
-                  <span class="input-group-text border-0" id="search-addon">
-                    <i class="fas fa-search"></i>
-                  </span>
-                </form>
-              </div>
-
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-          aria-controls="navbarNav"
-          aria-expanded="true"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div
-          className="ml-5 collapse navbar-collapse accLinks justify-content-center"
-          id="collapsibleNavbar"
-          
-        >
-          <ul className="navbar-nav">
-            <li className="nav-item mx-1 mt-2">
-              <a className="nav-link" href="/stores">
-                browse stores
-              </a>
-            </li>
-            <li className="nav-item mx-1 mt-2">
-              <LanguageSwitcher />
-            </li>
-
-            <li class="nav-item dropdown mr-0 ml-5">
-              <a
-                class="nav-link "
-                href="/profile"
-                id="notificationsDropdownMenuLink"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="true"
-              >
-                <img
-                  src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
-                  width="40"
-                  height="40"
-                  alt="logo"
-                  className="rounded-circle"
-                  onClick={this.clearNotifications}
-                />{ this.state.notifications_number > 0 ? <span class="badge badge-pill badge-danger align-top">{this.state.notifications_number}</span> : "" } 
-              </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="notificationsDropdownMenuLink"
-              >
-                <h5 className="font-weight-bold p-2">Notifications</h5>
-                {this.state.new_notification_message === "" ? "" : <h6 className="p-2">you have no notifications yet</h6>}
-              </div>
-            </li>
-
-            <li class="nav-item dropdown mr-0">
-              <a
-                className="nav-link"
-                href="/customerprofile"
-                id="optionsDropdownMenuLink"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="true"
-              >
-                  <FontAwesomeIcon icon={faCaretDown} className="mt-3"></FontAwesomeIcon>
-              </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="optionsDropdownMenuLink"
-              >
-                 <a className="dropdown-item" href="profile">
-                  Profile
-                </a>
-
-                <a className="dropdown-item" href="editprofile">
-                  Edit Profile
-                </a>
-                <a className="dropdown-item" href="#">
-                  Logout
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      */
       <nav class="navbar navbar-icon-top navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="/profile">Profile</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -202,7 +103,7 @@ class CustomerAccNavBar extends Component {
                 <a class="dropdown-item" href="/edit_profile">Edit Profile</a>
                 <a class="dropdown-item" href="#"></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/signin"> Logout</a>
+                <a class="dropdown-item" href="javascript:void(0);" onClick={this.logout}> Logout</a>
               </div>
             </li>
           </ul>
@@ -214,4 +115,4 @@ class CustomerAccNavBar extends Component {
   }
 }
 
-export default CustomerAccNavBar;
+export default withRouter(CustomerAccNavBar);
