@@ -17,20 +17,25 @@ const Account = () => {
 
     const [userInfo, setUserInfo] = useState({});
     const [recommendations, setRecommendations] = useState([]);
+    const [loading, setLoading] = useState(false);
     
     useEffect(() => {
        getUser();
-    });
+    }, []);
     
 
     
     const getUser = async () => {
+        setLoading(true);
         let response = await UserService.getUserInfo();
         if(response.status == 200){
             setUserInfo(response.data.data);
+            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^ bendaaaaaaaaaaaaaaaaary")
+            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^ " + response.data.data.first_name)
         }else{
 
         }
+        setLoading(false);
     }
 
     let userType = "" ;    
@@ -45,30 +50,54 @@ const Account = () => {
 
         return (
             <div>
-                <div className="d-flex" id="wrapper">
-
-                       <AccSideNavbar user={userType}/>                      
-
-                    <div id="page-content-wrapper">
-                        <AccNavbar />
-                    
-                        <div class="container-fluid">
-
-                       <AccountInfoSection user={userInfo} />
-                        
-                        <hr></hr>
-                         {/**------------------------------------- actions row ---------------------------------- */}
-                            <h2>{userInfo.first_name}</h2>
-                            {userType === "customer" ? <CustomerActions user={userInfo}/> : <SellerActions user={userInfo}/> }
-                            
-                             {/**------------------------------------- recommentation row ---------------------------------- */}
-
-                            <AccountRecommendedProducts products={recommendations} />
+                {
+                    loading === true ? 
+                    <div className="d-flex justify-content-center align-items-center">
+                        <div className=" spinner-border text-muted" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </div>
-                </div>
-                
-            </div>
+
+                    :
+
+                    <div>
+                        <div className="d-flex" id="wrapper">
+
+                            <AccSideNavbar user={userType}/>                      
+
+                            <div id="page-content-wrapper">
+                                <AccNavbar />
+                            
+                                <div class="container-fluid">
+
+                            { userInfo === null ? 
+
+                            <h2 className="text-danger">can't load your data</h2>
+
+                            :
+
+                            <div>
+                            <AccountInfoSection user={userInfo} />
+                                
+                                <hr></hr>
+                                {/**------------------------------------- actions row ---------------------------------- */}
+                                    <h2>{userInfo.first_name}</h2>
+                                    {userType === "customer" ? <CustomerActions user={userInfo}/> : <SellerActions user={userInfo}/> }
+                                    
+                                    {/**------------------------------------- recommentation row ---------------------------------- */}
+
+                                    <AccountRecommendedProducts products={recommendations} />
+                            </div>
+
+                            }
+
+                            </div>
+                        </div>
+
+                    </div>
             <Footer/>
+        </div>
+        }
         </div>
             
 

@@ -7,20 +7,26 @@ import AccNavbar from "../ScreenSnippets/accounts/AccNavbar";
 import Footer from "../ScreenSnippets/accounts/Footer";
 import OrdersTable from "../ScreenSnippets/orders/OrdersTable";
 import AccSideNavbar from "../ScreenSnippets/accounts/AccSideNavbar";
+import SellerService from "../Services/SellerService";
 
 class MyOrders extends Component {
 
     state = {
-        orders: []
+        orders: [],
+        loading : false,
       }
     
-    componentDidMount() {
-        axios.get("http://127.0.0.1:8000/api/orders/")
-          .then(res => {
-            const orders = res.data;
-            this.setState({ orders });
-            console.log(this.state.orders);
-          })
+    componentDidMount = () => {
+       this.getMyOrders();
+    }
+
+    getMyOrders = () => {
+        let response = SellerService.getMyOrders();
+        if(response.status == 200){
+            this.setState({ orders : response.data.data });
+        }else{
+
+        }
     }
 
     render() {

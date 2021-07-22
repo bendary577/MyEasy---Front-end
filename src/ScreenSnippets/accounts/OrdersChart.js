@@ -28,7 +28,7 @@ class OrdersChart extends Component {
 
         return (    
                  
-            <div className="app">
+            <div className="app w-100">
                 <div className="my-2">
                     <h4>Your Orders</h4>
                 </div>

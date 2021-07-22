@@ -14,8 +14,6 @@ class AccountInfoSection extends Component {
             height : "80"
         };
 
-
-    
         return (
             <div>
                 {/**------------------------------------- account intro row ---------------------------------- */}
@@ -36,7 +34,7 @@ class AccountInfoSection extends Component {
                                             <img src={person_2} style={avatarStyle} className="rounded" alt="avatar" />
                                         </div>
                                         <div className="col-md-8">
-                                            <div className="info">
+                                            <div className="info border rounded h-100 p-5">
                                                 <h2>{this.props.user.first_name}</h2>
                                                 <p>
                                                     {
@@ -45,10 +43,9 @@ class AccountInfoSection extends Component {
                                                     }
                                                 </p>
                                                 {/* <p>registered at {this.props.user.created_at.slice(0,10)}</p> */}
-                                            </div>
-                                            
-                                            <div className="about">
-                                                <h4>{this.props.user.bio}</h4>
+                                                <div className="about">
+                                                    <h4>{this.props.user.bio}</h4>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

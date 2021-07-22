@@ -3,20 +3,15 @@ import axios from "axios";
 
 //--------------------------------------- create axios instance -------------------------------
 //axios instance to send unauthenticated requests
-export const axiosInstance = axios.create({
-    //withCredentials: true
-})
+export const axiosInstance = axios.create({})
 
 //axios instance to send authenticated requests
-export const authenticatedAxiosInstance = axios.create({
-    //withCredentials: true
-})
+export const authenticatedAxiosInstance = axios.create({})
 
 
 //--------------------------------------- axios request interceptors -------------------------------
 authenticatedAxiosInstance.interceptors.request.use(async (req) => {
     let token = await localStorage.getItem('token');
-    console.log("user infooooooooooooooooooooooooooo " + token);
     req.headers.authorization = `Bearer ${token}`;
     return req;
 });

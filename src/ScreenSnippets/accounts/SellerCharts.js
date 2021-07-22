@@ -31,7 +31,7 @@ class SellerCharts extends Component {
                 
                 {/*---------------------------- card1-----------------------------*/}
 
-                <div className="col-md-6 mb-3 ">
+                <div className="col-md-6 col-sm-12 mb-3 ">
                     <div class="card w-100">
                         <div className="card-body">
                             <OrdersChart />
@@ -41,8 +41,8 @@ class SellerCharts extends Component {
 
                 {/*---------------------------- card2-----------------------------*/}
 
-                <div className="col-md-6 mb-3 ">
-                    <div className="card w-100">
+                <div className="col-md-6 col-sm-12 mb-3 ">
+                    <div className="card">
                         <div className="card-body">
                             <TransactionsChart />
                         </div>

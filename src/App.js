@@ -1,4 +1,4 @@
-import React, { useEffect  } from 'react';
+import React, { useEffect, useState  } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./Screens/Home";
 import SignUp from "./Screens/SignUp";
@@ -45,197 +45,256 @@ import PayInvoice from './Screens/PayInvoice';
 import TermsAndConditions from './Screens/Terms&Conditions';
 import AdminCheckComplaint from './Screens/AdminCheckComplaint';
 import WithdrawMoney from './Screens/WithdrawMoney';
+import UserService from './Services/UserService';
 
 const App = () => {
 
     const {i18n} = useTranslation();
+    const [showAdminRoutes, setShowAdminRoutes] = useState(false);
+    const [showCustomerRoutes, setShowCustomerRoutes] = useState(false);
+    const [showSellerRoutes, setShowSellerRoutes] = useState(false);
+    const [showCompanyRoutes, setShowCompanyRoutes] = useState(false);
+    const [userAuthenticated, setUserAuthenticated] = useState(false);
 
+    {/* ---------------------------- initialize app with default language -------------------------------- */}
     useEffect(() => {
         document.dir = i18n.dir();
       }, [i18n, i18n.language]);
 
+    {/* ---------------------------- check authentication and user type ---------------------------------- */}
+    useEffect(() => {
+        console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ in app.js 0")
+        const loadRoutes =  async () => {
+            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ in app.js")
+            let token = await localStorage.getItem('token');
+            if(token){
+                console.log("^^^^^^^^^^^^^^^^^^^^^^ authenticated " + token)
+                setUserAuthenticated(true);
+                console.log("authenticated " + userAuthenticated)
+                let response = UserService.getUserInfo();
+                if(response.status === 200){
+                    response.data.data.profile_type === 'App\\Models\\AdminProfile' ? 
+                        setShowAdminRoutes(true)
+                    :
+                        response.data.data.profile_type === 'App\\Models\\CustomerProfile' ? 
+                            setShowCustomerRoutes(true)
+                        :
+                            response.data.data.profile_type === 'App\\Models\\SellerProfile' ?
+                                setShowSellerRoutes(true)
+                            :
+                                response.data.data.profile_type === 'App\\Models\\CompanyProfile' ?
+                                    setShowCompanyRoutes(true)
+                                :
+                                    setUserAuthenticated(false)
+                }else{
+                    setUserAuthenticated(false);
+                }
+            }else{
+                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^ not authenticated ")
+                setUserAuthenticated(false);
+            }
+        }
+        loadRoutes();
+    }, []);
+
         return (
             <AuthenticationProvider >
                 <BrowserRouter>
-                    <Switch>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
+                        {/* -------------------------------------------- public/authenticated routes ------------------------------------- */}
+                        { userAuthenticated === false ?
+                                (<Switch>
+                                     <Route exact path={["/", "/home"]}>
+                                        <Home />
+                                    </Route>
 
-                        <Route exact path="/signin">
-                            <SigninPage />
-                        </Route>
+                                    <Route exact path="/terms_and_conditions">
+                                        <TermsAndConditions />
+                                    </Route>
 
-                        <Route exact path="/signup">
-                            <SignUp />
-                        </Route>
+                                    <Route exact path="/signin">
+                                        <SigninPage />
+                                    </Route>
 
-                        <Route exact path="/registeras">
-                            <SignUpAs />
-                        </Route>
+                                    <Route exact path="/signup">
+                                        <SignUp />
+                                    </Route>
 
-                        <Route exact path="/forgetpassword">
-                            <ForgetPassword />
-                        </Route>
+                                    <Route exact path="/registeras">
+                                        <SignUpAs />
+                                    </Route>
 
-                        <Route exact path="/profile">
-                            <Account />
-                        </Route>
+                                    <Route exact path="/forgetpassword">
+                                        <ForgetPassword />
+                                    </Route>
 
-                        <Route exact path="/edit_profile">
-                            <EditProfile />
-                        </Route>
+                                    <Route exact path="/confirm_code">
+                                        <ForgotPasswordConfirmation />
+                                    </Route>
 
-                        <Route exact path="/make_complaint">
-                            <MakeComplaint />
-                        </Route>
+                                    <Route exact path="/update_password">
+                                        <UpdatePassword />
+                                    </Route>
+                                    
+                                    <Route exact path="/pay_invoice">
+                                        <PayInvoice />
+                                    </Route>
+                                </Switch>)
+                                :
+                                (<Switch>
+                                    <Route exact path="/profile">
+                                        <Account />
+                                    </Route>
 
-                        <Route exact path="/buyitem">
-                            <BuyItem />
-                        </Route>
+                                    <Route exact path="/edit_profile">
+                                        <EditProfile />
+                                    </Route>
 
-                        <Route exact path="/myorders">
-                            <MyOrders />
-                        </Route>
+                                    <Route exact path="/make_complaint">
+                                        <MakeComplaint />
+                                    </Route>
 
-                        <Route exact path="/orderDetails">
-                            <OrderDetails />
-                        </Route>
+                                    <Route exact path="/myorders">
+                                        <MyOrders />
+                                    </Route>
 
-                        <Route exact path="/mycart">
-                            <MyCart />
-                        </Route>
+                                    <Route exact path="/orderDetails">
+                                        <OrderDetails />
+                                    </Route>
 
-                        <Route exact path="/mystore">
-                            <SellerStore />
-                        </Route>
+                                    <Route exact path="/view_store">
+                                        <StoreView />
+                                    </Route>
 
-                        <Route exact path="/createstore">
-                            <CreateStore />
-                        </Route>
+                                    <Route exact path="/viewitem">
+                                        <ViewItemDetails />
+                                    </Route>
 
-                        <Route exact path="/home">
-                            <Home />
-                        </Route>
+                                    <Route exact path="/sellerProfile">
+                                        <SellerProfile />
+                                    </Route>
 
-                        <Route exact path="/viewitem">
-                            <ViewItemDetails />
-                        </Route>
+                                    <Route exact path="/stores">
+                                        <Stores />
+                                    </Route>
 
-                        <Route exact path="/uploaditem">
-                            <Uploaditem />
-                        </Route>
+                                    <Route exact path="/search">
+                                        <Search />
+                                    </Route>
 
-                        <Route exact path="/make_invoice">
-                            <MakeInvoice />
-                        </Route>
+                                    <Route exact path="/notifications">
+                                        <Notifications />
+                                    </Route>
+                                </Switch>)
+                        }
 
-                        <Route exact path="/myinvoices">
-                            <MyInvoices />
-                        </Route>
+                        {/* ------------------------------------------ customer only routes ------------------------------------- */}
+                        {
+                            ( showCustomerRoutes &&
+                                <Switch>
+                                    <Route exact path="/buyitem">
+                                        <BuyItem />
+                                    </Route>
 
-                        <Route exact path="/sellerProfile">
-                            <SellerProfile />
-                        </Route>
+                                    <Route exact path="/mycart">
+                                        <MyCart />
+                                    </Route>
+                                </Switch>
+                            )
+                        }
 
-                        <Route exact path="/stores">
-                            <Stores />
-                        </Route>
+                        {/* ----------------------------------------- seller and company only routes ----------------------------- */}
+                        
+                        {
+                            ( showCompanyRoutes || showSellerRoutes) &&
+                            <Switch>
+                                <Route exact path="/mystore">
+                                    <SellerStore />
+                                </Route>
 
-                        <Route exact path="/new_order">
-                            <NewOrder />
-                        </Route>
+                                <Route exact path="/createstore">
+                                    <CreateStore />
+                                </Route>
 
-                        <Route exact path="/mystore">
-                            
-                            <SellerStore />
-                        </Route>
+                                <Route exact path="/make_invoice">
+                                    <MakeInvoice />
+                                </Route>
 
-                        <Route exact path="/withdraw_money">
-                            <WithdrawMoney />
-                        </Route>
+                                <Route exact path="/myinvoices">
+                                    <MyInvoices />
+                                </Route>
 
-                        <Route exact path="/admin">
-                            <AdminWelcomeView/>
-                        </Route>
+                                <Route exact path="/uploaditem">
+                                    <Uploaditem />
+                                </Route>
 
-                        <Route exact path="/admin/signup_requests">
-                            <AdminRegisterationRequests/>
-                        </Route>
+                                <Route exact path="/mystore">
+                                    
+                                    <SellerStore />
+                                </Route>
 
-                        <Route exact path="/admin/complaints">
-                            <AdminComplaintsView/>
-                        </Route>
+                                <Route exact path="/integration">
+                                    <Integartion />
+                                </Route>
 
-                        <Route exact path="/admin/transactions">
-                            <AdminTransactionsView/>
-                        </Route>
+                                <Route exact path="/withdraw_money">
+                                    <WithdrawMoney />
+                                </Route>
 
-                        <Route exact path="/admin/manage_users">
-                            <AdminManageUsersView/>
-                        </Route>
+                                <Route exact path="/new_order">
+                                    <NewOrder />
+                                </Route>
+                            </Switch>
+                        }
+                        {/* ------------------------------------ admin only routes -------------------------------------- */}
+                        { 
+                            ( showAdminRoutes &&
+                                <Switch>
+                                    <Route exact path="/admin">
+                                        <AdminWelcomeView/>
+                                    </Route>
 
-                        <Route exact path="/admin/check_complaint">
-                            <AdminCheckComplaint/>
-                        </Route>
+                                    <Route exact path="/admin/signup_requests">
+                                        <AdminRegisterationRequests/>
+                                    </Route>
 
-                        <Route exact path="/admin/customers">
-                            <AdminCustomersView/>
-                        </Route>
+                                    <Route exact path="/admin/complaints">
+                                        <AdminComplaintsView/>
+                                    </Route>
 
-                        <Route exact path="/admin/companies">
-                            <AdminCompaniesView/>
-                        </Route>
+                                    <Route exact path="/admin/transactions">
+                                        <AdminTransactionsView/>
+                                    </Route>
 
-                        <Route exact path="/admin/sellers">
-                            <AdminIndividualSellerView/>
-                        </Route>
+                                    <Route exact path="/admin/manage_users">
+                                        <AdminManageUsersView/>
+                                    </Route>
 
-                        <Route exact path="/admin/charts">
-                            <AdminChartsView/>
-                        </Route>
+                                    <Route exact path="/admin/check_complaint">
+                                        <AdminCheckComplaint/>
+                                    </Route>
 
-                        <Route exact path="/admin/approval_files">
-                            <AdminUserApprovalFiles/>
-                        </Route>
+                                    <Route exact path="/admin/customers">
+                                        <AdminCustomersView/>
+                                    </Route>
 
-                        <Route exact path="/search">
-                            <Search />
-                        </Route>
+                                    <Route exact path="/admin/companies">
+                                        <AdminCompaniesView/>
+                                    </Route>
 
-                        <Route exact path="/notifications">
-                            <Notifications />
-                        </Route>
+                                    <Route exact path="/admin/sellers">
+                                        <AdminIndividualSellerView/>
+                                    </Route>
 
-                        <Route exact path="/confirm_code">
-                            <ForgotPasswordConfirmation />
-                        </Route>
+                                    <Route exact path="/admin/charts">
+                                        <AdminChartsView/>
+                                    </Route>
 
-                        <Route exact path="/update_password">
-                            <UpdatePassword />
-                        </Route>
-
-                        <Route exact path="/view_store">
-                            <StoreView />
-                        </Route>
-
-                        <Route exact path="/newOrder">
-                            <NewOrder />
-                        </Route>
-
-                        <Route exact path="/integration">
-                            <Integartion />
-                        </Route>
-
-                        <Route exact path="/pay_invoice">
-                            <PayInvoice />
-                        </Route>
-
-                        <Route exact path="/terms_and_conditions">
-                            <TermsAndConditions />
-                        </Route>
-
-                    </Switch>
+                                    <Route exact path="/admin/approval_files">
+                                        <AdminUserApprovalFiles/>
+                                    </Route>
+                                </Switch>
+                            )
+                        }
                 </BrowserRouter>
             </AuthenticationProvider>
                             

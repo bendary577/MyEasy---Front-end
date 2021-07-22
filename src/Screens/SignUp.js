@@ -409,8 +409,6 @@ class Signup extends Component {
 export default Signup;
 */
 
-
-
 import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -422,9 +420,10 @@ import { withRouter } from "react-router-dom";
 import "../../public/css/signup.css";
 import AuthService from "../Services/AuthService";
 import Signup from '../../public/images/Authentication/signup.png';
+import Recaptcha from "react-recaptcha";
 
 const imageStyle = {
-    width : 600,
+    width : "100%",
     height : 600
 }
 const required = value => {
@@ -447,15 +446,6 @@ const email = value => {
   }
 };
 
-const vusername = value => {
-  if (value.length < 3 || value.length > 20) {
-    return (
-      <div className="alert alert-danger mt-2" role="alert">
-        The username must be between 3 and 20 characters.
-      </div>
-    );
-  }
-};
 
 const vpassword = value => {
   if (value.length < 6 || value.length > 40) {
@@ -486,20 +476,23 @@ class SignUp extends Component {
     this.state = {
       first_name : "",
       second_name : "",
-      username: "",
       email: "",
       password: "",
       confirm_password : "",
       address : "",
       phone : "",
+      birth_date : null,
+      type : 1,
       zip_code : "",
-      files : [],
+      approval_files : [],
+      gender : null,
       successful: false,
       message: "",
     };
   }
 
-   vconfirmpassword = value => {
+
+ vconfirmpassword = value => {
     if (value !== this.state.password) {
       return (
         <div className="alert alert-danger mt-2" role="alert">
@@ -521,11 +514,6 @@ class SignUp extends Component {
     });
   }
 
-  onChangeUsername = (e) => {
-    this.setState({
-      username: e.target.value
-    });
-  }
 
   onChangeEmail = (e) => {
     this.setState({
@@ -557,15 +545,27 @@ class SignUp extends Component {
     });
   }
 
+  onChangeBirthdate = (e) => {
+    this.setState({
+      birth_date: e.target.value
+    });
+  }
+
   onChangeZipCode = (e) => {
     this.setState({
       zip_code: e.target.value
     });
   }
 
+  onChangeGender = (e) => {
+    this.setState({
+      gender : e.target.value
+    });
+  }
+
   onChangeFiles = (e) => {
     this.setState({
-      files : e.target.files
+      approval_files : e.target.files
     });
   }
 
@@ -583,26 +583,46 @@ class SignUp extends Component {
         let data = {
            first_name : this.state.first_name,
            second_name : this.state.second_name,
-           username : this.state.username,
            email: this.state.email,
            password: this.state.password,
-           phone : this.state.phone,
+           phone_number : this.state.phone,
            address: this.state.address,
-           zip_code: this.state.zip_code,
+           zipcode: this.state.zip_code,
         }
-        if(this.state.files.length !== 0){
+
+        if(this.state.approval_files.length !== 0){
             let formData = new FormData();
-            for (let i = 0; i < this.state.files.length; i++) {
-                formData.append(`images[${i}]`, this.state.files[i])
+            for (let i = 0; i < this.state.approval_files.length; i++) {
+                formData.append(`approval_files[${i}]`, this.state.approval_files[i])
             }
             data.approval_files = formData;
         }
+
+        if(this.props.location.state.type === 'seller' || this.props.location.state.type === 'customer'){
+          data.birth_date = this.state.birth_date;
+          data.gender = this.state.gender;
+        }
+
+        this.props.location.state.type === 'customer' ? data.type = 1 : this.props.location.state.type === 'seller' ? data.type = 2 : data.type = 3;
+
+        console.log(
+          data.birth_date + " " +
+          data.password + " " + 
+          data.gender + " " + 
+          data.type
+        )
       AuthService.register(data).then(
         response => {
-          this.setState({
-            message: response.data.message,
-            successful: true
-          });
+          console.log("^^^^^^^^^^^^^^^^^^^^^^ success")
+          if(response.status === 200 || response.status === 201){
+            console.log("^^^^^^^^^^^^^^^^^^^^^^ success 2")
+            this.setState({
+              message: response.data,
+              successful: true
+            });
+            this.props.history.push("/signin");
+            window.location.reload();
+          }
         },
         error => {
           const resMessage =
@@ -628,6 +648,7 @@ class SignUp extends Component {
     
     return (
             <div className="signup ">
+              <div className="container">
                <div className="row">
                    <div class="col-md-6">
                         <div className="auth-card card card-container">
@@ -675,18 +696,6 @@ class SignUp extends Component {
                                 </div>
                 
                                 <div className="form-group">
-                                    <label htmlFor="username">Username</label>
-                                    <Input
-                                    type="text"
-                                    className="form-control"
-                                    name="username"
-                                    value={this.state.username}
-                                    onChange={this.onChangeUsername}
-                                    validations={[required, vusername]}
-                                    />
-                                </div>
-                
-                                <div className="form-group">
                                     <label htmlFor="email">Email</label>
                                     <Input
                                     type="email"
@@ -718,7 +727,7 @@ class SignUp extends Component {
                                     name="confirm_password"
                                     value={this.state.confirm_password}
                                     onChange={this.onChangeConfirmPassword}
-                                    validations={[required, vpassword, this.vconfirmpassword]}
+                                    validations={[required, this.vconfirmpassword]}
                                     />
                                 </div>
                 
@@ -753,6 +762,53 @@ class SignUp extends Component {
                                     validations={[required]}
                                     />
                                 </div>
+
+                                {
+                                        /** ------------------------------ customer & seller birthdate ------------------------------ */
+                                        ( (type === 'seller' || type=== 'customer') && 
+                                          <div>
+                                            <div className="form-group">
+                                                <label htmlFor="birthdate">Birthdate</label>
+                                                <Input
+                                                  type="date"
+                                                  className="form-control"
+                                                  name="birthdate"
+                                                  value={this.state.birth_date}
+                                                  onChange={this.onChangeBirthdate}
+                                                  validations={[required]}
+                                                  />
+                                            </div>
+
+                                            <div className="my-3">
+                                              <div className="form-check form-check-inline">
+                                              <Input
+                                                  id="male"
+                                                  type="radio"
+                                                  className="form-check-input"
+                                                  name="male"
+                                                  value="Male"
+                                                  onChange={this.onChangeGender}
+                                                  validations={[required]}
+                                                  />
+                                                <label className="form-check-label" for="male">Male</label>
+                                              </div>
+
+                                              <div className="form-check form-check-inline">
+                                                <Input
+                                                    id="female"
+                                                    type="radio"
+                                                    className="form-check-input"
+                                                    name="female"
+                                                    value="Female"
+                                                    onChange={this.onChangeGender}
+                                                    validations={[required]}
+                                                    />
+                                                <label className="form-check-label" for="female">Female</label>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        )
+                                  }
 
                                 <div className="form-group">
                                     <label htmlFor="zip_code">Zip Code</label>
@@ -796,9 +852,24 @@ class SignUp extends Component {
                                         )
                                     }
 
+
+                                <Recaptcha
+                                  sitekey="6Lf0F7AbAAAAAKpiEmoBHnzDJjHhrOd_5a8EGipn"
+                                />
+
                                 <div className="form-group">
-                                    <a href="/profile" className="btn btn-primary btn-block">Sign Up</a>
+                                    <input type="submit" value="Sign Up" className="btn btn-primary btn-block" />
                                 </div>
+
+                                <div className="form-group text-center">
+                                    <p>already have an account ?</p>
+                                </div>
+
+                                
+                                <div className="form-group">
+                                    <a href="/signin" className="btn btn-success btn-block">Sign In</a>
+                                </div>
+
                                 <div>
                                     <p>By clicking Register, you agree to our <a href="">Terms & Condtitions</a> and <a href="">Privacy Policy</a></p>
                                 </div>
@@ -856,6 +927,7 @@ class SignUp extends Component {
                             </div>
                        </div>
                    </div>
+             </div>
              </div>
        </div>
       );

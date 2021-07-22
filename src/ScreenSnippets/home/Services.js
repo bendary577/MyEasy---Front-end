@@ -6,6 +6,7 @@ import shopping from "../../../public/icons/home/online-shopping.png";
 import time from "../../../public/icons/home/time.png";
 import bill from "../../../public/icons/home/bill.png";
 import { withTranslation } from 'react-i18next';
+import '../../../public/css/services_section.css';
 
 class Services extends Component {
     render() {

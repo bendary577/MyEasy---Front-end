@@ -34,14 +34,13 @@ class About extends Component {
                                     <p className="mb-4">{t(`home.about.second_section_description_1`)}</p>
                                     <p className="mb-4">{t(`home.about.second_section_description_2`)}</p>
                                     <a className="btn btn-dark" href="" style={{
-                                        width: '30%', borderRadius: '30px'
+                                        width: '30%', borderRadius: '30px', marginBottom : '20px'
                                     }}>{t(`home.about.read_more`)}</a>
                                 </div>
                             <div className="col-xs-12 col-lg-6">
                                 <img className="w-100 h-100" src={visaPayment} alt="" />
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </section >

@@ -6,10 +6,7 @@ class UserService {
     //----------------------------- register method --------------------------------------------
     getUserInfo = async () => {
         const response = await authenticatedAxiosInstance.get(GET_USER_INFO);
-        if (response.status === 200) {
-            return response;
-        }else{
-        }
+        return response;
     }
     
 }

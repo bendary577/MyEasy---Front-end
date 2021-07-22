@@ -1,24 +1,15 @@
-import axios from 'axios';
-import authHeader from './AuthHeader';
-
-const API_URL = 'http://localhost:8080/api/test/';
+import { authenticatedAxiosInstance } from "./axios";
+import { GET_My_ORDERS } from "../APIs/order";
 
 class SellerService {
-  getPublicContent() {
-    return axios.get(API_URL + 'all');
+
+  //----------------------------- register method --------------------------------------------
+  getMyOrders = async () => {
+    const response = await authenticatedAxiosInstance.get(GET_My_ORDERS);
+    return response;
   }
 
-  getUserBoard() {
-    return axios.get(API_URL + 'user', { headers: authHeader() });
-  }
 
-  getModeratorBoard() {
-    return axios.get(API_URL + 'mod', { headers: authHeader() });
-  }
-
-  getAdminBoard() {
-    return axios.get(API_URL + 'admin', { headers: authHeader() });
-  }
 }
 
 export default new SellerService();

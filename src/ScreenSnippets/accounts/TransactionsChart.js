@@ -28,20 +28,20 @@ class TransactionsChart extends Component {
 
         return (    
                  
-            <div className="app">
-            <div className="">
-                <div className="my-2">
-                    <h4>Your Transactions</h4>
-                </div>
-                <div className="mixed-chart">
-                    <Chart
-                    options={this.state.options}
-                    series={this.state.series}
-                    type="line"
-                    width="400"
-                    />
-                </div>
-            </div>
+            <div className="app w-100">
+              <div className="">
+                  <div className="my-2">
+                      <h4>Your Transactions</h4>
+                  </div>
+                  <div className="mixed-chart">
+                      <Chart
+                      options={this.state.options}
+                      series={this.state.series}
+                      type="line"
+                      width="400"
+                      />
+                  </div>
+              </div>
         </div>
 
 

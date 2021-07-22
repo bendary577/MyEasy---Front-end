@@ -7,16 +7,17 @@ import TransactionsChart from "./TransactionsChart";
 import OrdersChart from "./OrdersChart";
 
 class SellerActions extends Component {
+
+    componentDidMount = () => {
+        console.log("Kosooooooooom Hayateeeeeeeeeee" + this.props.user.profile)
+    }
+
     render() {
 
         const iconImgsStyle = {
             width: 120,
             height: 120
         };
-
-        const componentDidMount = () => {
-            console.log("Kosooooooooom Hayateeeeeeeeeee" + this.props.user.profile)
-        }
 
         return (    
 

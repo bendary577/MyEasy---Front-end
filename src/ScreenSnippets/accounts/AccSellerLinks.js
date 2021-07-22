@@ -12,7 +12,11 @@ import integration from '../../../public/icons/profile/integration.png';
 import customers from '../../../public/icons/profile/customers.png';
 import withdraw from '../../../public/icons/profile/withdraw.png';
 import myorders from '../../../public/icons/profile/myorders.png';
-import { withRouter } from 'react-router-dom'
+import make_invoice from '../../../public/icons/profile/new_invoice.png';
+import my_invoices from '../../../public/icons/profile/my_invoices.png';
+import make_complaint from '../../../public/icons/profile/make_complaint.png';
+import my_complaints from '../../../public/icons/profile/my_compalints.png';
+import { withRouter } from 'react-router-dom';
 
 const iconStyle = {
     width : 20,
@@ -45,7 +49,7 @@ class AccSellerLinks extends Component {
                 <div class="list-group list-group-flush">
                     <a href="#" class="list-group-item list-group-item-action bg-light">
                         <img src={wallet} style={iconStyle} className="" alt="" />
-                        Your Wallet
+                            Your Wallet
                         <div className="alert alert-success mt-2 text-center">
                             <h3><strong className="text-success">0.00 EGP</strong></h3>
                             <a href="" className="text-primary">change to dollar</a>
@@ -76,18 +80,43 @@ class AccSellerLinks extends Component {
                         <img src={stores} style={iconStyle} className="" alt="" />
                         My Store
                     </a>
+                    {/* ---------------------------- orders --------------------------------- */}
                     <a href="/myorders" class="list-group-item list-group-item-action bg-light">
                         <img src={orders} style={iconStyle} className="" alt="" />
                         My Orders 
                     </a>
-                    <a href="/myinvoices" class="list-group-item list-group-item-action bg-light">
+                    {/* --------------------------- invoices --------------------------------- */}
+                    <a class="list-group-item list-group-item-action bg-light dropdown-toggle" href="#invoices_collapse" data-toggle="collapse" aria-expanded="false">
                         <img src={invoices} style={iconStyle} className="" alt="" />
                         Invoices
                     </a>
-                    <a href="/make_complaint" class="list-group-item list-group-item-action bg-light">
+                    <ul class="collapse list-unstyled" id="invoices_collapse">
+                        <a href="/myinvoices" class="list-group-item list-group-item-action bg-light">
+                            <img src={my_invoices} style={iconStyle} className="" alt="" />
+                            My Invoices
+                        </a>
+                        <a href="/myinvoices" class="list-group-item list-group-item-action bg-light">
+                            <img src={make_invoice} style={iconStyle} className="" alt="" />
+                            Create Invoice
+                        </a>
+                    </ul>
+
+                    {/* ------------------------- complaint ------------------------------------- */}
+                    <a class="list-group-item list-group-item-action bg-light dropdown-toggle" href="#complaints_collapse" data-toggle="collapse" aria-expanded="false">
                         <img src={customers} style={iconStyle} className="" alt="" />
                         Complaints    
                     </a>
+                    <ul class="collapse list-unstyled" id="complaints_collapse">
+                        <a href="/make_complaint" class="list-group-item list-group-item-action bg-light">
+                            <img src={my_complaints} style={iconStyle} className="" alt="" />
+                            My Complaints 
+                        </a>
+                        <a href="/make_complaint" class="list-group-item list-group-item-action bg-light">
+                            <img src={make_complaint} style={iconStyle} className="" alt="" />
+                            Make Complaint 
+                        </a>
+                    </ul>
+                     {/* ------------------------- integration ------------------------------------- */}
                     <a href="/integration" class="list-group-item list-group-item-action bg-light">
                         <img src={integration} style={iconStyle} className="" alt="" />
                         Integration Settings    
