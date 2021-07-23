@@ -61,6 +61,11 @@ const App = () => {
         document.dir = i18n.dir();
       }, [i18n, i18n.language]);
 
+    useEffect(() => {
+        // action on update of movies
+        setUserAuthenticated(true);
+    }, [userAuthenticated]);
+
     {/* ---------------------------- check authentication and user type ---------------------------------- */}
     useEffect(() => {
         console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ in app.js 0")
@@ -69,7 +74,7 @@ const App = () => {
             let token = await localStorage.getItem('token');
             if(token){
                 console.log("^^^^^^^^^^^^^^^^^^^^^^ authenticated " + token)
-                setUserAuthenticated(true);
+                setUserAuthenticated(true)
                 console.log("authenticated " + userAuthenticated)
                 let response = UserService.getUserInfo();
                 if(response.status === 200){
@@ -141,7 +146,7 @@ const App = () => {
                                 </Switch>)
                                 :
                                 (<Switch>
-                                    <Route exact path="/profile">
+                                    <Route exact path={["/", "/profile"]}>
                                         <Account />
                                     </Route>
 
